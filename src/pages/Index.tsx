@@ -50,12 +50,12 @@ export default function Index() {
               </ScrollReveal>
               <ScrollReveal delay={100}>
                 <h1 className="text-ink mb-8">
-                  Editorial Portfolio
+                  Michelle Rojas
                 </h1>
               </ScrollReveal>
               <ScrollReveal delay={200}>
                 <p className="text-lg md:text-xl text-ink-light max-w-xl mb-10">
-                  Refined portfolio for creatives
+                  Designer and brand strategist crafting thoughtful identities for ambitious brands.
                 </p>
               </ScrollReveal>
 
@@ -76,7 +76,7 @@ export default function Index() {
                 <div className="aspect-[4/5] bg-cream-darker overflow-hidden">
                   <img
                     src={portraitMain}
-                    alt="Elena Vance - Designer"
+                    alt="Michelle Rojas - Designer"
                     className="w-full h-full object-cover"
                   />
                 </div>
@@ -167,7 +167,7 @@ export default function Index() {
                 <div className="aspect-[4/5] bg-cream-darker overflow-hidden">
                   <img
                     src={portraitMain}
-                    alt="Elena Vance portrait"
+                    alt="Michelle Rojas portrait"
                     className="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700"
                   />
                 </div>
