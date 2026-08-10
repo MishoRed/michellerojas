@@ -26,7 +26,7 @@ export function Footer() {
               to="/"
               className="font-serif text-2xl text-ink transition-opacity duration-300 hover:opacity-70"
             >
-              Elena Vance
+              Michelle Rojas
             </Link>
             <p className="mt-4 text-sm text-ink-muted max-w-xs">
               Designer and brand strategist crafting distinctive identities with intention and restraint.
@@ -73,7 +73,7 @@ export function Footer() {
         {/* Bottom */}
         <div className="mt-16 pt-8 border-t border-divider flex flex-col md:flex-row md:items-center justify-between gap-4">
           <p className="text-xs text-ink-muted">
-            © {currentYear} Elena Vance. All rights reserved.
+            © {currentYear} Michelle Rojas. All rights reserved.
           </p>
           <p className="text-xs text-ink-muted">
             New York, NY

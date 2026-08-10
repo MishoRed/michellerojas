@@ -55,7 +55,7 @@ export function Header() {
               to="/"
               className="font-serif text-xl md:text-2xl text-ink transition-opacity duration-300 hover:opacity-70"
             >
-              Elena Vance
+              Michelle Rojas
             </Link>
 
             {/* Desktop Navigation */}
@@ -109,7 +109,7 @@ export function Header() {
               className="font-serif text-xl text-ink"
               onClick={() => setIsMobileMenuOpen(false)}
             >
-              Elena Vance
+              Michelle Rojas
             </Link>
             <button
               onClick={() => setIsMobileMenuOpen(false)}

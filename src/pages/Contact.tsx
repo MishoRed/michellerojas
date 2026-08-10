@@ -68,7 +68,7 @@ export default function Contact() {
     } catch (err) {
       toast({
         title: "Something went wrong",
-        description: "Your message couldn't be sent. Please try again or email hello@elenavance.com.",
+        description: "Your message couldn't be sent. Please try again or email hello@michellerojas.com.",
         variant: "destructive",
       });
     } finally {
@@ -193,8 +193,8 @@ your project.</h1>
                 <div className="lg:sticky lg:top-32 space-y-10">
                   <div>
                     <p className="eyebrow mb-3">Email</p>
-                    <a href="mailto:hello@elenavance.com" className="text-ink hover:opacity-70 transition-opacity duration-300">
-                      hello@elenavance.com
+                    <a href="mailto:hello@michellerojas.com" className="text-ink hover:opacity-70 transition-opacity duration-300">
+                      hello@michellerojas.com
                     </a>
                   </div>
 
@@ -241,8 +241,8 @@ your project.</h1>
             <ScrollReveal delay={100}>
               <p className="text-ink-light">
                 You can also reach me directly at{" "}
-                <a href="mailto:hello@elenavance.com" className="text-ink underline underline-offset-4 hover:opacity-70 transition-opacity duration-300">
-                  hello@elenavance.com
+                <a href="mailto:hello@michellerojas.com" className="text-ink underline underline-offset-4 hover:opacity-70 transition-opacity duration-300">
+                  hello@michellerojas.com
                 </a>
               </p>
             </ScrollReveal>

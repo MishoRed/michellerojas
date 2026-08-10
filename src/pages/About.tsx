@@ -54,7 +54,7 @@ export default function About() {
                 <div className="aspect-[4/5] overflow-hidden">
                   <img
                     src={portraitMain}
-                    alt="Elena Vance"
+                    alt="Michelle Rojas"
                     className="w-full h-full object-cover"
                   />
                 </div>
@@ -70,7 +70,7 @@ export default function About() {
           <div className="max-w-3xl">
             <ScrollReveal>
               <p className="text-xl md:text-2xl text-ink leading-relaxed mb-8 first-letter:text-8xl md:first-letter:text-9xl first-letter:font-serif first-letter:float-left first-letter:mr-4 first-letter:mt-0 first-letter:leading-[0.75]">
-                I'm Elena, a designer and brand strategist based in New York City. 
+                I'm Michelle, a designer and brand strategist based in New York City. 
                 For over a decade, I've partnered with organizations—from ambitious 
                 startups to established institutions—to craft identities that resonate 
                 and endure.
@@ -86,10 +86,9 @@ export default function About() {
             </ScrollReveal>
             <ScrollReveal delay={200}>
               <p className="text-ink-light mb-8">
-                Before starting my practice, I spent five years at Pentagram and three 
-                years at Collins, where I had the privilege of working with brands like 
-                The Whitney Museum, Dropbox, and Spotify. These experiences shaped my 
-                belief that great design emerges from rigorous thinking and deep collaboration.
+                Before starting my practice, I worked with leading design studios and 
+                global brands, where I developed my belief that great design emerges 
+                from rigorous thinking and deep collaboration.
               </p>
             </ScrollReveal>
             <ScrollReveal delay={300}>
@@ -162,7 +161,7 @@ export default function About() {
                 <div className="aspect-[16/10] overflow-hidden">
                   <img
                     src={workspace}
-                    alt="Elena's workspace"
+                    alt="Michelle's workspace"
                     className="w-full h-full object-cover"
                   />
                 </div>
