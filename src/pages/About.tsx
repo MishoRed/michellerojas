@@ -4,7 +4,7 @@ import { Layout } from "@/components/layout/Layout";
 import { ScrollReveal } from "@/components/shared/ScrollReveal";
 import { Button } from "@/components/ui/button";
 
-import portraitMain from "@/assets/portrait-main.jpg";
+import portraitMainAsset from "@/assets/portrait-main.jpg.asset.json";
 import workspace from "@/assets/workspace.jpg";
 
 const values = [
@@ -53,7 +53,7 @@ export default function About() {
               <ScrollReveal delay={200}>
                 <div className="aspect-[4/5] overflow-hidden">
                   <img
-                    src={portraitMain}
+                    src={portraitMainAsset.url}
                     alt="Michelle Rojas"
                     className="w-full h-full object-cover"
                   />
