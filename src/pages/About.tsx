@@ -27,9 +27,6 @@ const values = [
 
 const recognition = [
   { name: "Communication Arts", type: "Award of Excellence", year: "2024" },
-  { name: "Brand New", type: "Best Identities", year: "2023" },
-  { name: "AIGA", type: "50 Books/50 Covers", year: "2023" },
-  { name: "Design Week", type: "Rising Star", year: "2022" },
 ];
 
 export default function About() {
