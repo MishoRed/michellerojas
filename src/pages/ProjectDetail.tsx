@@ -1,7 +1,9 @@
+import { useState } from "react";
 import { useParams, Link, Navigate } from "react-router-dom";
 import { ArrowLeft, ArrowRight } from "lucide-react";
 import { Layout } from "@/components/layout/Layout";
 import { ScrollReveal } from "@/components/shared/ScrollReveal";
+import { Lightbox } from "@/components/shared/Lightbox";
 import { projects } from "@/data/projects";
 
 import northlightHero from "@/assets/projects/northlight-hero.jpg";
