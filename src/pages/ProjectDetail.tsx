@@ -1,7 +1,9 @@
+import { useState } from "react";
 import { useParams, Link, Navigate } from "react-router-dom";
 import { ArrowLeft, ArrowRight } from "lucide-react";
 import { Layout } from "@/components/layout/Layout";
 import { ScrollReveal } from "@/components/shared/ScrollReveal";
+import { Lightbox } from "@/components/shared/Lightbox";
 import { projects } from "@/data/projects";
 
 import northlightHero from "@/assets/projects/northlight-hero.jpg";
@@ -18,10 +20,17 @@ const projectImages: Record<string, string[]> = {
 
 export default function ProjectDetail() {
   const { slug } = useParams<{ slug: string }>();
-  
+  const [lightboxOpen, setLightboxOpen] = useState(false);
+  const [lightboxIndex, setLightboxIndex] = useState(0);
+
+  const openLightbox = (index: number) => {
+    setLightboxIndex(index);
+    setLightboxOpen(true);
+  };
+
   const projectIndex = projects.findIndex((p) => p.slug === slug);
   const project = projects[projectIndex];
-  
+
   if (!project) {
     return <Navigate to="/work" replace />;
   }
@@ -116,50 +125,75 @@ export default function ProjectDetail() {
           <div className="space-y-8 md:space-y-12">
             {/* Full Width Image */}
             <ScrollReveal>
-              <div className="aspect-[16/10] overflow-hidden">
+              <button
+                onClick={() => openLightbox(0)}
+                className="block w-full text-left aspect-[16/10] overflow-hidden cursor-pointer group"
+                aria-label={`Open ${project.title} gallery image 1 in lightbox`}
+              >
                 <img
                   src={images[0]}
                   alt={`${project.title} detail`}
-                  className="w-full h-full object-cover"
+                  className="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-[1.02]"
                 />
-              </div>
+              </button>
             </ScrollReveal>
 
             {/* Two Column */}
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12">
               <ScrollReveal>
-                <div className="aspect-[4/5] overflow-hidden">
+                <button
+                  onClick={() => openLightbox(1)}
+                  className="block w-full text-left aspect-[4/5] overflow-hidden cursor-pointer group"
+                  aria-label={`Open ${project.title} gallery image 2 in lightbox`}
+                >
                   <img
                     src={images[1]}
                     alt={`${project.title} detail`}
-                    className="w-full h-full object-cover"
+                    className="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-[1.02]"
                   />
-                </div>
+                </button>
               </ScrollReveal>
               <ScrollReveal delay={100}>
-                <div className="aspect-[4/5] overflow-hidden">
+                <button
+                  onClick={() => openLightbox(2)}
+                  className="block w-full text-left aspect-[4/5] overflow-hidden cursor-pointer group"
+                  aria-label={`Open ${project.title} gallery image 3 in lightbox`}
+                >
                   <img
                     src={images[2]}
                     alt={`${project.title} detail`}
-                    className="w-full h-full object-cover"
+                    className="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-[1.02]"
                   />
-                </div>
+                </button>
               </ScrollReveal>
             </div>
 
             {/* Full Width Image */}
             <ScrollReveal>
-              <div className="aspect-[21/9] overflow-hidden">
+              <button
+                onClick={() => openLightbox(0)}
+                className="block w-full text-left aspect-[21/9] overflow-hidden cursor-pointer group"
+                aria-label={`Open ${project.title} gallery image 4 in lightbox`}
+              >
                 <img
                   src={images[0]}
                   alt={`${project.title} detail`}
-                  className="w-full h-full object-cover"
+                  className="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-[1.02]"
                 />
-              </div>
+              </button>
             </ScrollReveal>
           </div>
         </div>
       </section>
+
+      <Lightbox
+        images={images}
+        currentIndex={lightboxIndex}
+        isOpen={lightboxOpen}
+        onClose={() => setLightboxOpen(false)}
+        onNavigate={setLightboxIndex}
+        alt={project.title}
+      />
 
       {/* Next Project */}
       <section className="border-t border-divider">
