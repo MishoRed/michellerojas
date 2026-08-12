@@ -3,6 +3,7 @@ import { ArrowRight, Download } from "lucide-react";
 import { Layout } from "@/components/layout/Layout";
 import { ScrollReveal } from "@/components/shared/ScrollReveal";
 import { Button } from "@/components/ui/button";
+import resumePdf from "@/assets/michelle-rojas-resume.pdf.asset.json";
 
 const experience = [
   {
@@ -83,8 +84,19 @@ export default function Resume() {
                   <br />
                   hello@michellerojas.com
                 </p>
+                <Button asChild className="mt-6">
+                  <a
+                    href={resumePdf.url}
+                    download="Michelle-Rojas-Resume.pdf"
+                    className="inline-flex items-center gap-2"
+                  >
+                    <Download size={18} strokeWidth={1.5} />
+                    Download Resume (PDF)
+                  </a>
+                </Button>
               </ScrollReveal>
             </div>
+
           </div>
         </div>
       </section>
@@ -204,8 +216,8 @@ export default function Resume() {
             </ScrollReveal>
             <ScrollReveal delay={100}>
               <p className="text-ink-light mb-10 max-w-xl mx-auto">
-                I'm happy to share a complete CV or portfolio deck on request.
-                Reach out and I'll send it over.
+                Download the full CV as a PDF, or reach out if you'd like a
+                portfolio deck.
               </p>
             </ScrollReveal>
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
@@ -219,12 +231,17 @@ export default function Resume() {
               </ScrollReveal>
               <ScrollReveal delay={300}>
                 <Button asChild variant="outline">
-                  <Link to="/contact" className="inline-flex items-center gap-2">
+                  <a
+                    href={resumePdf.url}
+                    download="Michelle-Rojas-Resume.pdf"
+                    className="inline-flex items-center gap-2"
+                  >
                     <Download size={18} strokeWidth={1.5} />
-                    Request CV
-                  </Link>
+                    Download CV
+                  </a>
                 </Button>
               </ScrollReveal>
+
             </div>
           </div>
         </div>
