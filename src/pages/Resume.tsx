@@ -218,9 +218,11 @@ export default function Resume() {
                 </Button>
               </ScrollReveal>
               <ScrollReveal delay={300}>
-                <Button variant="outline" className="inline-flex items-center gap-2">
-                  <Download size={18} strokeWidth={1.5} />
-                  Download CV
+                <Button asChild variant="outline">
+                  <Link to="/contact" className="inline-flex items-center gap-2">
+                    <Download size={18} strokeWidth={1.5} />
+                    Request CV
+                  </Link>
                 </Button>
               </ScrollReveal>
             </div>
