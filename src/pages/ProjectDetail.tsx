@@ -20,10 +20,17 @@ const projectImages: Record<string, string[]> = {
 
 export default function ProjectDetail() {
   const { slug } = useParams<{ slug: string }>();
-  
+  const [lightboxOpen, setLightboxOpen] = useState(false);
+  const [lightboxIndex, setLightboxIndex] = useState(0);
+
+  const openLightbox = (index: number) => {
+    setLightboxIndex(index);
+    setLightboxOpen(true);
+  };
+
   const projectIndex = projects.findIndex((p) => p.slug === slug);
   const project = projects[projectIndex];
-  
+
   if (!project) {
     return <Navigate to="/work" replace />;
   }
