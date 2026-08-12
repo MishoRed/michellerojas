@@ -11,7 +11,6 @@ const navLinks = [
 const socialLinks = [
   { name: "Instagram", url: "https://instagram.com" },
   { name: "LinkedIn", url: "https://linkedin.com" },
-  { name: "Twitter", url: "https://twitter.com" },
 ];
 
 export function Footer() {
@@ -77,7 +76,7 @@ export function Footer() {
             © {currentYear} Michelle Rojas. All rights reserved.
           </p>
           <p className="text-xs text-ink-muted">
-            New York, NY
+            Seattle, WA
           </p>
         </div>
       </div>
