@@ -125,50 +125,75 @@ export default function ProjectDetail() {
           <div className="space-y-8 md:space-y-12">
             {/* Full Width Image */}
             <ScrollReveal>
-              <div className="aspect-[16/10] overflow-hidden">
+              <button
+                onClick={() => openLightbox(0)}
+                className="block w-full text-left aspect-[16/10] overflow-hidden cursor-pointer group"
+                aria-label={`Open ${project.title} gallery image 1 in lightbox`}
+              >
                 <img
                   src={images[0]}
                   alt={`${project.title} detail`}
-                  className="w-full h-full object-cover"
+                  className="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-[1.02]"
                 />
-              </div>
+              </button>
             </ScrollReveal>
 
             {/* Two Column */}
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12">
               <ScrollReveal>
-                <div className="aspect-[4/5] overflow-hidden">
+                <button
+                  onClick={() => openLightbox(1)}
+                  className="block w-full text-left aspect-[4/5] overflow-hidden cursor-pointer group"
+                  aria-label={`Open ${project.title} gallery image 2 in lightbox`}
+                >
                   <img
                     src={images[1]}
                     alt={`${project.title} detail`}
-                    className="w-full h-full object-cover"
+                    className="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-[1.02]"
                   />
-                </div>
+                </button>
               </ScrollReveal>
               <ScrollReveal delay={100}>
-                <div className="aspect-[4/5] overflow-hidden">
+                <button
+                  onClick={() => openLightbox(2)}
+                  className="block w-full text-left aspect-[4/5] overflow-hidden cursor-pointer group"
+                  aria-label={`Open ${project.title} gallery image 3 in lightbox`}
+                >
                   <img
                     src={images[2]}
                     alt={`${project.title} detail`}
-                    className="w-full h-full object-cover"
+                    className="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-[1.02]"
                   />
-                </div>
+                </button>
               </ScrollReveal>
             </div>
 
             {/* Full Width Image */}
             <ScrollReveal>
-              <div className="aspect-[21/9] overflow-hidden">
+              <button
+                onClick={() => openLightbox(0)}
+                className="block w-full text-left aspect-[21/9] overflow-hidden cursor-pointer group"
+                aria-label={`Open ${project.title} gallery image 4 in lightbox`}
+              >
                 <img
                   src={images[0]}
                   alt={`${project.title} detail`}
-                  className="w-full h-full object-cover"
+                  className="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-[1.02]"
                 />
-              </div>
+              </button>
             </ScrollReveal>
           </div>
         </div>
       </section>
+
+      <Lightbox
+        images={images}
+        currentIndex={lightboxIndex}
+        isOpen={lightboxOpen}
+        onClose={() => setLightboxOpen(false)}
+        onNavigate={setLightboxIndex}
+        alt={project.title}
+      />
 
       {/* Next Project */}
       <section className="border-t border-divider">
