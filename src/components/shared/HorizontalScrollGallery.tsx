@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import { projects } from '@/data/projects';
 
 // Import gallery images
-import gallery1 from '@/assets/gallery/gallery-1.jpg';
+import gallery1Asset from '@/assets/gallery/gallery-1.jpg.asset.json';
 import gallery2 from '@/assets/gallery/gallery-2.jpg';
 import gallery3 from '@/assets/gallery/gallery-3.jpg';
 import gallery4 from '@/assets/gallery/gallery-4.jpg';
@@ -41,7 +41,7 @@ interface GalleryImage {
 }
 
 const galleryImages: GalleryImage[] = [
-  { src: gallery1, alt: 'Northlight Studio brand composition', size: 'large', orientation: 'portrait', verticalOffset: 'center', projectSlug: 'northlight-studio' },
+  { src: gallery1Asset.url, alt: 'Born x Raised mural portrait', size: 'large', orientation: 'portrait', verticalOffset: 'center', projectSlug: 'northlight-studio' },
   { src: gallery2, alt: 'Meridian Architects typography detail', size: 'medium', orientation: 'landscape', verticalOffset: 'top', projectSlug: 'meridian-architects' },
   { src: gallery3, alt: 'Ember & Co logo on textured paper', size: 'small', orientation: 'portrait', verticalOffset: 'bottom', projectSlug: 'ember-and-co' },
   { src: gallery4, alt: 'Stillwater Journal stationery suite', size: 'large', orientation: 'landscape', verticalOffset: 'center', projectSlug: 'stillwater-journal' },
