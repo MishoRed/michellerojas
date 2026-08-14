@@ -85,7 +85,7 @@ export const projects = [
   },
   {
     slug: "drift-studio",
-    title: "Drift Studio",
+    title: "BORN X RAISED",
     category: "Brand Identity",
     year: "2024",
     client: "Drift Studio",
