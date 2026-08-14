@@ -61,7 +61,7 @@ export const projects = [
   },
   {
     slug: "forge-collective",
-    title: "Forge Collective",
+    title: "BORN X RAISED",
     category: "Visual System",
     year: "2024",
     client: "Forge Collective",
