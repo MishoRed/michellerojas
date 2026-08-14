@@ -1,10 +1,10 @@
 export const projects = [
   {
     slug: "northlight-studio",
-    title: "Northlight Studio",
+    title: "BORN X RAISED",
     category: "Brand Identity",
     year: "2024",
-    client: "Northlight Studio",
+    client: "BORN X RAISED",
     industry: "Creative Agency",
     services: ["Brand Strategy", "Visual Identity", "Brand Guidelines"],
     overview: "A comprehensive brand identity for a boutique creative studio specializing in architectural visualization. The identity balances sophistication with approachability, using restrained typography and a warm, natural palette.",
@@ -13,10 +13,10 @@ export const projects = [
   },
   {
     slug: "meridian-architects",
-    title: "Meridian Architects",
+    title: "PCC COMMUNITY MARKETS",
     category: "Visual System",
     year: "2024",
-    client: "Meridian Architects",
+    client: "PCC COMMUNITY MARKETS",
     industry: "Architecture",
     services: ["Visual Identity", "Signage Design", "Digital Design"],
     overview: "A complete visual system for an award-winning architecture firm known for their sustainable, human-centered designs. The identity reflects their commitment to thoughtful, enduring architecture.",
@@ -25,7 +25,7 @@ export const projects = [
   },
   {
     slug: "ember-and-co",
-    title: "Ember & Co",
+    title: "PCC COMMUNITY MARKETS",
     category: "Brand Refresh",
     year: "2023",
     client: "Ember & Co",
@@ -37,7 +37,7 @@ export const projects = [
   },
   {
     slug: "stillwater-journal",
-    title: "Stillwater Journal",
+    title: "PCC COMMUNITY MARKETS",
     category: "Editorial Design",
     year: "2023",
     client: "Stillwater Publishing",
@@ -49,7 +49,7 @@ export const projects = [
   },
   {
     slug: "aura-wellness",
-    title: "Aura Wellness",
+    title: "BORN X RAISED",
     category: "Brand Identity",
     year: "2024",
     client: "Aura Wellness",
@@ -61,7 +61,7 @@ export const projects = [
   },
   {
     slug: "forge-collective",
-    title: "Forge Collective",
+    title: "BORN X RAISED",
     category: "Visual System",
     year: "2024",
     client: "Forge Collective",
@@ -73,7 +73,7 @@ export const projects = [
   },
   {
     slug: "halcyon-press",
-    title: "Halcyon Press",
+    title: "PCC COMMUNITY MARKETS",
     category: "Editorial Design",
     year: "2023",
     client: "Halcyon Press",
@@ -85,7 +85,7 @@ export const projects = [
   },
   {
     slug: "drift-studio",
-    title: "Drift Studio",
+    title: "BORN X RAISED",
     category: "Brand Identity",
     year: "2024",
     client: "Drift Studio",
