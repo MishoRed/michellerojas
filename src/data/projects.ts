@@ -73,7 +73,7 @@ export const projects = [
   },
   {
     slug: "halcyon-press",
-    title: "Halcyon Press",
+    title: "PCC COMMUNITY MARKETS",
     category: "Editorial Design",
     year: "2023",
     client: "Halcyon Press",
