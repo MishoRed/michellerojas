@@ -37,7 +37,7 @@ export const projects = [
   },
   {
     slug: "stillwater-journal",
-    title: "Stillwater Journal",
+    title: "PCC COMMUNITY MARKETS",
     category: "Editorial Design",
     year: "2023",
     client: "Stillwater Publishing",
