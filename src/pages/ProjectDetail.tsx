@@ -183,6 +183,21 @@ export default function ProjectDetail() {
                 />
               </button>
             </ScrollReveal>
+
+            {/* Born x Raised Mural */}
+            <ScrollReveal>
+              <button
+                onClick={() => openLightbox(3)}
+                className="block w-full text-left aspect-[16/9] overflow-hidden cursor-pointer group"
+                aria-label={`Open ${project.title} Born x Raised mural in lightbox`}
+              >
+                <img
+                  src={images[3]}
+                  alt="Born x Raised mural portrait"
+                  className="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-[1.02]"
+                />
+              </button>
+            </ScrollReveal>
           </div>
         </div>
       </section>
