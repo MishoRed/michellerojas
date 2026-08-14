@@ -49,7 +49,7 @@ export const projects = [
   },
   {
     slug: "aura-wellness",
-    title: "Aura Wellness",
+    title: "BORN X RAISED",
     category: "Brand Identity",
     year: "2024",
     client: "Aura Wellness",
