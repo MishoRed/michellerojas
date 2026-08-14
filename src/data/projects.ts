@@ -25,7 +25,7 @@ export const projects = [
   },
   {
     slug: "ember-and-co",
-    title: "Ember & Co",
+    title: "PCC COMMUNITY MARKETS",
     category: "Brand Refresh",
     year: "2023",
     client: "Ember & Co",
