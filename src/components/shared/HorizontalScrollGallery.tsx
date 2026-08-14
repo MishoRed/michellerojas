@@ -4,7 +4,7 @@ import { projects } from '@/data/projects';
 
 // Import gallery images
 import gallery1Asset from '@/assets/gallery/gallery-1.jpg.asset.json';
-import gallery2 from '@/assets/gallery/gallery-2.jpg';
+import gallery2Asset from '@/assets/gallery/gallery-2.jpg.asset.json';
 import gallery3 from '@/assets/gallery/gallery-3.jpg';
 import gallery4 from '@/assets/gallery/gallery-4.jpg';
 import gallery5 from '@/assets/gallery/gallery-5.jpg';
