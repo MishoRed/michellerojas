@@ -1,10 +1,10 @@
 export const projects = [
   {
     slug: "northlight-studio",
-    title: "Northlight Studio",
+    title: "BORN X RAISED",
     category: "Brand Identity",
     year: "2024",
-    client: "Northlight Studio",
+    client: "BORN X RAISED",
     industry: "Creative Agency",
     services: ["Brand Strategy", "Visual Identity", "Brand Guidelines"],
     overview: "A comprehensive brand identity for a boutique creative studio specializing in architectural visualization. The identity balances sophistication with approachability, using restrained typography and a warm, natural palette.",
@@ -13,10 +13,10 @@ export const projects = [
   },
   {
     slug: "meridian-architects",
-    title: "Meridian Architects",
+    title: "PCC COMMUNITY MARKETS",
     category: "Visual System",
     year: "2024",
-    client: "Meridian Architects",
+    client: "PCC COMMUNITY MARKETS",
     industry: "Architecture",
     services: ["Visual Identity", "Signage Design", "Digital Design"],
     overview: "A complete visual system for an award-winning architecture firm known for their sustainable, human-centered designs. The identity reflects their commitment to thoughtful, enduring architecture.",
