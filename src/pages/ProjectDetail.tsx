@@ -10,9 +10,10 @@ import northlightHero from "@/assets/projects/northlight-hero.jpg";
 import meridianHero from "@/assets/projects/meridian-hero.jpg";
 import emberHero from "@/assets/projects/ember-hero.jpg";
 import stillwaterHero from "@/assets/projects/stillwater-hero.jpg";
+import bornRaisedAsset from "@/assets/gallery/gallery-1.jpg.asset.json";
 
 const projectImages: Record<string, string[]> = {
-  "northlight-studio": [northlightHero, meridianHero, emberHero],
+  "northlight-studio": [northlightHero, meridianHero, emberHero, bornRaisedAsset.url],
   "meridian-architects": [meridianHero, stillwaterHero, northlightHero],
   "ember-and-co": [emberHero, northlightHero, stillwaterHero],
   "stillwater-journal": [stillwaterHero, emberHero, meridianHero],
