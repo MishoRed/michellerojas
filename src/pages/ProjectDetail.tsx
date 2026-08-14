@@ -10,10 +10,9 @@ import northlightHero from "@/assets/projects/northlight-hero.jpg";
 import meridianHero from "@/assets/projects/meridian-hero.jpg";
 import emberHero from "@/assets/projects/ember-hero.jpg";
 import stillwaterHero from "@/assets/projects/stillwater-hero.jpg";
-import bornRaisedAsset from "@/assets/gallery/gallery-1.jpg.asset.json";
 
 const projectImages: Record<string, string[]> = {
-  "northlight-studio": [northlightHero, meridianHero, emberHero, bornRaisedAsset.url],
+  "northlight-studio": [northlightHero, meridianHero, emberHero],
   "meridian-architects": [meridianHero, stillwaterHero, northlightHero],
   "ember-and-co": [emberHero, northlightHero, stillwaterHero],
   "stillwater-journal": [stillwaterHero, emberHero, meridianHero],
@@ -179,21 +178,6 @@ export default function ProjectDetail() {
                 <img
                   src={images[0]}
                   alt={`${project.title} detail`}
-                  className="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-[1.02]"
-                />
-              </button>
-            </ScrollReveal>
-
-            {/* Born x Raised Mural */}
-            <ScrollReveal>
-              <button
-                onClick={() => openLightbox(3)}
-                className="block w-full text-left aspect-[16/9] overflow-hidden cursor-pointer group"
-                aria-label={`Open ${project.title} Born x Raised mural in lightbox`}
-              >
-                <img
-                  src={images[3]}
-                  alt="Born x Raised mural portrait"
                   className="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-[1.02]"
                 />
               </button>
