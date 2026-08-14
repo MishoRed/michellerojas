@@ -42,7 +42,7 @@ interface GalleryImage {
 
 const galleryImages: GalleryImage[] = [
   { src: gallery1Asset.url, alt: 'Born x Raised mural portrait', size: 'large', orientation: 'portrait', verticalOffset: 'center', projectSlug: 'northlight-studio' },
-  { src: gallery2, alt: 'Meridian Architects typography detail', size: 'medium', orientation: 'landscape', verticalOffset: 'top', projectSlug: 'meridian-architects' },
+  { src: gallery2Asset.url, alt: 'PCC Community Markets Burien storefront', size: 'medium', orientation: 'landscape', verticalOffset: 'top', projectSlug: 'meridian-architects' },
   { src: gallery3, alt: 'Ember & Co logo on textured paper', size: 'small', orientation: 'portrait', verticalOffset: 'bottom', projectSlug: 'ember-and-co' },
   { src: gallery4, alt: 'Stillwater Journal stationery suite', size: 'large', orientation: 'landscape', verticalOffset: 'center', projectSlug: 'stillwater-journal' },
   { src: gallery5, alt: 'Aura Wellness digital interface', size: 'medium', orientation: 'portrait', verticalOffset: 'top', projectSlug: 'aura-wellness' },
