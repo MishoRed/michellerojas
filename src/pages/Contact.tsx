@@ -19,6 +19,11 @@ const contactSchema = z.object({
   referral: z.string().max(100).optional(),
 });
 
+const encodeFormData = (data: Record<string, string>) =>
+  Object.entries(data)
+    .map(([key, value]) => `${encodeURIComponent(key)}=${encodeURIComponent(value)}`)
+    .join("&");
+
 export default function Contact() {
   const { toast } = useToast();
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -50,8 +55,14 @@ export default function Contact() {
     }
     setIsSubmitting(true);
     try {
-      // Simulate form submission
-      await new Promise(resolve => setTimeout(resolve, 1500));
+      const response = await fetch("/", {
+        method: "POST",
+        headers: { "Content-Type": "application/x-www-form-urlencoded" },
+        body: encodeFormData({ "form-name": "contact", ...result.data }),
+      });
+      if (!response.ok) {
+        throw new Error(`Form submission failed with status ${response.status}`);
+      }
       toast({
         title: "Message sent",
         description: "Thank you for reaching out. I'll be in touch within 24-48 hours."
@@ -107,7 +118,21 @@ your project.</h1>
             {/* Form */}
             <div className="lg:col-span-7">
               <ScrollReveal>
-                <form onSubmit={handleSubmit} className="space-y-8">
+                <form
+                  onSubmit={handleSubmit}
+                  name="contact"
+                  method="POST"
+                  data-netlify="true"
+                  data-netlify-honeypot="bot-field"
+                  className="space-y-8"
+                >
+                  <input type="hidden" name="form-name" value="contact" />
+                  <div hidden aria-hidden="true">
+                    <label>
+                      Don't fill this out if you're human: <input name="bot-field" tabIndex={-1} autoComplete="off" />
+                    </label>
+                  </div>
+
                   {/* Name */}
                   <div>
                     <label htmlFor="name" className="eyebrow block mb-3">
