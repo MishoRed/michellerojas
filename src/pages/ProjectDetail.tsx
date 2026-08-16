@@ -141,7 +141,7 @@ export default function ProjectDetail() {
                 <img
                   src={detailImages[0]}
                   alt={`${project.title} detail`}
-                  className="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-[1.02]"
+                  className={`w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-[1.02] ${slug === "born-x-raised" ? "object-top" : ""}`}
                 />
               </button>
             </ScrollReveal>
@@ -186,7 +186,7 @@ export default function ProjectDetail() {
                 <img
                   src={detailImages[3] ?? detailImages[0]}
                   alt={`${project.title} detail`}
-                  className="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-[1.02]"
+                  className={`w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-[1.02] ${slug === "born-x-raised" ? "object-top" : ""}`}
                 />
               </button>
             </ScrollReveal>
