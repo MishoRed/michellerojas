@@ -1,4 +1,18 @@
-export const projects = [
+export interface Project {
+  slug: string;
+  title: string;
+  category: string;
+  year: string;
+  client: string;
+  industry: string;
+  services: string[];
+  overview: string;
+  challenge: string;
+  solution: string;
+  presentationUrl?: string;
+}
+
+export const projects: Project[] = [
   {
     slug: "born-x-raised",
     title: "BORN X RAISED",
@@ -10,18 +24,20 @@ export const projects = [
     overview: "This project audited Born X Raised (BXR), a Los Angeles streetwear brand built on Venice subcultures, Chicano and indigenous identity, and LA community pride. With nearly half a million followers and high-profile partnerships including a Fanatics x Complex collab for the Mexico National Baseball Team and ties to figures like Nipsey Hussle, BXR carries real cultural authority through a relaxed, nostalgic, community-driven tone.",
     challenge: "Despite BXR's strong cultural footprint, the brand produces almost exclusively menswear, even though women visibly wear and style its oversized pieces. BXR has never partnered with a women's label to serve that audience directly, leaving a clear, unaddressed gap in how the brand reaches its own community.",
     solution: "The proposed fix is a collaboration with iamkoko.la, an LA-based women's streetwear brand that reworks vintage jerseys into corsets and cropped silhouettes and already overlaps with BXR's existing partners like Complex Market. The concept centers on a Los Angeles team jersey collection (Lakers, Dodgers, Raiders) rendered in iamkoko.la's style but branded with BXR's logo, giving women an entry point into the BXR world, grounded in real audience interest, without diluting the brand's core identity.",
+    presentationUrl: "https://www.canva.com/design/DAHJ5gMA0lk/a5DuQfpCOFlv20KA4bkbYQ/view",
   },
   {
-    slug: "meridian-architects",
-    title: "PCC COMMUNITY MARKETS",
-    category: "Visual System",
-    year: "2024",
-    client: "PCC COMMUNITY MARKETS",
-    industry: "Architecture",
-    services: ["Visual Identity", "Signage Design", "Digital Design"],
-    overview: "A complete visual system for an award-winning architecture firm known for their sustainable, human-centered designs. The identity reflects their commitment to thoughtful, enduring architecture.",
-    challenge: "The firm's previous identity didn't reflect the quality and innovation of their work. They needed a visual system that could work across physical and digital touchpoints while honoring their modernist sensibilities.",
-    solution: "We created a modular visual system built on geometric principles that mirror their architectural philosophy. The system is flexible enough for diverse applications while maintaining a cohesive visual language.",
+    slug: "pcc-community-markets",
+    title: "PCC Community Markets",
+    category: "Brand Identity",
+    year: "2026",
+    client: "PCC Community Markets",
+    industry: "Grocery Store and Retail Food Cooperative",
+    services: ["Brand Strategy Presentation"],
+    overview: "This project audited PCC Community Markets, a Puget Sound co-op with 16 stores, over 95,000 member households, and an \"organic first,\" community-led brand identity built on partnerships with farmers, indigenous tribes, and BIPOC, women-owned, and LGBTQ+ suppliers. The audit found real strengths in PCC's content strategy, including transparency, strong Instagram engagement, and an authentic community voice.",
+    challenge: "Despite this values-driven positioning, PCC's Partner Program, which offers member discounts at local businesses, included no POC-owned food partnerships and few genuinely healthy options. This left a gap between PCC's stated commitment to diversity and equity and the actual makeup of its business partnerships.",
+    solution: "The proposed fix pairs PCC with Ba Bar Green, a vegan, plant-based Vietnamese restaurant in South Lake Union owned by Eric Banh and Teresa Nguyen, adding a healthy, POC-owned partner that shares PCC's values and audience. The plan includes a \"comfort-vegan,\" community-first creative direction, prototypes like a member discount flyer and a joint cooking class, and a one-year Instagram-first rollout, positioning the partnership to sharpen PCC's brand identity while opening the door to future growth in underserved areas.",
+    presentationUrl: "https://www.canva.com/design/DAHLRcL0UBM/KdmD6N1dqDVdTK9WCxn_lQ/view#1",
   },
   {
     slug: "ember-and-co",
