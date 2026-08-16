@@ -41,7 +41,7 @@ interface GalleryImage {
 }
 
 const galleryImages: GalleryImage[] = [
-  { src: gallery1, alt: 'Born x Raised mural portrait', size: 'large', orientation: 'landscape', verticalOffset: 'center', projectSlug: 'northlight-studio' },
+  { src: gallery1, alt: 'Born x Raised mural portrait', size: 'large', orientation: 'landscape', verticalOffset: 'center', projectSlug: 'born-x-raised' },
   { src: gallery2, alt: 'PCC Community Markets Burien storefront', size: 'medium', orientation: 'landscape', verticalOffset: 'top', projectSlug: 'meridian-architects' },
   { src: gallery3, alt: 'Ember & Co logo on textured paper', size: 'small', orientation: 'portrait', verticalOffset: 'bottom', projectSlug: 'ember-and-co' },
   { src: gallery4, alt: 'Stillwater Journal stationery suite', size: 'large', orientation: 'landscape', verticalOffset: 'center', projectSlug: 'stillwater-journal' },
@@ -49,7 +49,7 @@ const galleryImages: GalleryImage[] = [
   { src: gallery6, alt: 'Forge Collective packaging detail', size: 'small', orientation: 'landscape', verticalOffset: 'center', projectSlug: 'forge-collective' },
   { src: gallery7, alt: 'Halcyon Press brand guidelines', size: 'large', orientation: 'portrait', verticalOffset: 'bottom', projectSlug: 'halcyon-press' },
   { src: gallery8, alt: 'Drift Studio environmental signage', size: 'medium', orientation: 'landscape', verticalOffset: 'center', projectSlug: 'drift-studio' },
-  { src: gallery9, alt: 'Northlight Studio color palette', size: 'small', orientation: 'portrait', verticalOffset: 'top', projectSlug: 'northlight-studio' },
+  { src: gallery9, alt: 'Northlight Studio color palette', size: 'small', orientation: 'portrait', verticalOffset: 'top', projectSlug: 'born-x-raised' },
   { src: gallery10, alt: 'Meridian Architects business cards', size: 'large', orientation: 'landscape', verticalOffset: 'center', projectSlug: 'meridian-architects' },
   { src: gallery11, alt: 'Stillwater Journal editorial layout', size: 'medium', orientation: 'portrait', verticalOffset: 'bottom', projectSlug: 'stillwater-journal' },
   { src: gallery12, alt: 'Ember & Co texture exploration', size: 'small', orientation: 'landscape', verticalOffset: 'top', projectSlug: 'ember-and-co' },
@@ -57,7 +57,7 @@ const galleryImages: GalleryImage[] = [
   { src: gallery14, alt: 'Forge Collective letterhead', size: 'medium', orientation: 'landscape', verticalOffset: 'center', projectSlug: 'forge-collective' },
   { src: gallery15, alt: 'Halcyon Press product photography', size: 'small', orientation: 'portrait', verticalOffset: 'bottom', projectSlug: 'halcyon-press' },
   { src: gallery16, alt: 'Drift Studio poster design', size: 'large', orientation: 'landscape', verticalOffset: 'top', projectSlug: 'drift-studio' },
-  { src: gallery17, alt: 'Northlight Studio mobile app', size: 'medium', orientation: 'portrait', verticalOffset: 'center', projectSlug: 'northlight-studio' },
+  { src: gallery17, alt: 'Northlight Studio mobile app', size: 'medium', orientation: 'portrait', verticalOffset: 'center', projectSlug: 'born-x-raised' },
   { src: gallery18, alt: 'Meridian Architects monogram detail', size: 'small', orientation: 'landscape', verticalOffset: 'center', projectSlug: 'meridian-architects' },
   { src: gallery19, alt: 'Halcyon Press book cover', size: 'large', orientation: 'portrait', verticalOffset: 'bottom', projectSlug: 'halcyon-press' },
   { src: gallery20, alt: 'Aura Wellness iconography set', size: 'medium', orientation: 'landscape', verticalOffset: 'top', projectSlug: 'aura-wellness' },

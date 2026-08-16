@@ -1,15 +1,15 @@
 export const projects = [
   {
-    slug: "northlight-studio",
+    slug: "born-x-raised",
     title: "BORN X RAISED",
     category: "Brand Identity",
-    year: "2024",
+    year: "2026",
     client: "BORN X RAISED",
-    industry: "Creative Agency",
-    services: ["Brand Strategy", "Visual Identity", "Brand Guidelines"],
-    overview: "A comprehensive brand identity for a boutique creative studio specializing in architectural visualization. The identity balances sophistication with approachability, using restrained typography and a warm, natural palette.",
-    challenge: "Northlight needed an identity that would resonate with high-end architectural firms while remaining accessible to emerging practices. The challenge was to create something timeless yet contemporary.",
-    solution: "We developed a typographic-led identity system anchored by custom lettering that echoes the precision of architectural draftsmanship. The warm, neutral palette brings humanity to the technical nature of their work.",
+    industry: "Apparel and Fashion Industry",
+    services: ["Brand Strategy Presentation"],
+    overview: "This project audited Born X Raised (BXR), a Los Angeles streetwear brand built on Venice subcultures, Chicano and indigenous identity, and LA community pride. With nearly half a million followers and high-profile partnerships including a Fanatics x Complex collab for the Mexico National Baseball Team and ties to figures like Nipsey Hussle, BXR carries real cultural authority through a relaxed, nostalgic, community-driven tone.",
+    challenge: "Despite BXR's strong cultural footprint, the brand produces almost exclusively menswear, even though women visibly wear and style its oversized pieces. BXR has never partnered with a women's label to serve that audience directly, leaving a clear, unaddressed gap in how the brand reaches its own community.",
+    solution: "The proposed fix is a collaboration with iamkoko.la, an LA-based women's streetwear brand that reworks vintage jerseys into corsets and cropped silhouettes and already overlaps with BXR's existing partners like Complex Market. The concept centers on a Los Angeles team jersey collection (Lakers, Dodgers, Raiders) rendered in iamkoko.la's style but branded with BXR's logo, giving women an entry point into the BXR world, grounded in real audience interest, without diluting the brand's core identity.",
   },
   {
     slug: "meridian-architects",

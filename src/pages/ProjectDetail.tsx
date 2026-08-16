@@ -12,7 +12,7 @@ import emberHero from "@/assets/projects/ember-hero.jpg";
 import stillwaterHero from "@/assets/projects/stillwater-hero.jpg";
 
 const projectImages: Record<string, string[]> = {
-  "northlight-studio": [northlightHero, meridianHero, emberHero],
+  "born-x-raised": [northlightHero, meridianHero, emberHero],
   "meridian-architects": [meridianHero, stillwaterHero, northlightHero],
   "ember-and-co": [emberHero, northlightHero, stillwaterHero],
   "stillwater-journal": [stillwaterHero, emberHero, meridianHero],
