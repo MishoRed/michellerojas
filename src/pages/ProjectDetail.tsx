@@ -11,6 +11,7 @@ import meridianHero from "@/assets/projects/meridian-hero.jpg";
 import emberHero from "@/assets/projects/ember-hero.jpg";
 import stillwaterHero from "@/assets/projects/stillwater-hero.jpg";
 import bornXRaisedHero from "@/assets/gallery/gallery-1.jpg";
+import pccCommunityMarketsHero from "@/assets/gallery/gallery-2.jpg";
 import bornXRaised1 from "@/assets/projects/born-x-raised-1.webp";
 import bornXRaised2 from "@/assets/projects/born-x-raised-2.webp";
 import bornXRaised3 from "@/assets/projects/born-x-raised-3.webp";
@@ -22,7 +23,7 @@ import pccCommunityMarkets4 from "@/assets/projects/pcc-community-markets-4.png"
 
 const projectImages: Record<string, string[]> = {
   "born-x-raised": [bornXRaisedHero, bornXRaised1, bornXRaised2, bornXRaised3, bornXRaised4],
-  "pcc-community-markets": [meridianHero, pccCommunityMarkets1, pccCommunityMarkets2, pccCommunityMarkets3, pccCommunityMarkets4],
+  "pcc-community-markets": [pccCommunityMarketsHero, pccCommunityMarkets1, pccCommunityMarkets2, pccCommunityMarkets3, pccCommunityMarkets4],
   "ember-and-co": [emberHero, northlightHero, stillwaterHero],
   "stillwater-journal": [stillwaterHero, emberHero, meridianHero],
 };
