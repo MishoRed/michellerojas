@@ -135,7 +135,7 @@ export default function ProjectDetail() {
             <ScrollReveal>
               <button
                 onClick={() => openLightbox(0)}
-                className="block w-full text-left aspect-[16/10] overflow-hidden cursor-pointer group"
+                className={`block w-full text-left overflow-hidden cursor-pointer group ${slug === "born-x-raised" ? "aspect-[4/3]" : "aspect-[16/10]"}`}
                 aria-label={`Open ${project.title} gallery image 1 in lightbox`}
               >
                 <img
@@ -180,7 +180,7 @@ export default function ProjectDetail() {
             <ScrollReveal>
               <button
                 onClick={() => openLightbox(detailImages[3] ? 3 : 0)}
-                className="block w-full text-left aspect-[21/9] overflow-hidden cursor-pointer group"
+                className={`block w-full text-left overflow-hidden cursor-pointer group ${slug === "born-x-raised" ? "aspect-[4/3]" : "aspect-[21/9]"}`}
                 aria-label={`Open ${project.title} gallery image 4 in lightbox`}
               >
                 <img
