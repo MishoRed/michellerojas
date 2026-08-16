@@ -27,5 +27,22 @@
   <body>
     <div id="root"></div>
     <script type="module" src="/src/main.tsx"></script>
+
+    <!--
+      Static form for Netlify's build-time form detection. Netlify parses
+      the built HTML for forms, so a form only rendered by React JS is
+      invisible to it — this hidden duplicate has the same name and fields
+      as the real form in src/pages/Contact.tsx.
+    -->
+    <form name="contact" data-netlify="true" data-netlify-honeypot="bot-field" hidden>
+      <input type="text" name="name" />
+      <input type="email" name="email" />
+      <input type="text" name="company" />
+      <input type="text" name="projectType" />
+      <input type="text" name="budget" />
+      <textarea name="message"></textarea>
+      <input type="text" name="referral" />
+      <input type="text" name="bot-field" />
+    </form>
   </body>
 </html>

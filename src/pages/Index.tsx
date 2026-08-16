@@ -12,7 +12,7 @@ import northlightHero from "@/assets/projects/northlight-hero.jpg";
 import meridianHero from "@/assets/projects/meridian-hero.jpg";
 import emberHero from "@/assets/projects/ember-hero.jpg";
 import stillwaterHero from "@/assets/projects/stillwater-hero.jpg";
-import portraitMainAsset from "@/assets/portrait-main.jpg.asset.json";
+import portraitMain from "@/assets/portrait-main.jpg";
 
 const projectImages: Record<string, string> = {
   "northlight-studio": northlightHero,
@@ -75,7 +75,7 @@ export default function Index() {
               <ScrollReveal delay={200}>
                 <div className="aspect-[4/5] bg-cream-darker overflow-hidden">
                   <img
-                    src={portraitMainAsset.url}
+                    src={portraitMain}
                     alt="Michelle Rojas - Designer"
                     className="w-full h-full object-cover"
                   />
@@ -166,7 +166,7 @@ export default function Index() {
               <ScrollReveal delay={200}>
                 <div className="aspect-[4/5] bg-cream-darker overflow-hidden">
                   <img
-                    src={portraitMainAsset.url}
+                    src={portraitMain}
                     alt="Michelle Rojas portrait"
                     className="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700"
                   />
