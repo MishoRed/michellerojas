@@ -135,13 +135,13 @@ export default function ProjectDetail() {
             <ScrollReveal>
               <button
                 onClick={() => openLightbox(0)}
-                className={`block w-full text-left overflow-hidden cursor-pointer group ${slug === "born-x-raised" ? "aspect-[4/3]" : "aspect-[16/10]"}`}
+                className={`block w-full text-left overflow-hidden cursor-pointer group ${slug === "born-x-raised" ? "aspect-[3/4]" : "aspect-[16/10]"}`}
                 aria-label={`Open ${project.title} gallery image 1 in lightbox`}
               >
                 <img
                   src={detailImages[0]}
                   alt={`${project.title} detail`}
-                  className={`w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-[1.02] ${slug === "born-x-raised" ? "object-top" : ""}`}
+                  className="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-[1.02]"
                 />
               </button>
             </ScrollReveal>
@@ -180,13 +180,13 @@ export default function ProjectDetail() {
             <ScrollReveal>
               <button
                 onClick={() => openLightbox(detailImages[3] ? 3 : 0)}
-                className={`block w-full text-left overflow-hidden cursor-pointer group ${slug === "born-x-raised" ? "aspect-[4/3]" : "aspect-[21/9]"}`}
+                className={`block w-full text-left overflow-hidden cursor-pointer group ${slug === "born-x-raised" ? "aspect-[3/4]" : "aspect-[21/9]"}`}
                 aria-label={`Open ${project.title} gallery image 4 in lightbox`}
               >
                 <img
                   src={detailImages[3] ?? detailImages[0]}
                   alt={`${project.title} detail`}
-                  className={`w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-[1.02] ${slug === "born-x-raised" ? "object-top" : ""}`}
+                  className="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-[1.02]"
                 />
               </button>
             </ScrollReveal>
