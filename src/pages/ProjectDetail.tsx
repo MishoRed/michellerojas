@@ -92,6 +92,19 @@ export default function ProjectDetail() {
                     <p className="eyebrow mb-2">The Solution</p>
                     <p className="text-ink-light">{project.solution}</p>
                   </div>
+                  {slug === "born-x-raised" && (
+                    <div>
+                      <a
+                        href="https://www.canva.com/design/DAHJ5gMA0lk/a5DuQfpCOFlv20KA4bkbYQ/view"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="arrow-link text-ink"
+                      >
+                        VIEW PRESENTATION
+                        <ArrowRight size={18} strokeWidth={1.5} />
+                      </a>
+                    </div>
+                  )}
                 </div>
               </ScrollReveal>
             </div>
