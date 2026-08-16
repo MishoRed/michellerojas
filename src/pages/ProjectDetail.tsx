@@ -11,9 +11,13 @@ import meridianHero from "@/assets/projects/meridian-hero.jpg";
 import emberHero from "@/assets/projects/ember-hero.jpg";
 import stillwaterHero from "@/assets/projects/stillwater-hero.jpg";
 import bornXRaisedHero from "@/assets/gallery/gallery-1.jpg";
+import bornXRaised1 from "@/assets/projects/born-x-raised-1.webp";
+import bornXRaised2 from "@/assets/projects/born-x-raised-2.webp";
+import bornXRaised3 from "@/assets/projects/born-x-raised-3.webp";
+import bornXRaised4 from "@/assets/projects/born-x-raised-4.webp";
 
 const projectImages: Record<string, string[]> = {
-  "born-x-raised": [bornXRaisedHero, meridianHero, emberHero],
+  "born-x-raised": [bornXRaisedHero, bornXRaised1, bornXRaised2, bornXRaised3, bornXRaised4],
   "meridian-architects": [meridianHero, stillwaterHero, northlightHero],
   "ember-and-co": [emberHero, northlightHero, stillwaterHero],
   "stillwater-journal": [stillwaterHero, emberHero, meridianHero],
@@ -38,6 +42,9 @@ export default function ProjectDetail() {
 
   const nextProject = projects[(projectIndex + 1) % projects.length];
   const images = projectImages[slug!] || [northlightHero];
+  // Projects with a dedicated hero image supply more than 3 images; the
+  // gallery below uses the remaining ones instead of doubling up the hero.
+  const detailImages = images.length > 3 ? images.slice(1) : images;
 
   return (
     <Layout>
@@ -132,7 +139,7 @@ export default function ProjectDetail() {
                 aria-label={`Open ${project.title} gallery image 1 in lightbox`}
               >
                 <img
-                  src={images[0]}
+                  src={detailImages[0]}
                   alt={`${project.title} detail`}
                   className="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-[1.02]"
                 />
@@ -148,7 +155,7 @@ export default function ProjectDetail() {
                   aria-label={`Open ${project.title} gallery image 2 in lightbox`}
                 >
                   <img
-                    src={images[1]}
+                    src={detailImages[1]}
                     alt={`${project.title} detail`}
                     className="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-[1.02]"
                   />
@@ -161,7 +168,7 @@ export default function ProjectDetail() {
                   aria-label={`Open ${project.title} gallery image 3 in lightbox`}
                 >
                   <img
-                    src={images[2]}
+                    src={detailImages[2]}
                     alt={`${project.title} detail`}
                     className="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-[1.02]"
                   />
@@ -172,12 +179,12 @@ export default function ProjectDetail() {
             {/* Full Width Image */}
             <ScrollReveal>
               <button
-                onClick={() => openLightbox(0)}
+                onClick={() => openLightbox(detailImages[3] ? 3 : 0)}
                 className="block w-full text-left aspect-[21/9] overflow-hidden cursor-pointer group"
                 aria-label={`Open ${project.title} gallery image 4 in lightbox`}
               >
                 <img
-                  src={images[0]}
+                  src={detailImages[3] ?? detailImages[0]}
                   alt={`${project.title} detail`}
                   className="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-[1.02]"
                 />
@@ -188,7 +195,7 @@ export default function ProjectDetail() {
       </section>
 
       <Lightbox
-        images={images}
+        images={detailImages}
         currentIndex={lightboxIndex}
         isOpen={lightboxOpen}
         onClose={() => setLightboxOpen(false)}
