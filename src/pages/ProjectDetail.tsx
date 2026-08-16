@@ -18,7 +18,7 @@ import bornXRaised4 from "@/assets/projects/born-x-raised-4.webp";
 
 const projectImages: Record<string, string[]> = {
   "born-x-raised": [bornXRaisedHero, bornXRaised1, bornXRaised2, bornXRaised3, bornXRaised4],
-  "meridian-architects": [meridianHero, stillwaterHero, northlightHero],
+  "pcc-community-markets": [meridianHero, stillwaterHero, northlightHero],
   "ember-and-co": [emberHero, northlightHero, stillwaterHero],
   "stillwater-journal": [stillwaterHero, emberHero, meridianHero],
 };
@@ -92,10 +92,10 @@ export default function ProjectDetail() {
                     <p className="eyebrow mb-2">The Solution</p>
                     <p className="text-ink-light">{project.solution}</p>
                   </div>
-                  {slug === "born-x-raised" && (
+                  {project.presentationUrl && (
                     <div>
                       <a
-                        href="https://www.canva.com/design/DAHJ5gMA0lk/a5DuQfpCOFlv20KA4bkbYQ/view"
+                        href={project.presentationUrl}
                         target="_blank"
                         rel="noopener noreferrer"
                         className="arrow-link text-ink"

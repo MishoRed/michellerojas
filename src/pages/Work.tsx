@@ -10,7 +10,7 @@ import stillwaterHero from "@/assets/projects/stillwater-hero.jpg";
 
 const projectImages: Record<string, string> = {
   "born-x-raised": northlightHero,
-  "meridian-architects": meridianHero,
+  "pcc-community-markets": meridianHero,
   "ember-and-co": emberHero,
   "stillwater-journal": stillwaterHero,
 };
