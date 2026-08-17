@@ -20,12 +20,23 @@ import pccCommunityMarkets1 from "@/assets/projects/pcc-community-markets-1.png"
 import pccCommunityMarkets2 from "@/assets/projects/pcc-community-markets-2.png";
 import pccCommunityMarkets3 from "@/assets/projects/pcc-community-markets-3.png";
 import pccCommunityMarkets4 from "@/assets/projects/pcc-community-markets-4.png";
+import eveHero from "@/assets/projects/eve-hero.png";
+import eveLowFidelityFlow from "@/assets/projects/eve-low-fidelity-flow.png";
+import eveLowFidelityFlowPicture from "@/assets/projects/eve-low-fidelity-flow-picture.png";
+import eveHiFidelityFlowPicture from "@/assets/projects/eve-hi-fidelity-flow-picture.png";
+import eveHiFidelityFlow from "@/assets/projects/eve-hi-fidelity-flow.png";
+import eveUwScreenSummit from "@/assets/projects/eve-uw-screen-summit-2026.png";
 
 const projectImages: Record<string, string[]> = {
   "born-x-raised": [bornXRaisedHero, bornXRaised1, bornXRaised2, bornXRaised3, bornXRaised4],
   "pcc-community-markets": [pccCommunityMarketsHero, pccCommunityMarkets1, pccCommunityMarkets2, pccCommunityMarkets3, pccCommunityMarkets4],
-  "eve": [emberHero, northlightHero, stillwaterHero],
+  "eve": [eveHero, eveLowFidelityFlow, eveLowFidelityFlowPicture, eveHiFidelityFlowPicture, eveHiFidelityFlow],
   "stillwater-journal": [stillwaterHero, emberHero, meridianHero],
+};
+
+// Extra small image shown below the gallery on select project pages.
+const bonusImages: Record<string, string> = {
+  "eve": eveUwScreenSummit,
 };
 
 export default function ProjectDetail() {
@@ -61,7 +72,7 @@ export default function ProjectDetail() {
               <img
                 src={images[0]}
                 alt={project.title}
-                className="w-full h-full object-cover"
+                className={`w-full h-full object-cover ${slug === "eve" ? "object-left" : ""}`}
               />
             </div>
           </ScrollReveal>
@@ -214,6 +225,18 @@ export default function ProjectDetail() {
                 />
               </button>
             </ScrollReveal>
+
+            {bonusImages[slug!] && (
+              <ScrollReveal>
+                <div className="max-w-sm">
+                  <img
+                    src={bonusImages[slug!]}
+                    alt={`${project.title} award`}
+                    className="w-full h-auto"
+                  />
+                </div>
+              </ScrollReveal>
+            )}
           </div>
         </div>
       </section>
