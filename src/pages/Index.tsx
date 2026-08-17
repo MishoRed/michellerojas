@@ -8,17 +8,17 @@ import { HorizontalScrollGallery } from "@/components/shared/HorizontalScrollGal
 import { Button } from "@/components/ui/button";
 import { projects } from "@/data/projects";
 
-import stillwaterHero from "@/assets/projects/stillwater-hero.jpg";
 import portraitMain from "@/assets/portrait-main.jpg";
 import bornXRaisedHero from "@/assets/gallery/gallery-1.jpg";
 import pccCommunityMarketsHero from "@/assets/gallery/gallery-2.jpg";
 import eveHero from "@/assets/projects/eve-hero.png";
+import paneraBreadHero from "@/assets/projects/panera-bread-hero.png";
 
 const projectImages: Record<string, string> = {
   "born-x-raised": bornXRaisedHero,
   "pcc-community-markets": pccCommunityMarketsHero,
   "eve": eveHero,
-  "panera-bread": stillwaterHero,
+  "panera-bread": paneraBreadHero,
 };
 
 const services = [

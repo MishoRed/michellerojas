@@ -5,7 +5,6 @@ import { projects } from '@/data/projects';
 // Import gallery images
 import gallery1 from '@/assets/gallery/gallery-1.jpg';
 import gallery2 from '@/assets/gallery/gallery-2.jpg';
-import gallery4 from '@/assets/gallery/gallery-4.jpg';
 import gallery5 from '@/assets/gallery/gallery-5.jpg';
 import gallery6 from '@/assets/gallery/gallery-6.jpg';
 import gallery7 from '@/assets/gallery/gallery-7.jpg';
@@ -27,6 +26,7 @@ import gallery22 from '@/assets/gallery/gallery-22.jpg';
 import gallery23 from '@/assets/gallery/gallery-23.jpg';
 import gallery24 from '@/assets/gallery/gallery-24.jpg';
 import eveHero from '@/assets/projects/eve-hero.png';
+import paneraBreadHero from '@/assets/projects/panera-bread-hero.png';
 
 type ImageSize = 'large' | 'medium' | 'small';
 type ImageOrientation = 'portrait' | 'landscape';
@@ -46,7 +46,7 @@ const galleryImages: GalleryImage[] = [
   { src: gallery1, alt: 'Born x Raised mural portrait', size: 'large', orientation: 'landscape', verticalOffset: 'center', projectSlug: 'born-x-raised' },
   { src: gallery2, alt: 'PCC Community Markets Burien storefront', size: 'medium', orientation: 'landscape', verticalOffset: 'top', projectSlug: 'pcc-community-markets' },
   { src: eveHero, alt: 'Eve AI skincare app', size: 'small', orientation: 'portrait', verticalOffset: 'bottom', projectSlug: 'eve', objectPosition: 'left' },
-  { src: gallery4, alt: 'Stillwater Journal stationery suite', size: 'large', orientation: 'landscape', verticalOffset: 'center', projectSlug: 'panera-bread' },
+  { src: paneraBreadHero, alt: 'Panera Bread multicultural marketing', size: 'large', orientation: 'landscape', verticalOffset: 'center', projectSlug: 'panera-bread' },
   { src: gallery5, alt: 'Aura Wellness digital interface', size: 'medium', orientation: 'portrait', verticalOffset: 'top', projectSlug: 'aura-wellness' },
   { src: gallery6, alt: 'Forge Collective packaging detail', size: 'small', orientation: 'landscape', verticalOffset: 'center', projectSlug: 'forge-collective' },
   { src: gallery7, alt: 'Halcyon Press brand guidelines', size: 'large', orientation: 'portrait', verticalOffset: 'bottom', projectSlug: 'halcyon-press' },
