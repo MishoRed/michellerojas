@@ -39,12 +39,13 @@ interface GalleryImage {
   verticalOffset: 'top' | 'center' | 'bottom';
   projectSlug: string;
   fit?: 'cover' | 'contain';
+  objectPosition?: string;
 }
 
 const galleryImages: GalleryImage[] = [
   { src: gallery1, alt: 'Born x Raised mural portrait', size: 'large', orientation: 'landscape', verticalOffset: 'center', projectSlug: 'born-x-raised' },
   { src: gallery2, alt: 'PCC Community Markets Burien storefront', size: 'medium', orientation: 'landscape', verticalOffset: 'top', projectSlug: 'pcc-community-markets' },
-  { src: eveHero, alt: 'Eve AI skincare app', size: 'small', orientation: 'portrait', verticalOffset: 'bottom', projectSlug: 'eve', fit: 'contain' },
+  { src: eveHero, alt: 'Eve AI skincare app', size: 'small', orientation: 'portrait', verticalOffset: 'bottom', projectSlug: 'eve', objectPosition: 'left' },
   { src: gallery4, alt: 'Stillwater Journal stationery suite', size: 'large', orientation: 'landscape', verticalOffset: 'center', projectSlug: 'stillwater-journal' },
   { src: gallery5, alt: 'Aura Wellness digital interface', size: 'medium', orientation: 'portrait', verticalOffset: 'top', projectSlug: 'aura-wellness' },
   { src: gallery6, alt: 'Forge Collective packaging detail', size: 'small', orientation: 'landscape', verticalOffset: 'center', projectSlug: 'forge-collective' },
@@ -232,6 +233,7 @@ export const HorizontalScrollGallery = () => {
                     alt={image.alt}
                     loading={index < 8 ? 'eager' : 'lazy'}
                     className={`w-full h-full ${image.fit === 'contain' ? 'object-contain bg-cream-darker' : 'object-cover'}`}
+                    style={image.objectPosition ? { objectPosition: image.objectPosition } : undefined}
                     draggable={false}
                   />
                 </div>
