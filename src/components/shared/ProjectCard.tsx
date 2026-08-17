@@ -11,6 +11,7 @@ interface ProjectCardProps {
   className?: string;
   aspectRatio?: "landscape" | "portrait";
   objectPosition?: string;
+  objectFit?: "cover" | "contain";
 }
 
 export function ProjectCard({
@@ -22,6 +23,7 @@ export function ProjectCard({
   className,
   aspectRatio = "landscape",
   objectPosition = "center",
+  objectFit = "cover",
 }: ProjectCardProps) {
   return (
     <Link
@@ -38,7 +40,10 @@ export function ProjectCard({
         <img
           src={image}
           alt={title}
-          className="project-card-image w-full h-full object-cover"
+          className={cn(
+            "project-card-image w-full h-full",
+            objectFit === "contain" ? "object-contain" : "object-cover"
+          )}
           style={{ objectPosition }}
         />
         {/* Hover Overlay */}
