@@ -27,6 +27,7 @@ import gallery21 from '@/assets/gallery/gallery-21.jpg';
 import gallery22 from '@/assets/gallery/gallery-22.jpg';
 import gallery23 from '@/assets/gallery/gallery-23.jpg';
 import gallery24 from '@/assets/gallery/gallery-24.jpg';
+import eveHero from '@/assets/projects/eve-hero.png';
 
 type ImageSize = 'large' | 'medium' | 'small';
 type ImageOrientation = 'portrait' | 'landscape';
@@ -38,6 +39,7 @@ interface GalleryImage {
   orientation: ImageOrientation;
   verticalOffset: 'top' | 'center' | 'bottom';
   projectSlug: string;
+  fit?: 'cover' | 'contain';
 }
 
 const galleryImages: GalleryImage[] = [
@@ -65,6 +67,7 @@ const galleryImages: GalleryImage[] = [
   { src: gallery22, alt: 'Ember & Co print collateral', size: 'large', orientation: 'landscape', verticalOffset: 'center', projectSlug: 'eve' },
   { src: gallery23, alt: 'Stillwater Journal typography specimen', size: 'medium', orientation: 'portrait', verticalOffset: 'bottom', projectSlug: 'stillwater-journal' },
   { src: gallery24, alt: 'Drift Studio brand elements', size: 'small', orientation: 'landscape', verticalOffset: 'top', projectSlug: 'drift-studio' },
+  { src: eveHero, alt: 'Eve AI skincare app', size: 'large', orientation: 'landscape', verticalOffset: 'center', projectSlug: 'eve', fit: 'contain' },
 ];
 
 const getImageDimensions = (size: ImageSize, orientation: ImageOrientation): { width: number; height: number } => {
@@ -149,7 +152,7 @@ export const HorizontalScrollGallery = () => {
         // More height = slower horizontal scroll
         height: `${Math.max(300, horizontalScrollAmount * 0.6 + window.innerHeight)}px`
       }}
-      aria-label="Image gallery, 24 items"
+      aria-label="Image gallery, 25 items"
       role="region"
     >
       {/* Skip link */}
@@ -230,7 +233,7 @@ export const HorizontalScrollGallery = () => {
                     src={image.src}
                     alt={image.alt}
                     loading={index < 8 ? 'eager' : 'lazy'}
-                    className="w-full h-full object-cover"
+                    className={`w-full h-full ${image.fit === 'contain' ? 'object-contain bg-cream-darker' : 'object-cover'}`}
                     draggable={false}
                   />
                 </div>

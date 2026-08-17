@@ -47,6 +47,7 @@ export default function Work() {
                   year={project.year}
                   image={projectImages[project.slug]}
                   aspectRatio={index % 2 === 0 ? "landscape" : "portrait"}
+                  objectFit={project.slug === "eve" || project.slug === "pcc-community-markets" ? "contain" : "cover"}
                 />
               </ScrollReveal>
             ))}

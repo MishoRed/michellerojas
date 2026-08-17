@@ -118,6 +118,7 @@ export default function Index() {
                   year={project.year}
                   image={projectImages[project.slug]}
                   aspectRatio={index % 3 === 0 ? "portrait" : "landscape"}
+                  objectFit={project.slug === "eve" ? "contain" : "cover"}
                 />
               </ScrollReveal>
             ))}
