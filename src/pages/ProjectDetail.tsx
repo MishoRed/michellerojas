@@ -7,9 +7,6 @@ import { Lightbox } from "@/components/shared/Lightbox";
 import { projects } from "@/data/projects";
 
 import northlightHero from "@/assets/projects/northlight-hero.jpg";
-import meridianHero from "@/assets/projects/meridian-hero.jpg";
-import emberHero from "@/assets/projects/ember-hero.jpg";
-import stillwaterHero from "@/assets/projects/stillwater-hero.jpg";
 import bornXRaisedHero from "@/assets/gallery/gallery-1.jpg";
 import pccCommunityMarketsHero from "@/assets/gallery/gallery-2.jpg";
 import bornXRaised1 from "@/assets/projects/born-x-raised-1.webp";
@@ -25,12 +22,17 @@ import eveLowFidelityFlow from "@/assets/projects/eve-low-fidelity-flow.png";
 import eveLowFidelityFlowPicture from "@/assets/projects/eve-low-fidelity-flow-picture.png";
 import eveHiFidelityFlowPicture from "@/assets/projects/eve-hi-fidelity-flow-picture.png";
 import eveHiFidelityFlow from "@/assets/projects/eve-hi-fidelity-flow.png";
+import paneraBreadHero from "@/assets/projects/panera-bread-hero.png";
+import paneraBread1 from "@/assets/projects/panera-bread-1.png";
+import paneraBread2 from "@/assets/projects/panera-bread-2.png";
+import paneraBread3 from "@/assets/projects/panera-bread-3.png";
+import paneraBread4 from "@/assets/projects/panera-bread-4.png";
 
 const projectImages: Record<string, string[]> = {
   "born-x-raised": [bornXRaisedHero, bornXRaised1, bornXRaised2, bornXRaised3, bornXRaised4],
   "pcc-community-markets": [pccCommunityMarketsHero, pccCommunityMarkets1, pccCommunityMarkets2, pccCommunityMarkets3, pccCommunityMarkets4],
   "eve": [eveHero, eveLowFidelityFlow, eveLowFidelityFlowPicture, eveHiFidelityFlowPicture, eveHiFidelityFlow],
-  "panera-bread": [stillwaterHero, emberHero, meridianHero],
+  "panera-bread": [paneraBreadHero, paneraBread1, paneraBread2, paneraBread3, paneraBread4],
 };
 
 export default function ProjectDetail() {
@@ -186,7 +188,7 @@ export default function ProjectDetail() {
                   <img
                     src={detailImages[1]}
                     alt={`${project.title} detail`}
-                    className="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-[1.02]"
+                    className={`w-full h-full transition-transform duration-700 ease-out group-hover:scale-[1.02] ${slug === "panera-bread" ? "object-contain bg-cream-darker" : "object-cover"}`}
                   />
                 </button>
               </ScrollReveal>
@@ -199,7 +201,7 @@ export default function ProjectDetail() {
                   <img
                     src={detailImages[2]}
                     alt={`${project.title} detail`}
-                    className="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-[1.02]"
+                    className={`w-full h-full transition-transform duration-700 ease-out group-hover:scale-[1.02] ${slug === "panera-bread" ? "object-contain bg-cream-darker" : "object-cover"}`}
                   />
                 </button>
               </ScrollReveal>
