@@ -20,11 +20,16 @@ import pccCommunityMarkets1 from "@/assets/projects/pcc-community-markets-1.png"
 import pccCommunityMarkets2 from "@/assets/projects/pcc-community-markets-2.png";
 import pccCommunityMarkets3 from "@/assets/projects/pcc-community-markets-3.png";
 import pccCommunityMarkets4 from "@/assets/projects/pcc-community-markets-4.png";
+import eveHero from "@/assets/projects/eve-hero.png";
+import eveLowFidelityFlow from "@/assets/projects/eve-low-fidelity-flow.png";
+import eveLowFidelityFlowPicture from "@/assets/projects/eve-low-fidelity-flow-picture.png";
+import eveHiFidelityFlowPicture from "@/assets/projects/eve-hi-fidelity-flow-picture.png";
+import eveHiFidelityFlow from "@/assets/projects/eve-hi-fidelity-flow.png";
 
 const projectImages: Record<string, string[]> = {
   "born-x-raised": [bornXRaisedHero, bornXRaised1, bornXRaised2, bornXRaised3, bornXRaised4],
   "pcc-community-markets": [pccCommunityMarketsHero, pccCommunityMarkets1, pccCommunityMarkets2, pccCommunityMarkets3, pccCommunityMarkets4],
-  "ember-and-co": [emberHero, northlightHero, stillwaterHero],
+  "eve": [eveHero, eveLowFidelityFlow, eveLowFidelityFlowPicture, eveHiFidelityFlowPicture, eveHiFidelityFlow],
   "stillwater-journal": [stillwaterHero, emberHero, meridianHero],
 };
 
@@ -61,7 +66,7 @@ export default function ProjectDetail() {
               <img
                 src={images[0]}
                 alt={project.title}
-                className="w-full h-full object-cover"
+                className={`w-full h-full object-cover ${slug === "eve" ? "object-left" : ""}`}
               />
             </div>
           </ScrollReveal>
@@ -138,6 +143,12 @@ export default function ProjectDetail() {
                     <p className="eyebrow mb-2">Year</p>
                     <p className="text-ink">{project.year}</p>
                   </div>
+                  {project.award && (
+                    <div>
+                      <p className="eyebrow mb-2">Award Winning</p>
+                      <p className="text-ink">{project.award}</p>
+                    </div>
+                  )}
                 </div>
               </ScrollReveal>
             </div>

@@ -17,7 +17,7 @@ import portraitMain from "@/assets/portrait-main.jpg";
 const projectImages: Record<string, string> = {
   "born-x-raised": northlightHero,
   "pcc-community-markets": meridianHero,
-  "ember-and-co": emberHero,
+  "eve": emberHero,
   "stillwater-journal": stillwaterHero,
 };
 

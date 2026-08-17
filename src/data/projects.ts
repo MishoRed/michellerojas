@@ -10,6 +10,7 @@ export interface Project {
   challenge: string;
   solution: string;
   presentationUrl?: string;
+  award?: string;
 }
 
 export const projects: Project[] = [
@@ -40,16 +41,18 @@ export const projects: Project[] = [
     presentationUrl: "https://www.canva.com/design/DAHLRcL0UBM/KdmD6N1dqDVdTK9WCxn_lQ/view#1",
   },
   {
-    slug: "ember-and-co",
-    title: "PCC COMMUNITY MARKETS",
-    category: "Brand Refresh",
-    year: "2023",
-    client: "Ember & Co",
-    industry: "Beauty & Wellness",
-    services: ["Brand Strategy", "Packaging Design", "Art Direction"],
-    overview: "A refined brand refresh for a luxury skincare line focused on natural, science-backed formulations. The new identity elevates the brand while honoring its commitment to simplicity and efficacy.",
-    challenge: "Ember had outgrown their original identity but needed to maintain recognition among their loyal customer base. The refresh needed to feel evolutionary rather than revolutionary.",
-    solution: "We refined and elevated every touchpoint, introducing warmer tones and premium materials while maintaining the brand's essential character. The result is sophisticated yet approachable.",
+    slug: "eve",
+    title: "Eve",
+    category: "AI UX",
+    year: "2026",
+    client: "Eve",
+    industry: "Skincare",
+    services: ["AI UX Presentation"],
+    overview: "Eve is a skincare app designed to support long-term routine consistency by helping users make confident, informed, and low-stress skincare decisions over time. Its core audience spans individuals ages 18 to 55 across all genders who want to build and maintain a comprehensive skincare routine tailored to their unique needs.",
+    challenge: "Users need a simple way to track and evaluate their routines so they can understand which products and practices are actually improving their skin versus which aren't delivering results. Because skincare is closely tied to confidence and self-image, routines that become overwhelming or fail to show progress can leave users feeling frustrated, discouraged, and unsure of what to do next.",
+    solution: "Eve addresses this by making skincare management structured, personalized, and easy to maintain through intuitive tools for tracking products, skin concerns, and routine frequency. By simplifying how users track, evaluate, and adapt their routines, Eve helps them feel more confident, informed, and in control of their long-term skincare journey.",
+    presentationUrl: "https://www.figma.com/deck/yg3Uxg6IyKZvkRleM3wrKs/EVE---Presentation?node-id=10-19&t=zx8y2O25ZjshdZEi-1",
+    award: "UW Screen Summit 2026",
   },
   {
     slug: "stillwater-journal",
