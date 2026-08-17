@@ -228,7 +228,7 @@ export default function ProjectDetail() {
 
             {bonusImages[slug!] && (
               <ScrollReveal>
-                <div className="max-w-sm">
+                <div className="max-w-[240px] mx-auto">
                   <img
                     src={bonusImages[slug!]}
                     alt={`${project.title} award`}
