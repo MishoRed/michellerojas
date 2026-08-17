@@ -8,16 +8,16 @@ import { HorizontalScrollGallery } from "@/components/shared/HorizontalScrollGal
 import { Button } from "@/components/ui/button";
 import { projects } from "@/data/projects";
 
-import northlightHero from "@/assets/projects/northlight-hero.jpg";
-import meridianHero from "@/assets/projects/meridian-hero.jpg";
-import emberHero from "@/assets/projects/ember-hero.jpg";
 import stillwaterHero from "@/assets/projects/stillwater-hero.jpg";
 import portraitMain from "@/assets/portrait-main.jpg";
+import bornXRaisedHero from "@/assets/gallery/gallery-1.jpg";
+import pccCommunityMarketsHero from "@/assets/gallery/gallery-2.jpg";
+import eveHero from "@/assets/projects/eve-hero.png";
 
 const projectImages: Record<string, string> = {
-  "born-x-raised": northlightHero,
-  "pcc-community-markets": meridianHero,
-  "eve": emberHero,
+  "born-x-raised": bornXRaisedHero,
+  "pcc-community-markets": pccCommunityMarketsHero,
+  "eve": eveHero,
   "stillwater-journal": stillwaterHero,
 };
 
@@ -118,6 +118,7 @@ export default function Index() {
                   year={project.year}
                   image={projectImages[project.slug]}
                   aspectRatio={index % 3 === 0 ? "portrait" : "landscape"}
+                  objectPosition={project.slug === "eve" ? "left" : "center"}
                 />
               </ScrollReveal>
             ))}
