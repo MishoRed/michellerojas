@@ -24,7 +24,7 @@ import pccCommunityMarkets4 from "@/assets/projects/pcc-community-markets-4.png"
 const projectImages: Record<string, string[]> = {
   "born-x-raised": [bornXRaisedHero, bornXRaised1, bornXRaised2, bornXRaised3, bornXRaised4],
   "pcc-community-markets": [pccCommunityMarketsHero, pccCommunityMarkets1, pccCommunityMarkets2, pccCommunityMarkets3, pccCommunityMarkets4],
-  "ember-and-co": [emberHero, northlightHero, stillwaterHero],
+  "eve": [emberHero, northlightHero, stillwaterHero],
   "stillwater-journal": [stillwaterHero, emberHero, meridianHero],
 };
 
@@ -138,6 +138,12 @@ export default function ProjectDetail() {
                     <p className="eyebrow mb-2">Year</p>
                     <p className="text-ink">{project.year}</p>
                   </div>
+                  {project.award && (
+                    <div>
+                      <p className="eyebrow mb-2">Award Winning</p>
+                      <p className="text-ink">{project.award}</p>
+                    </div>
+                  )}
                 </div>
               </ScrollReveal>
             </div>
