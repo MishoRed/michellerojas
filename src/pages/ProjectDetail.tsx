@@ -30,7 +30,7 @@ const projectImages: Record<string, string[]> = {
   "born-x-raised": [bornXRaisedHero, bornXRaised1, bornXRaised2, bornXRaised3, bornXRaised4],
   "pcc-community-markets": [pccCommunityMarketsHero, pccCommunityMarkets1, pccCommunityMarkets2, pccCommunityMarkets3, pccCommunityMarkets4],
   "eve": [eveHero, eveLowFidelityFlow, eveLowFidelityFlowPicture, eveHiFidelityFlowPicture, eveHiFidelityFlow],
-  "stillwater-journal": [stillwaterHero, emberHero, meridianHero],
+  "panera-bread": [stillwaterHero, emberHero, meridianHero],
 };
 
 export default function ProjectDetail() {

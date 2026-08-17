@@ -18,7 +18,7 @@ const projectImages: Record<string, string> = {
   "born-x-raised": bornXRaisedHero,
   "pcc-community-markets": pccCommunityMarketsHero,
   "eve": eveHero,
-  "stillwater-journal": stillwaterHero,
+  "panera-bread": stillwaterHero,
 };
 
 const services = [
