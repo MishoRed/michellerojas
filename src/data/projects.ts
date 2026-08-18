@@ -81,7 +81,7 @@ export const projects: Project[] = [
     presentationUrl: "https://www.canva.com/design/DAGvWtHQwCs/pUyYv6ifTTxY5aOHHVBmNA/view#25",
   },
   {
-    slug: "forge-collective",
+    slug: "soundcloud",
     title: "Soundcloud",
     category: "Audio Storytelling",
     year: "2025",

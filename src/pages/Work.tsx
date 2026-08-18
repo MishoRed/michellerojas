@@ -16,7 +16,7 @@ const projectImages: Record<string, string> = {
   "eve": eveHero,
   "panera-bread": paneraBreadHero,
   "meta": metaHero,
-  "forge-collective": soundcloudHero,
+  "soundcloud": soundcloudHero,
 };
 
 export default function Work() {
@@ -52,8 +52,8 @@ export default function Work() {
                   image={projectImages[project.slug]}
                   aspectRatio={index % 2 === 0 ? "landscape" : "portrait"}
                   objectPosition={project.slug === "eve" || project.slug === "pcc-community-markets" ? "left" : "center"}
-                  objectFit={project.slug === "meta" || project.slug === "forge-collective" ? "contain" : "cover"}
-                  customAspectRatio={project.slug === "meta" || project.slug === "forge-collective" ? "4 / 3" : undefined}
+                  objectFit={project.slug === "meta" || project.slug === "soundcloud" ? "contain" : "cover"}
+                  customAspectRatio={project.slug === "meta" || project.slug === "soundcloud" ? "4 / 3" : undefined}
                 />
               </ScrollReveal>
             ))}
