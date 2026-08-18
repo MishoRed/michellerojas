@@ -9,6 +9,7 @@ import eveHero from "@/assets/projects/eve-hero.png";
 import paneraBreadHero from "@/assets/projects/panera-bread-hero.png";
 import metaHero from "@/assets/projects/meta-hero.jpeg";
 import soundcloudHero from "@/assets/projects/soundcloud-hero.png";
+import kekePalmerHero from "@/assets/projects/keke-palmer-hero.jpg";
 
 const projectImages: Record<string, string> = {
   "born-x-raised": bornXRaisedHero,
@@ -17,7 +18,10 @@ const projectImages: Record<string, string> = {
   "panera-bread": paneraBreadHero,
   "meta": metaHero,
   "soundcloud": soundcloudHero,
+  "baby-this-is-keke-palmer": kekePalmerHero,
 };
+
+const containAspectSlugs = ["meta", "soundcloud", "baby-this-is-keke-palmer"];
 
 export default function Work() {
   return (
@@ -52,8 +56,8 @@ export default function Work() {
                   image={projectImages[project.slug]}
                   aspectRatio={index % 2 === 0 ? "landscape" : "portrait"}
                   objectPosition={project.slug === "eve" || project.slug === "pcc-community-markets" ? "left" : "center"}
-                  objectFit={project.slug === "meta" || project.slug === "soundcloud" ? "contain" : "cover"}
-                  customAspectRatio={project.slug === "meta" || project.slug === "soundcloud" ? "4 / 3" : undefined}
+                  objectFit={containAspectSlugs.includes(project.slug) ? "contain" : "cover"}
+                  customAspectRatio={containAspectSlugs.includes(project.slug) ? "4 / 3" : undefined}
                 />
               </ScrollReveal>
             ))}

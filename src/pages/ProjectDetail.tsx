@@ -33,6 +33,11 @@ import meta2 from "@/assets/projects/meta-2.png";
 import meta3 from "@/assets/projects/meta-3.png";
 import meta4 from "@/assets/projects/meta-4.png";
 import soundcloudHeroWide from "@/assets/projects/soundcloud-hero-wide.png";
+import kekePalmerHeroWide from "@/assets/projects/keke-palmer-hero-wide.jpg";
+import kekePalmerPodcast from "@/assets/projects/keke-palmer-podcast.png";
+import krsAstrology from "@/assets/projects/krs-astrology.png";
+import ladaAstrology from "@/assets/projects/lada-astrology.png";
+import kekePalmerInfluencers from "@/assets/projects/keke-palmer-influencers.png";
 
 const projectImages: Record<string, string[]> = {
   "born-x-raised": [bornXRaisedHero, bornXRaised1, bornXRaised2, bornXRaised3, bornXRaised4],
@@ -41,6 +46,15 @@ const projectImages: Record<string, string[]> = {
   "panera-bread": [paneraBreadHero, paneraBread1, paneraBread2, paneraBread3, paneraBread4],
   "meta": [metaHeroWide, meta1, meta2, meta3, meta4],
   "soundcloud": [soundcloudHeroWide],
+  "baby-this-is-keke-palmer": [kekePalmerHeroWide, kekePalmerPodcast, krsAstrology, ladaAstrology, kekePalmerInfluencers],
+};
+
+// Projects whose gallery images should fill their containers exactly (no
+// crop, no letterbox) instead of using the default fixed aspect ratios.
+// Each tuple is [image 1, image 2, image 3, image 4] as "width / height".
+const galleryAspectRatios: Record<string, [string, string, string, string]> = {
+  meta: ["3332 / 1554", "2522 / 1570", "2522 / 1570", "3152 / 1294"],
+  "baby-this-is-keke-palmer": ["2050 / 672", "1298 / 1856", "1350 / 1852", "1430 / 1006"],
 };
 
 export default function ProjectDetail() {
@@ -62,6 +76,7 @@ export default function ProjectDetail() {
 
   const nextProject = projects[(projectIndex + 1) % projects.length];
   const images = projectImages[slug!] || [northlightHero];
+  const galleryAspects = galleryAspectRatios[slug!];
   // Projects with a dedicated hero image supply more than 3 images; the
   // gallery below uses the remaining ones instead of doubling up the hero.
   const detailImages = images.length > 3 ? images.slice(1) : images;
@@ -223,14 +238,14 @@ export default function ProjectDetail() {
             <ScrollReveal>
               <button
                 onClick={() => openLightbox(0)}
-                className={`block w-full text-left overflow-hidden cursor-pointer group ${slug === "born-x-raised" ? "aspect-square" : "aspect-[16/10]"} ${slug === "meta" ? "bg-cream-darker" : ""}`}
-                style={slug === "meta" ? { aspectRatio: "3332 / 1554" } : undefined}
+                className={`block w-full text-left overflow-hidden cursor-pointer group ${slug === "born-x-raised" ? "aspect-square" : "aspect-[16/10]"} ${galleryAspects ? "bg-cream-darker" : ""}`}
+                style={galleryAspects ? { aspectRatio: galleryAspects[0] } : undefined}
                 aria-label={`Open ${project.title} gallery image 1 in lightbox`}
               >
                 <img
                   src={detailImages[0]}
                   alt={`${project.title} detail`}
-                  className={`w-full h-full transition-transform duration-700 ease-out group-hover:scale-[1.02] ${slug === "meta" ? "object-contain" : "object-cover"} ${slug === "born-x-raised" ? "object-[50%_80%]" : ""}`}
+                  className={`w-full h-full transition-transform duration-700 ease-out group-hover:scale-[1.02] ${galleryAspects ? "object-contain" : "object-cover"} ${slug === "born-x-raised" ? "object-[50%_80%]" : ""}`}
                 />
               </button>
             </ScrollReveal>
@@ -240,28 +255,28 @@ export default function ProjectDetail() {
               <ScrollReveal>
                 <button
                   onClick={() => openLightbox(1)}
-                  className={`block w-full text-left aspect-[4/5] overflow-hidden cursor-pointer group ${slug === "meta" ? "bg-cream-darker" : ""}`}
-                  style={slug === "meta" ? { aspectRatio: "2522 / 1570" } : undefined}
+                  className={`block w-full text-left aspect-[4/5] overflow-hidden cursor-pointer group ${galleryAspects ? "bg-cream-darker" : ""}`}
+                  style={galleryAspects ? { aspectRatio: galleryAspects[1] } : undefined}
                   aria-label={`Open ${project.title} gallery image 2 in lightbox`}
                 >
                   <img
                     src={detailImages[1]}
                     alt={`${project.title} detail`}
-                    className={`w-full h-full transition-transform duration-700 ease-out group-hover:scale-[1.02] ${slug === "meta" ? "object-cover" : slug === "panera-bread" ? "object-contain bg-cream-darker" : "object-cover"}`}
+                    className={`w-full h-full transition-transform duration-700 ease-out group-hover:scale-[1.02] ${galleryAspects ? "object-cover" : slug === "panera-bread" ? "object-contain bg-cream-darker" : "object-cover"}`}
                   />
                 </button>
               </ScrollReveal>
               <ScrollReveal delay={100}>
                 <button
                   onClick={() => openLightbox(2)}
-                  className={`block w-full text-left aspect-[4/5] overflow-hidden cursor-pointer group ${slug === "meta" ? "bg-cream-darker" : ""}`}
-                  style={slug === "meta" ? { aspectRatio: "2522 / 1570" } : undefined}
+                  className={`block w-full text-left aspect-[4/5] overflow-hidden cursor-pointer group ${galleryAspects ? "bg-cream-darker" : ""}`}
+                  style={galleryAspects ? { aspectRatio: galleryAspects[2] } : undefined}
                   aria-label={`Open ${project.title} gallery image 3 in lightbox`}
                 >
                   <img
                     src={detailImages[2]}
                     alt={`${project.title} detail`}
-                    className={`w-full h-full transition-transform duration-700 ease-out group-hover:scale-[1.02] ${slug === "panera-bread" || slug === "meta" ? "object-contain bg-cream-darker" : "object-cover"}`}
+                    className={`w-full h-full transition-transform duration-700 ease-out group-hover:scale-[1.02] ${slug === "panera-bread" || galleryAspects ? "object-contain bg-cream-darker" : "object-cover"}`}
                   />
                 </button>
               </ScrollReveal>
@@ -271,14 +286,14 @@ export default function ProjectDetail() {
             <ScrollReveal>
               <button
                 onClick={() => openLightbox(detailImages[3] ? 3 : 0)}
-                className={`block w-full text-left overflow-hidden cursor-pointer group ${slug === "born-x-raised" ? "aspect-square" : "aspect-[21/9]"} ${slug === "meta" ? "bg-cream-darker" : ""}`}
-                style={slug === "meta" ? { aspectRatio: "3152 / 1294" } : undefined}
+                className={`block w-full text-left overflow-hidden cursor-pointer group ${slug === "born-x-raised" ? "aspect-square" : "aspect-[21/9]"} ${galleryAspects ? "bg-cream-darker" : ""}`}
+                style={galleryAspects ? { aspectRatio: galleryAspects[3] } : undefined}
                 aria-label={`Open ${project.title} gallery image 4 in lightbox`}
               >
                 <img
                   src={detailImages[3] ?? detailImages[0]}
                   alt={`${project.title} detail`}
-                  className={`w-full h-full transition-transform duration-700 ease-out group-hover:scale-[1.02] ${slug === "meta" ? "object-contain" : "object-cover"} ${slug === "born-x-raised" ? "object-[50%_80%]" : ""}`}
+                  className={`w-full h-full transition-transform duration-700 ease-out group-hover:scale-[1.02] ${galleryAspects ? "object-contain" : "object-cover"} ${slug === "born-x-raised" ? "object-[50%_80%]" : ""}`}
                 />
               </button>
             </ScrollReveal>
