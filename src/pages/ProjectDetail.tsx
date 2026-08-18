@@ -70,11 +70,11 @@ export default function ProjectDetail() {
       <section className="pt-24 md:pt-32">
         <div className="w-full">
           <ScrollReveal>
-            <div className={`aspect-[16/9] md:aspect-[21/9] overflow-hidden ${slug === "meta" ? "bg-cream-darker" : ""}`}>
+            <div className="aspect-[16/9] md:aspect-[21/9] overflow-hidden">
               <img
                 src={images[0]}
                 alt={project.title}
-                className={`w-full h-full ${slug === "meta" ? "object-contain" : "object-cover"} ${slug === "eve" ? "object-left" : ""}`}
+                className={`w-full h-full object-cover ${slug === "eve" ? "object-left" : ""}`}
               />
             </div>
           </ScrollReveal>
