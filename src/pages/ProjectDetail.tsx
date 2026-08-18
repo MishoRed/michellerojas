@@ -40,7 +40,7 @@ const projectImages: Record<string, string[]> = {
   "eve": [eveHero, eveLowFidelityFlow, eveLowFidelityFlowPicture, eveHiFidelityFlowPicture, eveHiFidelityFlow],
   "panera-bread": [paneraBreadHero, paneraBread1, paneraBread2, paneraBread3, paneraBread4],
   "meta": [metaHeroWide, meta1, meta2, meta3, meta4],
-  "forge-collective": [soundcloudHeroWide],
+  "soundcloud": [soundcloudHeroWide],
 };
 
 export default function ProjectDetail() {
@@ -170,7 +170,7 @@ export default function ProjectDetail() {
       <section className="pb-16 md:pb-24">
         <div className="container-editorial px-6 md:px-12 lg:px-20">
           <div className="space-y-8 md:space-y-12">
-            {slug === "forge-collective" ? (
+            {slug === "soundcloud" ? (
             <ScrollReveal>
               <div className="max-w-3xl mx-auto">
                 <iframe
