@@ -32,6 +32,7 @@ import meta1 from "@/assets/projects/meta-1.png";
 import meta2 from "@/assets/projects/meta-2.png";
 import meta3 from "@/assets/projects/meta-3.png";
 import meta4 from "@/assets/projects/meta-4.png";
+import soundcloudHeroWide from "@/assets/projects/soundcloud-hero-wide.png";
 
 const projectImages: Record<string, string[]> = {
   "born-x-raised": [bornXRaisedHero, bornXRaised1, bornXRaised2, bornXRaised3, bornXRaised4],
@@ -39,6 +40,7 @@ const projectImages: Record<string, string[]> = {
   "eve": [eveHero, eveLowFidelityFlow, eveLowFidelityFlowPicture, eveHiFidelityFlowPicture, eveHiFidelityFlow],
   "panera-bread": [paneraBreadHero, paneraBread1, paneraBread2, paneraBread3, paneraBread4],
   "meta": [metaHeroWide, meta1, meta2, meta3, meta4],
+  "forge-collective": [soundcloudHeroWide],
 };
 
 export default function ProjectDetail() {
@@ -168,6 +170,55 @@ export default function ProjectDetail() {
       <section className="pb-16 md:pb-24">
         <div className="container-editorial px-6 md:px-12 lg:px-20">
           <div className="space-y-8 md:space-y-12">
+            {slug === "forge-collective" ? (
+            <ScrollReveal>
+              <div className="max-w-3xl mx-auto">
+                <iframe
+                  width="100%"
+                  height="450"
+                  scrolling="no"
+                  frameBorder="no"
+                  allow="autoplay; encrypted-media"
+                  title="The Thabbs - Yay Energy on SoundCloud"
+                  src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/soundcloud%253Atracks%253A2106833628&color=%23e2d9d5&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"
+                />
+                <div
+                  style={{
+                    fontSize: "10px",
+                    color: "#cccccc",
+                    lineBreak: "anywhere",
+                    wordBreak: "normal",
+                    overflow: "hidden",
+                    whiteSpace: "nowrap",
+                    textOverflow: "ellipsis",
+                    fontFamily: "Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif",
+                    fontWeight: 100,
+                  }}
+                >
+                  <a
+                    href="https://soundcloud.com/misho-red"
+                    title="Michelle"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    style={{ color: "#cccccc", textDecoration: "none" }}
+                  >
+                    Michelle
+                  </a>
+                  {" · "}
+                  <a
+                    href="https://soundcloud.com/misho-red/the-thabbs-yay-energy"
+                    title="The Thabbs - Yay Energy"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    style={{ color: "#cccccc", textDecoration: "none" }}
+                  >
+                    The Thabbs - Yay Energy
+                  </a>
+                </div>
+              </div>
+            </ScrollReveal>
+            ) : (
+            <>
             {/* Full Width Image */}
             <ScrollReveal>
               <button
@@ -231,6 +282,8 @@ export default function ProjectDetail() {
                 />
               </button>
             </ScrollReveal>
+            </>
+            )}
           </div>
         </div>
       </section>
