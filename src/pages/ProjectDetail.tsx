@@ -173,6 +173,7 @@ export default function ProjectDetail() {
               <button
                 onClick={() => openLightbox(0)}
                 className={`block w-full text-left overflow-hidden cursor-pointer group ${slug === "born-x-raised" ? "aspect-square" : "aspect-[16/10]"} ${slug === "meta" ? "bg-cream-darker" : ""}`}
+                style={slug === "meta" ? { aspectRatio: "3332 / 1554" } : undefined}
                 aria-label={`Open ${project.title} gallery image 1 in lightbox`}
               >
                 <img
