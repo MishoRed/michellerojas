@@ -27,7 +27,7 @@ import paneraBread1 from "@/assets/projects/panera-bread-1.png";
 import paneraBread2 from "@/assets/projects/panera-bread-2.png";
 import paneraBread3 from "@/assets/projects/panera-bread-3.png";
 import paneraBread4 from "@/assets/projects/panera-bread-4.png";
-import metaHero from "@/assets/projects/meta-hero.jpeg";
+import metaHeroWide from "@/assets/projects/meta-hero-wide.png";
 import meta1 from "@/assets/projects/meta-1.png";
 import meta2 from "@/assets/projects/meta-2.png";
 import meta3 from "@/assets/projects/meta-3.png";
@@ -38,7 +38,7 @@ const projectImages: Record<string, string[]> = {
   "pcc-community-markets": [pccCommunityMarketsHero, pccCommunityMarkets1, pccCommunityMarkets2, pccCommunityMarkets3, pccCommunityMarkets4],
   "eve": [eveHero, eveLowFidelityFlow, eveLowFidelityFlowPicture, eveHiFidelityFlowPicture, eveHiFidelityFlow],
   "panera-bread": [paneraBreadHero, paneraBread1, paneraBread2, paneraBread3, paneraBread4],
-  "meta": [metaHero, meta1, meta2, meta3, meta4],
+  "meta": [metaHeroWide, meta1, meta2, meta3, meta4],
 };
 
 export default function ProjectDetail() {
@@ -173,6 +173,7 @@ export default function ProjectDetail() {
               <button
                 onClick={() => openLightbox(0)}
                 className={`block w-full text-left overflow-hidden cursor-pointer group ${slug === "born-x-raised" ? "aspect-square" : "aspect-[16/10]"} ${slug === "meta" ? "bg-cream-darker" : ""}`}
+                style={slug === "meta" ? { aspectRatio: "3332 / 1554" } : undefined}
                 aria-label={`Open ${project.title} gallery image 1 in lightbox`}
               >
                 <img
@@ -189,12 +190,13 @@ export default function ProjectDetail() {
                 <button
                   onClick={() => openLightbox(1)}
                   className={`block w-full text-left aspect-[4/5] overflow-hidden cursor-pointer group ${slug === "meta" ? "bg-cream-darker" : ""}`}
+                  style={slug === "meta" ? { aspectRatio: "2522 / 1570" } : undefined}
                   aria-label={`Open ${project.title} gallery image 2 in lightbox`}
                 >
                   <img
                     src={detailImages[1]}
                     alt={`${project.title} detail`}
-                    className={`w-full h-full transition-transform duration-700 ease-out group-hover:scale-[1.02] ${slug === "panera-bread" || slug === "meta" ? "object-contain bg-cream-darker" : "object-cover"}`}
+                    className={`w-full h-full transition-transform duration-700 ease-out group-hover:scale-[1.02] ${slug === "meta" ? "object-cover" : slug === "panera-bread" ? "object-contain bg-cream-darker" : "object-cover"}`}
                   />
                 </button>
               </ScrollReveal>
@@ -202,6 +204,7 @@ export default function ProjectDetail() {
                 <button
                   onClick={() => openLightbox(2)}
                   className={`block w-full text-left aspect-[4/5] overflow-hidden cursor-pointer group ${slug === "meta" ? "bg-cream-darker" : ""}`}
+                  style={slug === "meta" ? { aspectRatio: "2522 / 1570" } : undefined}
                   aria-label={`Open ${project.title} gallery image 3 in lightbox`}
                 >
                   <img
@@ -218,6 +221,7 @@ export default function ProjectDetail() {
               <button
                 onClick={() => openLightbox(detailImages[3] ? 3 : 0)}
                 className={`block w-full text-left overflow-hidden cursor-pointer group ${slug === "born-x-raised" ? "aspect-square" : "aspect-[21/9]"} ${slug === "meta" ? "bg-cream-darker" : ""}`}
+                style={slug === "meta" ? { aspectRatio: "3152 / 1294" } : undefined}
                 aria-label={`Open ${project.title} gallery image 4 in lightbox`}
               >
                 <img
