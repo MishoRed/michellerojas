@@ -189,6 +189,7 @@ export default function ProjectDetail() {
                 <button
                   onClick={() => openLightbox(1)}
                   className={`block w-full text-left aspect-[4/5] overflow-hidden cursor-pointer group ${slug === "meta" ? "bg-cream-darker" : ""}`}
+                  style={slug === "meta" ? { aspectRatio: "2892 / 1278" } : undefined}
                   aria-label={`Open ${project.title} gallery image 2 in lightbox`}
                 >
                   <img
@@ -202,6 +203,7 @@ export default function ProjectDetail() {
                 <button
                   onClick={() => openLightbox(2)}
                   className={`block w-full text-left aspect-[4/5] overflow-hidden cursor-pointer group ${slug === "meta" ? "bg-cream-darker" : ""}`}
+                  style={slug === "meta" ? { aspectRatio: "2522 / 1570" } : undefined}
                   aria-label={`Open ${project.title} gallery image 3 in lightbox`}
                 >
                   <img
@@ -218,6 +220,7 @@ export default function ProjectDetail() {
               <button
                 onClick={() => openLightbox(detailImages[3] ? 3 : 0)}
                 className={`block w-full text-left overflow-hidden cursor-pointer group ${slug === "born-x-raised" ? "aspect-square" : "aspect-[21/9]"} ${slug === "meta" ? "bg-cream-darker" : ""}`}
+                style={slug === "meta" ? { aspectRatio: "3152 / 1294" } : undefined}
                 aria-label={`Open ${project.title} gallery image 4 in lightbox`}
               >
                 <img
