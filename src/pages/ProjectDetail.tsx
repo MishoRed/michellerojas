@@ -172,13 +172,13 @@ export default function ProjectDetail() {
             <ScrollReveal>
               <button
                 onClick={() => openLightbox(0)}
-                className={`block w-full text-left overflow-hidden cursor-pointer group ${slug === "born-x-raised" ? "aspect-square" : "aspect-[16/10]"}`}
+                className={`block w-full text-left overflow-hidden cursor-pointer group ${slug === "born-x-raised" ? "aspect-square" : "aspect-[16/10]"} ${slug === "meta" ? "bg-cream-darker" : ""}`}
                 aria-label={`Open ${project.title} gallery image 1 in lightbox`}
               >
                 <img
                   src={detailImages[0]}
                   alt={`${project.title} detail`}
-                  className={`w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-[1.02] ${slug === "born-x-raised" ? "object-[50%_80%]" : ""}`}
+                  className={`w-full h-full transition-transform duration-700 ease-out group-hover:scale-[1.02] ${slug === "meta" ? "object-contain" : "object-cover"} ${slug === "born-x-raised" ? "object-[50%_80%]" : ""}`}
                 />
               </button>
             </ScrollReveal>

@@ -5,7 +5,6 @@ import { projects } from '@/data/projects';
 // Import gallery images
 import gallery1 from '@/assets/gallery/gallery-1.jpg';
 import gallery2 from '@/assets/gallery/gallery-2.jpg';
-import gallery5 from '@/assets/gallery/gallery-5.jpg';
 import gallery6 from '@/assets/gallery/gallery-6.jpg';
 import gallery7 from '@/assets/gallery/gallery-7.jpg';
 import gallery8 from '@/assets/gallery/gallery-8.jpg';
