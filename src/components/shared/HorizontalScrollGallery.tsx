@@ -13,7 +13,6 @@ import gallery9 from '@/assets/gallery/gallery-9.jpg';
 import gallery10 from '@/assets/gallery/gallery-10.jpg';
 import gallery11 from '@/assets/gallery/gallery-11.jpg';
 import gallery12 from '@/assets/gallery/gallery-12.jpg';
-import gallery13 from '@/assets/gallery/gallery-13.jpg';
 import gallery14 from '@/assets/gallery/gallery-14.jpg';
 import gallery15 from '@/assets/gallery/gallery-15.jpg';
 import gallery16 from '@/assets/gallery/gallery-16.jpg';
@@ -27,6 +26,7 @@ import gallery23 from '@/assets/gallery/gallery-23.jpg';
 import gallery24 from '@/assets/gallery/gallery-24.jpg';
 import eveHero from '@/assets/projects/eve-hero.png';
 import paneraBreadHero from '@/assets/projects/panera-bread-hero.png';
+import metaHero from '@/assets/projects/meta-hero.jpeg';
 
 type ImageSize = 'large' | 'medium' | 'small';
 type ImageOrientation = 'portrait' | 'landscape';
@@ -47,7 +47,7 @@ const galleryImages: GalleryImage[] = [
   { src: gallery2, alt: 'PCC Community Markets Burien storefront', size: 'medium', orientation: 'landscape', verticalOffset: 'top', projectSlug: 'pcc-community-markets' },
   { src: eveHero, alt: 'Eve AI skincare app', size: 'small', orientation: 'portrait', verticalOffset: 'bottom', projectSlug: 'eve', objectPosition: 'left' },
   { src: paneraBreadHero, alt: 'Panera Bread multicultural marketing', size: 'large', orientation: 'landscape', verticalOffset: 'center', projectSlug: 'panera-bread' },
-  { src: gallery5, alt: 'Aura Wellness digital interface', size: 'medium', orientation: 'portrait', verticalOffset: 'top', projectSlug: 'aura-wellness' },
+  { src: gallery5, alt: 'Aura Wellness digital interface', size: 'medium', orientation: 'portrait', verticalOffset: 'top', projectSlug: 'meta' },
   { src: gallery6, alt: 'Forge Collective packaging detail', size: 'small', orientation: 'landscape', verticalOffset: 'center', projectSlug: 'forge-collective' },
   { src: gallery7, alt: 'Halcyon Press brand guidelines', size: 'large', orientation: 'portrait', verticalOffset: 'bottom', projectSlug: 'halcyon-press' },
   { src: gallery8, alt: 'Drift Studio environmental signage', size: 'medium', orientation: 'landscape', verticalOffset: 'center', projectSlug: 'drift-studio' },
@@ -55,14 +55,14 @@ const galleryImages: GalleryImage[] = [
   { src: gallery10, alt: 'Meridian Architects business cards', size: 'large', orientation: 'landscape', verticalOffset: 'center', projectSlug: 'pcc-community-markets' },
   { src: gallery11, alt: 'Stillwater Journal editorial layout', size: 'medium', orientation: 'portrait', verticalOffset: 'bottom', projectSlug: 'panera-bread' },
   { src: gallery12, alt: 'Ember & Co texture exploration', size: 'small', orientation: 'landscape', verticalOffset: 'top', projectSlug: 'eve' },
-  { src: gallery13, alt: 'Aura Wellness website design', size: 'large', orientation: 'portrait', verticalOffset: 'center', projectSlug: 'aura-wellness' },
+  { src: metaHero, alt: 'Meta inclusion and equity marketing', size: 'large', orientation: 'portrait', verticalOffset: 'center', projectSlug: 'meta', fit: 'contain' },
   { src: gallery14, alt: 'Forge Collective letterhead', size: 'medium', orientation: 'landscape', verticalOffset: 'center', projectSlug: 'forge-collective' },
   { src: gallery15, alt: 'Halcyon Press product photography', size: 'small', orientation: 'portrait', verticalOffset: 'bottom', projectSlug: 'halcyon-press' },
   { src: gallery16, alt: 'Drift Studio poster design', size: 'large', orientation: 'landscape', verticalOffset: 'top', projectSlug: 'drift-studio' },
   { src: gallery17, alt: 'Northlight Studio mobile app', size: 'medium', orientation: 'portrait', verticalOffset: 'center', projectSlug: 'born-x-raised' },
   { src: gallery18, alt: 'Meridian Architects monogram detail', size: 'small', orientation: 'landscape', verticalOffset: 'center', projectSlug: 'pcc-community-markets' },
   { src: gallery19, alt: 'Halcyon Press book cover', size: 'large', orientation: 'portrait', verticalOffset: 'bottom', projectSlug: 'halcyon-press' },
-  { src: gallery20, alt: 'Aura Wellness iconography set', size: 'medium', orientation: 'landscape', verticalOffset: 'top', projectSlug: 'aura-wellness' },
+  { src: gallery20, alt: 'Aura Wellness iconography set', size: 'medium', orientation: 'landscape', verticalOffset: 'top', projectSlug: 'meta' },
   { src: gallery21, alt: 'Forge Collective brand pattern', size: 'small', orientation: 'portrait', verticalOffset: 'center', projectSlug: 'forge-collective' },
   { src: gallery22, alt: 'Ember & Co print collateral', size: 'large', orientation: 'landscape', verticalOffset: 'center', projectSlug: 'eve' },
   { src: gallery23, alt: 'Stillwater Journal typography specimen', size: 'medium', orientation: 'portrait', verticalOffset: 'bottom', projectSlug: 'panera-bread' },

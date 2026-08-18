@@ -27,12 +27,18 @@ import paneraBread1 from "@/assets/projects/panera-bread-1.png";
 import paneraBread2 from "@/assets/projects/panera-bread-2.png";
 import paneraBread3 from "@/assets/projects/panera-bread-3.png";
 import paneraBread4 from "@/assets/projects/panera-bread-4.png";
+import metaHero from "@/assets/projects/meta-hero.jpeg";
+import meta1 from "@/assets/projects/meta-1.png";
+import meta2 from "@/assets/projects/meta-2.png";
+import meta3 from "@/assets/projects/meta-3.png";
+import meta4 from "@/assets/projects/meta-4.png";
 
 const projectImages: Record<string, string[]> = {
   "born-x-raised": [bornXRaisedHero, bornXRaised1, bornXRaised2, bornXRaised3, bornXRaised4],
   "pcc-community-markets": [pccCommunityMarketsHero, pccCommunityMarkets1, pccCommunityMarkets2, pccCommunityMarkets3, pccCommunityMarkets4],
   "eve": [eveHero, eveLowFidelityFlow, eveLowFidelityFlowPicture, eveHiFidelityFlowPicture, eveHiFidelityFlow],
   "panera-bread": [paneraBreadHero, paneraBread1, paneraBread2, paneraBread3, paneraBread4],
+  "meta": [metaHero, meta1, meta2, meta3, meta4],
 };
 
 export default function ProjectDetail() {
@@ -64,11 +70,11 @@ export default function ProjectDetail() {
       <section className="pt-24 md:pt-32">
         <div className="w-full">
           <ScrollReveal>
-            <div className="aspect-[16/9] md:aspect-[21/9] overflow-hidden">
+            <div className={`aspect-[16/9] md:aspect-[21/9] overflow-hidden ${slug === "meta" ? "bg-cream-darker" : ""}`}>
               <img
                 src={images[0]}
                 alt={project.title}
-                className={`w-full h-full object-cover ${slug === "eve" ? "object-left" : ""}`}
+                className={`w-full h-full ${slug === "meta" ? "object-contain" : "object-cover"} ${slug === "eve" ? "object-left" : ""}`}
               />
             </div>
           </ScrollReveal>
@@ -166,13 +172,13 @@ export default function ProjectDetail() {
             <ScrollReveal>
               <button
                 onClick={() => openLightbox(0)}
-                className={`block w-full text-left overflow-hidden cursor-pointer group ${slug === "born-x-raised" ? "aspect-square" : "aspect-[16/10]"}`}
+                className={`block w-full text-left overflow-hidden cursor-pointer group ${slug === "born-x-raised" ? "aspect-square" : "aspect-[16/10]"} ${slug === "meta" ? "bg-cream-darker" : ""}`}
                 aria-label={`Open ${project.title} gallery image 1 in lightbox`}
               >
                 <img
                   src={detailImages[0]}
                   alt={`${project.title} detail`}
-                  className={`w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-[1.02] ${slug === "born-x-raised" ? "object-[50%_80%]" : ""}`}
+                  className={`w-full h-full transition-transform duration-700 ease-out group-hover:scale-[1.02] ${slug === "meta" ? "object-contain" : "object-cover"} ${slug === "born-x-raised" ? "object-[50%_80%]" : ""}`}
                 />
               </button>
             </ScrollReveal>
@@ -182,26 +188,26 @@ export default function ProjectDetail() {
               <ScrollReveal>
                 <button
                   onClick={() => openLightbox(1)}
-                  className="block w-full text-left aspect-[4/5] overflow-hidden cursor-pointer group"
+                  className={`block w-full text-left aspect-[4/5] overflow-hidden cursor-pointer group ${slug === "meta" ? "bg-cream-darker" : ""}`}
                   aria-label={`Open ${project.title} gallery image 2 in lightbox`}
                 >
                   <img
                     src={detailImages[1]}
                     alt={`${project.title} detail`}
-                    className={`w-full h-full transition-transform duration-700 ease-out group-hover:scale-[1.02] ${slug === "panera-bread" ? "object-contain bg-cream-darker" : "object-cover"}`}
+                    className={`w-full h-full transition-transform duration-700 ease-out group-hover:scale-[1.02] ${slug === "panera-bread" || slug === "meta" ? "object-contain bg-cream-darker" : "object-cover"}`}
                   />
                 </button>
               </ScrollReveal>
               <ScrollReveal delay={100}>
                 <button
                   onClick={() => openLightbox(2)}
-                  className="block w-full text-left aspect-[4/5] overflow-hidden cursor-pointer group"
+                  className={`block w-full text-left aspect-[4/5] overflow-hidden cursor-pointer group ${slug === "meta" ? "bg-cream-darker" : ""}`}
                   aria-label={`Open ${project.title} gallery image 3 in lightbox`}
                 >
                   <img
                     src={detailImages[2]}
                     alt={`${project.title} detail`}
-                    className={`w-full h-full transition-transform duration-700 ease-out group-hover:scale-[1.02] ${slug === "panera-bread" ? "object-contain bg-cream-darker" : "object-cover"}`}
+                    className={`w-full h-full transition-transform duration-700 ease-out group-hover:scale-[1.02] ${slug === "panera-bread" || slug === "meta" ? "object-contain bg-cream-darker" : "object-cover"}`}
                   />
                 </button>
               </ScrollReveal>
@@ -211,13 +217,13 @@ export default function ProjectDetail() {
             <ScrollReveal>
               <button
                 onClick={() => openLightbox(detailImages[3] ? 3 : 0)}
-                className={`block w-full text-left overflow-hidden cursor-pointer group ${slug === "born-x-raised" ? "aspect-square" : "aspect-[21/9]"}`}
+                className={`block w-full text-left overflow-hidden cursor-pointer group ${slug === "born-x-raised" ? "aspect-square" : "aspect-[21/9]"} ${slug === "meta" ? "bg-cream-darker" : ""}`}
                 aria-label={`Open ${project.title} gallery image 4 in lightbox`}
               >
                 <img
                   src={detailImages[3] ?? detailImages[0]}
                   alt={`${project.title} detail`}
-                  className={`w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-[1.02] ${slug === "born-x-raised" ? "object-[50%_80%]" : ""}`}
+                  className={`w-full h-full transition-transform duration-700 ease-out group-hover:scale-[1.02] ${slug === "meta" ? "object-contain" : "object-cover"} ${slug === "born-x-raised" ? "object-[50%_80%]" : ""}`}
                 />
               </button>
             </ScrollReveal>
