@@ -12,6 +12,7 @@ interface ProjectCardProps {
   aspectRatio?: "landscape" | "portrait";
   objectPosition?: string;
   objectFit?: "cover" | "contain";
+  customAspectRatio?: string;
 }
 
 export function ProjectCard({
@@ -24,6 +25,7 @@ export function ProjectCard({
   aspectRatio = "landscape",
   objectPosition = "center",
   objectFit = "cover",
+  customAspectRatio,
 }: ProjectCardProps) {
   return (
     <Link
@@ -36,6 +38,7 @@ export function ProjectCard({
           "relative overflow-hidden bg-cream-darker mb-6",
           aspectRatio === "landscape" ? "aspect-[16/10]" : "aspect-[4/5]"
         )}
+        style={customAspectRatio ? { aspectRatio: customAspectRatio } : undefined}
       >
         <img
           src={image}

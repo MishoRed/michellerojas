@@ -51,6 +51,7 @@ export default function Work() {
                   aspectRatio={index % 2 === 0 ? "landscape" : "portrait"}
                   objectPosition={project.slug === "eve" || project.slug === "pcc-community-markets" ? "left" : "center"}
                   objectFit={project.slug === "meta" ? "contain" : "cover"}
+                  customAspectRatio={project.slug === "meta" ? "4 / 3" : undefined}
                 />
               </ScrollReveal>
             ))}
