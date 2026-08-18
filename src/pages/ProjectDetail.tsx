@@ -189,13 +189,13 @@ export default function ProjectDetail() {
                 <button
                   onClick={() => openLightbox(1)}
                   className={`block w-full text-left aspect-[4/5] overflow-hidden cursor-pointer group ${slug === "meta" ? "bg-cream-darker" : ""}`}
-                  style={slug === "meta" ? { aspectRatio: "2892 / 1278" } : undefined}
+                  style={slug === "meta" ? { aspectRatio: "2522 / 1570" } : undefined}
                   aria-label={`Open ${project.title} gallery image 2 in lightbox`}
                 >
                   <img
                     src={detailImages[1]}
                     alt={`${project.title} detail`}
-                    className={`w-full h-full transition-transform duration-700 ease-out group-hover:scale-[1.02] ${slug === "panera-bread" || slug === "meta" ? "object-contain bg-cream-darker" : "object-cover"}`}
+                    className={`w-full h-full transition-transform duration-700 ease-out group-hover:scale-[1.02] ${slug === "meta" ? "object-cover" : slug === "panera-bread" ? "object-contain bg-cream-darker" : "object-cover"}`}
                   />
                 </button>
               </ScrollReveal>
