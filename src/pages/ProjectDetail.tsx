@@ -27,7 +27,7 @@ import paneraBread1 from "@/assets/projects/panera-bread-1.png";
 import paneraBread2 from "@/assets/projects/panera-bread-2.png";
 import paneraBread3 from "@/assets/projects/panera-bread-3.png";
 import paneraBread4 from "@/assets/projects/panera-bread-4.png";
-import metaHero from "@/assets/projects/meta-hero.jpeg";
+import metaHeroWide from "@/assets/projects/meta-hero-wide.png";
 import meta1 from "@/assets/projects/meta-1.png";
 import meta2 from "@/assets/projects/meta-2.png";
 import meta3 from "@/assets/projects/meta-3.png";
@@ -38,7 +38,7 @@ const projectImages: Record<string, string[]> = {
   "pcc-community-markets": [pccCommunityMarketsHero, pccCommunityMarkets1, pccCommunityMarkets2, pccCommunityMarkets3, pccCommunityMarkets4],
   "eve": [eveHero, eveLowFidelityFlow, eveLowFidelityFlowPicture, eveHiFidelityFlowPicture, eveHiFidelityFlow],
   "panera-bread": [paneraBreadHero, paneraBread1, paneraBread2, paneraBread3, paneraBread4],
-  "meta": [metaHero, meta1, meta2, meta3, meta4],
+  "meta": [metaHeroWide, meta1, meta2, meta3, meta4],
 };
 
 export default function ProjectDetail() {
@@ -70,11 +70,11 @@ export default function ProjectDetail() {
       <section className="pt-24 md:pt-32">
         <div className="w-full">
           <ScrollReveal>
-            <div className={`aspect-[16/9] md:aspect-[21/9] overflow-hidden ${slug === "meta" ? "bg-cream-darker" : ""}`}>
+            <div className="aspect-[16/9] md:aspect-[21/9] overflow-hidden">
               <img
                 src={images[0]}
                 alt={project.title}
-                className={`w-full h-full ${slug === "meta" ? "object-contain" : "object-cover"} ${slug === "eve" ? "object-left" : ""}`}
+                className={`w-full h-full object-cover ${slug === "eve" ? "object-left" : ""}`}
               />
             </div>
           </ScrollReveal>
