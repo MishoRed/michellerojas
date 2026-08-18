@@ -55,7 +55,7 @@ const galleryImages: GalleryImage[] = [
   { src: gallery10, alt: 'Meridian Architects business cards', size: 'large', orientation: 'landscape', verticalOffset: 'center', projectSlug: 'pcc-community-markets' },
   { src: gallery11, alt: 'Stillwater Journal editorial layout', size: 'medium', orientation: 'portrait', verticalOffset: 'bottom', projectSlug: 'panera-bread' },
   { src: gallery12, alt: 'Ember & Co texture exploration', size: 'small', orientation: 'landscape', verticalOffset: 'top', projectSlug: 'eve' },
-  { src: metaHero, alt: 'Meta inclusion and equity marketing', size: 'large', orientation: 'portrait', verticalOffset: 'center', projectSlug: 'meta', fit: 'contain' },
+  { src: metaHero, alt: 'Meta inclusion and equity marketing', size: 'large', orientation: 'portrait', verticalOffset: 'center', projectSlug: 'meta' },
   { src: gallery14, alt: 'Forge Collective letterhead', size: 'medium', orientation: 'landscape', verticalOffset: 'center', projectSlug: 'forge-collective' },
   { src: gallery15, alt: 'Halcyon Press product photography', size: 'small', orientation: 'portrait', verticalOffset: 'bottom', projectSlug: 'halcyon-press' },
   { src: gallery16, alt: 'Drift Studio poster design', size: 'large', orientation: 'landscape', verticalOffset: 'top', projectSlug: 'drift-studio' },

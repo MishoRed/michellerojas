@@ -50,7 +50,6 @@ export default function Work() {
                   image={projectImages[project.slug]}
                   aspectRatio={index % 2 === 0 ? "landscape" : "portrait"}
                   objectPosition={project.slug === "eve" || project.slug === "pcc-community-markets" ? "left" : "center"}
-                  objectFit={project.slug === "meta" ? "contain" : "cover"}
                 />
               </ScrollReveal>
             ))}
