@@ -38,6 +38,11 @@ import kekePalmerPodcast from "@/assets/projects/keke-palmer-podcast.png";
 import krsAstrology from "@/assets/projects/krs-astrology.png";
 import ladaAstrology from "@/assets/projects/lada-astrology.png";
 import kekePalmerInfluencers from "@/assets/projects/keke-palmer-influencers.png";
+import paneraBreadCoffeeHeroWide from "@/assets/projects/panera-bread-coffee-hero-wide.jpg";
+import paneraBreadCoffeeLatteRecipes from "@/assets/projects/panera-bread-coffee-latte-recipes.png";
+import paneraBreadCoffeeEspresso from "@/assets/projects/panera-bread-coffee-espresso.png";
+import paneraBreadCoffeeFrenchRoast from "@/assets/projects/panera-bread-coffee-french-roast.png";
+import paneraBreadCoffeeNewBlends from "@/assets/projects/panera-bread-coffee-new-blends.png";
 
 const projectImages: Record<string, string[]> = {
   "born-x-raised": [bornXRaisedHero, bornXRaised1, bornXRaised2, bornXRaised3, bornXRaised4],
@@ -47,6 +52,7 @@ const projectImages: Record<string, string[]> = {
   "meta": [metaHeroWide, meta1, meta2, meta3, meta4],
   "soundcloud": [soundcloudHeroWide],
   "baby-this-is-keke-palmer": [kekePalmerHeroWide, kekePalmerPodcast, krsAstrology, ladaAstrology, kekePalmerInfluencers],
+  "panera-bread-coffee": [paneraBreadCoffeeHeroWide, paneraBreadCoffeeLatteRecipes, paneraBreadCoffeeEspresso, paneraBreadCoffeeFrenchRoast, paneraBreadCoffeeNewBlends],
 };
 
 // Projects whose gallery images should fill their containers exactly (no
@@ -55,6 +61,7 @@ const projectImages: Record<string, string[]> = {
 const galleryAspectRatios: Record<string, [string, string, string, string]> = {
   meta: ["3332 / 1554", "2522 / 1570", "2522 / 1570", "3152 / 1294"],
   "baby-this-is-keke-palmer": ["2050 / 672", "1298 / 1856", "1350 / 1852", "1430 / 1006"],
+  "panera-bread-coffee": ["2962 / 1052", "2880 / 1788", "2876 / 1648", "2924 / 1316"],
 };
 
 export default function ProjectDetail() {
@@ -135,7 +142,7 @@ export default function ProjectDetail() {
                         rel="noopener noreferrer"
                         className="arrow-link text-ink"
                       >
-                        VIEW PRESENTATION
+                        {project.presentationLabel || "VIEW PRESENTATION"}
                         <ArrowRight size={18} strokeWidth={1.5} />
                       </a>
                     </div>

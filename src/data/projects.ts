@@ -10,6 +10,7 @@ export interface Project {
   challenge: string;
   solution: string;
   presentationUrl?: string;
+  presentationLabel?: string;
   award?: string;
 }
 
@@ -106,15 +107,17 @@ export const projects: Project[] = [
     presentationUrl: "https://www.canva.com/design/DAG4jrT0hEk/BdvmekOLbxVRzIb9OVpNGA/view",
   },
   {
-    slug: "drift-studio",
-    title: "BORN X RAISED",
-    category: "Brand Identity",
-    year: "2024",
-    client: "Drift Studio",
-    industry: "Photography",
-    services: ["Brand Strategy", "Visual Identity", "Web Design"],
-    overview: "A refined brand identity for a fine art photography studio specializing in minimalist landscape and architectural work. The identity is as considered as the work it represents.",
-    challenge: "The studio needed an identity that would complement rather than compete with their photography. It needed to be almost invisible yet distinctly memorable.",
-    solution: "We designed a typographic identity with delicate, considered details that reveal themselves slowly—much like the subtle beauty in their photographs. Less became infinitely more.",
+    slug: "panera-bread-coffee",
+    title: "Panera Bread Coffee",
+    category: "Coffee Digital Marketing",
+    year: "2025 - 2026",
+    client: "Panera Bread Coffee",
+    industry: "Food",
+    services: ["Coffee Digital Marketing"],
+    overview: "In this role, I led D2C e-commerce, CRM, and digital marketing for Panera Coffee, driving audience growth, engagement, acquisition, and brand awareness through data-informed campaigns. As creative director, I also shaped the brand's tone, voice, and visual identity across photoshoots and email campaigns, while managing execution across Shopify, Omnisend, Google Ads, Microsoft Ads, Walmart Connect, and Amazon Seller Central.",
+    challenge: "The role required balancing creative brand-building with performance marketing across a wide range of platforms, all while managing a yearly budget to optimize acquisition and minimize costs. It also meant keeping the brand's visual and tonal identity consistent everywhere it showed up, from photoshoot concept and styling to email storytelling, customer segmentation, and the Panera Bread Coffee website, including original content like the latte recipes blog, without losing sight of measurable growth targets.",
+    solution: "By building and maintaining a cross-functional campaign calendar, directing creative execution, updating the website with fresh photoshoot imagery, banners, and product content, owning the latte recipes blog, and developing tailored segmentation strategies for email and text, I drove strong FY2025-2026 results: $42K in email revenue growth with 58% audience growth, $30K in Walmart e-commerce growth, $66K in Shopify growth, and a 25% lift in Google Ads conversions. I also managed SEO, landing page optimization, and the broader blog content calendar, presenting high-level performance reporting to General Management throughout.",
+    presentationUrl: "https://panera-coffee.com/",
+    presentationLabel: "PANERA BREAD COFFEE",
   },
 ];

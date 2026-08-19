@@ -5,7 +5,6 @@ import { projects } from '@/data/projects';
 // Import gallery images
 import gallery1 from '@/assets/gallery/gallery-1.jpg';
 import gallery2 from '@/assets/gallery/gallery-2.jpg';
-import gallery8 from '@/assets/gallery/gallery-8.jpg';
 import gallery9 from '@/assets/gallery/gallery-9.jpg';
 import gallery10 from '@/assets/gallery/gallery-10.jpg';
 import gallery11 from '@/assets/gallery/gallery-11.jpg';
@@ -14,6 +13,7 @@ import paneraBreadHero from '@/assets/projects/panera-bread-hero.png';
 import metaHero from '@/assets/projects/meta-hero.jpeg';
 import soundcloudHero from '@/assets/projects/soundcloud-hero.png';
 import kekePalmerHero from '@/assets/projects/keke-palmer-hero.jpg';
+import paneraBreadCoffeeHero from '@/assets/projects/panera-bread-coffee-hero.webp';
 
 type ImageSize = 'large' | 'medium' | 'small';
 type ImageOrientation = 'portrait' | 'landscape';
@@ -37,7 +37,7 @@ const galleryImages: GalleryImage[] = [
   { src: metaHero, alt: 'Meta inclusion and equity marketing', size: 'medium', orientation: 'landscape', verticalOffset: 'center', projectSlug: 'meta' },
   { src: soundcloudHero, alt: 'Soundcloud audio storytelling', size: 'small', orientation: 'landscape', verticalOffset: 'center', projectSlug: 'soundcloud' },
   { src: kekePalmerHero, alt: 'Baby, This is Keke Palmer influencer marketing', size: 'large', orientation: 'landscape', verticalOffset: 'bottom', projectSlug: 'baby-this-is-keke-palmer' },
-  { src: gallery8, alt: 'Drift Studio environmental signage', size: 'medium', orientation: 'landscape', verticalOffset: 'center', projectSlug: 'drift-studio' },
+  { src: paneraBreadCoffeeHero, alt: 'Panera Bread Coffee digital marketing', size: 'medium', orientation: 'landscape', verticalOffset: 'center', projectSlug: 'panera-bread-coffee' },
   { src: gallery9, alt: 'Northlight Studio color palette', size: 'small', orientation: 'portrait', verticalOffset: 'top', projectSlug: 'born-x-raised' },
   { src: gallery10, alt: 'Meridian Architects business cards', size: 'large', orientation: 'landscape', verticalOffset: 'center', projectSlug: 'pcc-community-markets' },
   { src: gallery11, alt: 'Stillwater Journal editorial layout', size: 'medium', orientation: 'portrait', verticalOffset: 'bottom', projectSlug: 'panera-bread' },
