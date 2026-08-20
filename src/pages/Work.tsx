@@ -25,7 +25,8 @@ const projectImages: Record<string, string> = {
   "sprouted-organic-coffee": sproutedOrganicCoffeeHero,
 };
 
-const containAspectSlugs = ["meta", "soundcloud", "baby-this-is-keke-palmer", "panera-bread-coffee", "sprouted-organic-coffee"];
+const customAspectSlugs = ["meta", "soundcloud", "baby-this-is-keke-palmer", "panera-bread-coffee", "sprouted-organic-coffee"];
+const containFitSlugs = ["meta", "soundcloud", "baby-this-is-keke-palmer", "panera-bread-coffee"];
 
 export default function Work() {
   return (
@@ -60,8 +61,8 @@ export default function Work() {
                   image={projectImages[project.slug]}
                   aspectRatio={index % 2 === 0 ? "landscape" : "portrait"}
                   objectPosition={project.slug === "eve" || project.slug === "pcc-community-markets" ? "left" : "center"}
-                  objectFit={containAspectSlugs.includes(project.slug) ? "contain" : "cover"}
-                  customAspectRatio={containAspectSlugs.includes(project.slug) ? "4 / 3" : undefined}
+                  objectFit={containFitSlugs.includes(project.slug) ? "contain" : "cover"}
+                  customAspectRatio={customAspectSlugs.includes(project.slug) ? "4 / 3" : undefined}
                 />
               </ScrollReveal>
             ))}
