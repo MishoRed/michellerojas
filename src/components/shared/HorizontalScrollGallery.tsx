@@ -208,7 +208,7 @@ export const HorizontalScrollGallery = () => {
                     src={image.src}
                     alt={image.alt}
                     loading={index < 8 ? 'eager' : 'lazy'}
-                    className={`w-full h-full ${image.fit === 'contain' ? 'object-contain bg-background' : 'object-cover'}`}
+                    className={`w-full h-full ${image.fit === 'contain' ? 'object-contain bg-[#FBFBF9]' : 'object-cover'}`}
                     style={image.objectPosition ? { objectPosition: image.objectPosition } : undefined}
                     draggable={false}
                   />
