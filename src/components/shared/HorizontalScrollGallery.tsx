@@ -12,7 +12,7 @@ import eveHero from '@/assets/projects/eve-hero.png';
 import paneraBreadHero from '@/assets/projects/panera-bread-hero.png';
 import metaHero from '@/assets/projects/meta-hero.jpeg';
 import soundcloudHero from '@/assets/projects/soundcloud-hero.png';
-import kekePalmerHero from '@/assets/projects/keke-palmer-hero.jpg';
+import kekePalmerMagazineCover from '@/assets/projects/keke-palmer-magazine-cover-original.png';
 import paneraBreadCoffeeHero from '@/assets/projects/panera-bread-coffee-hero.webp';
 import sproutedOrganicCoffeeHero from '@/assets/projects/sprouted-organic-coffee-hero.png';
 
@@ -41,7 +41,7 @@ const galleryImages: GalleryImage[] = [
   { src: paneraBreadHero, alt: 'Panera Bread multicultural marketing', size: 'large', orientation: 'landscape', verticalOffset: 'center', projectSlug: 'panera-bread' },
   { src: metaHero, alt: 'Meta inclusion and equity marketing', size: 'medium', orientation: 'landscape', verticalOffset: 'center', projectSlug: 'meta' },
   { src: soundcloudHero, alt: 'Soundcloud audio storytelling', size: 'small', orientation: 'landscape', verticalOffset: 'center', projectSlug: 'soundcloud' },
-  { src: kekePalmerHero, alt: 'Baby, This is Keke Palmer influencer marketing', size: 'large', orientation: 'landscape', verticalOffset: 'bottom', projectSlug: 'baby-this-is-keke-palmer' },
+  { src: kekePalmerMagazineCover, alt: 'Baby, This is Keke Palmer influencer marketing', size: 'large', orientation: 'portrait', verticalOffset: 'bottom', projectSlug: 'baby-this-is-keke-palmer' },
   { src: paneraBreadCoffeeHero, alt: 'Panera Bread Coffee digital marketing', size: 'medium', orientation: 'landscape', verticalOffset: 'center', projectSlug: 'panera-bread-coffee' },
   { src: sproutedOrganicCoffeeHero, alt: 'Sprouted Organic Coffee digital marketing', size: 'large', orientation: 'landscape', verticalOffset: 'center', projectSlug: 'sprouted-organic-coffee', customDimensions: { width: 560, height: 233 } },
   { src: gallery9, alt: 'Northlight Studio color palette', size: 'small', orientation: 'portrait', verticalOffset: 'top', projectSlug: 'born-x-raised' },
