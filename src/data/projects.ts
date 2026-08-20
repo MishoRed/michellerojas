@@ -120,4 +120,18 @@ export const projects: Project[] = [
     presentationUrl: "https://panera-coffee.com/",
     presentationLabel: "PANERA BREAD COFFEE",
   },
+  {
+    slug: "sprouted-organic-coffee",
+    title: "Sprouted Organic Coffee",
+    category: "Coffee Digital Marketing",
+    year: "2025 - 2026",
+    client: "Sprouted Organic Coffee",
+    industry: "Food",
+    services: ["Coffee Digital Marketing"],
+    overview: "In this role, I led the branded national coffee program for Sprouted Organic Coffee, driving audience growth, engagement, acquisition, and brand awareness through data-informed D2C e-commerce, CRM, and social media campaigns. As creative director, I also shaped the brand's tone, voice, and visual identity across photoshoots and email campaigns, managing execution across Shopify, Omnisend, Google Ads, and Meta.",
+    challenge: "The role required balancing creative brand-building with performance marketing and community management across multiple channels, all while managing a yearly budget to optimize acquisition and minimize costs. It also meant maintaining consistent visual and tonal identity across photoshoots, email storytelling, and original content like the \"Java Journal\" latte recipe blog, while sourcing and managing brand ambassador and influencer partnerships that stayed true to the brand.",
+    solution: "By building and maintaining a cross-functional campaign calendar, directing creative execution, owning the \"Java Journal\" latte recipe blog, copywriting social content, and developing tailored customer segmentation strategies for email and text, I strengthened the brand's presence across e-commerce and social channels. I also managed the Shopify website's advertising, SEO, and organic marketing, optimized landing pages, and ran the brand's ambassador and influencer program, presenting high-level performance reporting to General Management throughout.",
+    presentationUrl: "https://java-trading.com/",
+    presentationLabel: "SPROUTED ORGANIC COFFEE",
+  },
 ];

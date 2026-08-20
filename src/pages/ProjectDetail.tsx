@@ -43,6 +43,11 @@ import paneraBreadCoffeeLatteRecipes from "@/assets/projects/panera-bread-coffee
 import paneraBreadCoffeeEspresso from "@/assets/projects/panera-bread-coffee-espresso.png";
 import paneraBreadCoffeeFrenchRoast from "@/assets/projects/panera-bread-coffee-french-roast.png";
 import paneraBreadCoffeeNewBlends from "@/assets/projects/panera-bread-coffee-new-blends.png";
+import sproutedOrganicCoffeeHero from "@/assets/projects/sprouted-organic-coffee-hero.png";
+import sproutedOrganicCoffeeLatteRecipe from "@/assets/projects/sprouted-organic-coffee-latte-recipe.png";
+import sproutedOrganicCoffeeFrenchRoast from "@/assets/projects/sprouted-organic-coffee-french-roast.png";
+import sproutedOrganicCoffeeLightRoast from "@/assets/projects/sprouted-organic-coffee-light-roast.png";
+import sproutedOrganicCoffeeSocialMedia from "@/assets/projects/sprouted-organic-coffee-social-media.png";
 
 const projectImages: Record<string, string[]> = {
   "born-x-raised": [bornXRaisedHero, bornXRaised1, bornXRaised2, bornXRaised3, bornXRaised4],
@@ -53,6 +58,7 @@ const projectImages: Record<string, string[]> = {
   "soundcloud": [soundcloudHeroWide],
   "baby-this-is-keke-palmer": [kekePalmerHeroWide, kekePalmerPodcast, krsAstrology, ladaAstrology, kekePalmerInfluencers],
   "panera-bread-coffee": [paneraBreadCoffeeHeroWide, paneraBreadCoffeeLatteRecipes, paneraBreadCoffeeEspresso, paneraBreadCoffeeFrenchRoast, paneraBreadCoffeeNewBlends],
+  "sprouted-organic-coffee": [sproutedOrganicCoffeeHero, sproutedOrganicCoffeeLatteRecipe, sproutedOrganicCoffeeFrenchRoast, sproutedOrganicCoffeeLightRoast, sproutedOrganicCoffeeSocialMedia],
 };
 
 // Projects whose gallery images should fill their containers exactly (no
@@ -62,6 +68,7 @@ const galleryAspectRatios: Record<string, [string, string, string, string]> = {
   meta: ["3332 / 1554", "2522 / 1570", "2522 / 1570", "3152 / 1294"],
   "baby-this-is-keke-palmer": ["2050 / 672", "1298 / 1856", "1350 / 1852", "1430 / 1006"],
   "panera-bread-coffee": ["2962 / 1052", "2880 / 1788", "2876 / 1648", "2924 / 1316"],
+  "sprouted-organic-coffee": ["2548 / 1210", "2166 / 1038", "2214 / 1042", "2586 / 1316"],
 };
 
 export default function ProjectDetail() {
