@@ -9,7 +9,7 @@ import eveHero from "@/assets/projects/eve-hero.png";
 import paneraBreadHero from "@/assets/projects/panera-bread-hero.png";
 import metaHero from "@/assets/projects/meta-hero.jpeg";
 import soundcloudHero from "@/assets/projects/soundcloud-hero.png";
-import kekePalmerHero from "@/assets/projects/keke-palmer-hero.jpg";
+import kekePalmerMagazineCover from "@/assets/projects/keke-palmer-magazine-cover-original.png";
 import paneraBreadCoffeeHero from "@/assets/projects/panera-bread-coffee-hero.webp";
 import sproutedOrganicCoffeeHero from "@/assets/projects/sprouted-organic-coffee-hero.png";
 
@@ -20,13 +20,20 @@ const projectImages: Record<string, string> = {
   "panera-bread": paneraBreadHero,
   "meta": metaHero,
   "soundcloud": soundcloudHero,
-  "baby-this-is-keke-palmer": kekePalmerHero,
+  "baby-this-is-keke-palmer": kekePalmerMagazineCover,
   "panera-bread-coffee": paneraBreadCoffeeHero,
   "sprouted-organic-coffee": sproutedOrganicCoffeeHero,
 };
 
-const customAspectSlugs = ["meta", "soundcloud", "baby-this-is-keke-palmer", "panera-bread-coffee", "sprouted-organic-coffee"];
-const containFitSlugs = ["meta", "soundcloud", "baby-this-is-keke-palmer", "panera-bread-coffee", "sprouted-organic-coffee"];
+const customAspectSlugs = ["meta", "soundcloud", "panera-bread-coffee"];
+const containFitSlugs = ["meta", "soundcloud", "panera-bread-coffee"];
+// These heroes don't fit the shared 4/3 frame without cropping or
+// letterboxing, so they get a custom aspect ratio matching their own photo
+// instead, at which point cover and contain fit render identically.
+const exactAspectRatios: Record<string, string> = {
+  "sprouted-organic-coffee": "2550 / 1060",
+  "baby-this-is-keke-palmer": "1612 / 2150",
+};
 
 export default function Work() {
   return (
@@ -62,7 +69,7 @@ export default function Work() {
                   aspectRatio={index % 2 === 0 ? "landscape" : "portrait"}
                   objectPosition={project.slug === "eve" || project.slug === "pcc-community-markets" ? "left" : "center"}
                   objectFit={containFitSlugs.includes(project.slug) ? "contain" : "cover"}
-                  customAspectRatio={customAspectSlugs.includes(project.slug) ? "4 / 3" : undefined}
+                  customAspectRatio={exactAspectRatios[project.slug] ?? (customAspectSlugs.includes(project.slug) ? "4 / 3" : undefined)}
                 />
               </ScrollReveal>
             ))}
