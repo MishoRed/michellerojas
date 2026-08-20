@@ -25,8 +25,14 @@ const projectImages: Record<string, string> = {
   "sprouted-organic-coffee": sproutedOrganicCoffeeHero,
 };
 
-const customAspectSlugs = ["meta", "soundcloud", "baby-this-is-keke-palmer", "panera-bread-coffee", "sprouted-organic-coffee"];
-const containFitSlugs = ["meta", "soundcloud", "baby-this-is-keke-palmer", "panera-bread-coffee", "sprouted-organic-coffee"];
+const customAspectSlugs = ["meta", "soundcloud", "baby-this-is-keke-palmer", "panera-bread-coffee"];
+const containFitSlugs = ["meta", "soundcloud", "baby-this-is-keke-palmer", "panera-bread-coffee"];
+// Sprouted Organic Coffee's hero is a wide banner that doesn't fit the
+// shared 4/3 frame without cropping or letterboxing, so it gets a custom
+// aspect ratio matching its own photo instead.
+const exactAspectRatios: Record<string, string> = {
+  "sprouted-organic-coffee": "2550 / 1060",
+};
 
 export default function Work() {
   return (
@@ -62,7 +68,7 @@ export default function Work() {
                   aspectRatio={index % 2 === 0 ? "landscape" : "portrait"}
                   objectPosition={project.slug === "eve" || project.slug === "pcc-community-markets" ? "left" : "center"}
                   objectFit={containFitSlugs.includes(project.slug) ? "contain" : "cover"}
-                  customAspectRatio={customAspectSlugs.includes(project.slug) ? "4 / 3" : undefined}
+                  customAspectRatio={exactAspectRatios[project.slug] ?? (customAspectSlugs.includes(project.slug) ? "4 / 3" : undefined)}
                 />
               </ScrollReveal>
             ))}
