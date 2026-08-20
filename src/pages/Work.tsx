@@ -26,7 +26,7 @@ const projectImages: Record<string, string> = {
 };
 
 const customAspectSlugs = ["meta", "soundcloud", "baby-this-is-keke-palmer", "panera-bread-coffee", "sprouted-organic-coffee"];
-const containFitSlugs = ["meta", "soundcloud", "baby-this-is-keke-palmer", "panera-bread-coffee"];
+const containFitSlugs = ["meta", "soundcloud", "baby-this-is-keke-palmer", "panera-bread-coffee", "sprouted-organic-coffee"];
 
 export default function Work() {
   return (
