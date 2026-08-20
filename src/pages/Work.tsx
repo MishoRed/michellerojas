@@ -11,6 +11,7 @@ import metaHero from "@/assets/projects/meta-hero.jpeg";
 import soundcloudHero from "@/assets/projects/soundcloud-hero.png";
 import kekePalmerHero from "@/assets/projects/keke-palmer-hero.jpg";
 import paneraBreadCoffeeHero from "@/assets/projects/panera-bread-coffee-hero.webp";
+import sproutedOrganicCoffeeHero from "@/assets/projects/sprouted-organic-coffee-hero.png";
 
 const projectImages: Record<string, string> = {
   "born-x-raised": bornXRaisedHero,
@@ -21,9 +22,11 @@ const projectImages: Record<string, string> = {
   "soundcloud": soundcloudHero,
   "baby-this-is-keke-palmer": kekePalmerHero,
   "panera-bread-coffee": paneraBreadCoffeeHero,
+  "sprouted-organic-coffee": sproutedOrganicCoffeeHero,
 };
 
-const containAspectSlugs = ["meta", "soundcloud", "baby-this-is-keke-palmer", "panera-bread-coffee"];
+const customAspectSlugs = ["meta", "soundcloud", "baby-this-is-keke-palmer", "panera-bread-coffee", "sprouted-organic-coffee"];
+const containFitSlugs = ["meta", "soundcloud", "baby-this-is-keke-palmer", "panera-bread-coffee", "sprouted-organic-coffee"];
 
 export default function Work() {
   return (
@@ -58,8 +61,8 @@ export default function Work() {
                   image={projectImages[project.slug]}
                   aspectRatio={index % 2 === 0 ? "landscape" : "portrait"}
                   objectPosition={project.slug === "eve" || project.slug === "pcc-community-markets" ? "left" : "center"}
-                  objectFit={containAspectSlugs.includes(project.slug) ? "contain" : "cover"}
-                  customAspectRatio={containAspectSlugs.includes(project.slug) ? "4 / 3" : undefined}
+                  objectFit={containFitSlugs.includes(project.slug) ? "contain" : "cover"}
+                  customAspectRatio={customAspectSlugs.includes(project.slug) ? "4 / 3" : undefined}
                 />
               </ScrollReveal>
             ))}

@@ -14,6 +14,7 @@ import metaHero from '@/assets/projects/meta-hero.jpeg';
 import soundcloudHero from '@/assets/projects/soundcloud-hero.png';
 import kekePalmerHero from '@/assets/projects/keke-palmer-hero.jpg';
 import paneraBreadCoffeeHero from '@/assets/projects/panera-bread-coffee-hero.webp';
+import sproutedOrganicCoffeeHero from '@/assets/projects/sprouted-organic-coffee-hero.png';
 
 type ImageSize = 'large' | 'medium' | 'small';
 type ImageOrientation = 'portrait' | 'landscape';
@@ -38,6 +39,7 @@ const galleryImages: GalleryImage[] = [
   { src: soundcloudHero, alt: 'Soundcloud audio storytelling', size: 'small', orientation: 'landscape', verticalOffset: 'center', projectSlug: 'soundcloud' },
   { src: kekePalmerHero, alt: 'Baby, This is Keke Palmer influencer marketing', size: 'large', orientation: 'landscape', verticalOffset: 'bottom', projectSlug: 'baby-this-is-keke-palmer' },
   { src: paneraBreadCoffeeHero, alt: 'Panera Bread Coffee digital marketing', size: 'medium', orientation: 'landscape', verticalOffset: 'center', projectSlug: 'panera-bread-coffee' },
+  { src: sproutedOrganicCoffeeHero, alt: 'Sprouted Organic Coffee digital marketing', size: 'large', orientation: 'landscape', verticalOffset: 'top', projectSlug: 'sprouted-organic-coffee', fit: 'contain' },
   { src: gallery9, alt: 'Northlight Studio color palette', size: 'small', orientation: 'portrait', verticalOffset: 'top', projectSlug: 'born-x-raised' },
   { src: gallery10, alt: 'Meridian Architects business cards', size: 'large', orientation: 'landscape', verticalOffset: 'center', projectSlug: 'pcc-community-markets' },
   { src: gallery11, alt: 'Stillwater Journal editorial layout', size: 'medium', orientation: 'portrait', verticalOffset: 'bottom', projectSlug: 'panera-bread' },
@@ -125,7 +127,7 @@ export const HorizontalScrollGallery = () => {
         // More height = slower horizontal scroll
         height: `${Math.max(300, horizontalScrollAmount * 0.6 + window.innerHeight)}px`
       }}
-      aria-label="Image gallery, 11 items"
+      aria-label="Image gallery, 12 items"
       role="region"
     >
       {/* Skip link */}
@@ -206,7 +208,7 @@ export const HorizontalScrollGallery = () => {
                     src={image.src}
                     alt={image.alt}
                     loading={index < 8 ? 'eager' : 'lazy'}
-                    className={`w-full h-full ${image.fit === 'contain' ? 'object-contain bg-cream-darker' : 'object-cover'}`}
+                    className={`w-full h-full ${image.fit === 'contain' ? 'object-contain bg-[#FBFBF9]' : 'object-cover'}`}
                     style={image.objectPosition ? { objectPosition: image.objectPosition } : undefined}
                     draggable={false}
                   />
