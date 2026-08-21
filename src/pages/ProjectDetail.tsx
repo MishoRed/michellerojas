@@ -48,6 +48,11 @@ import sproutedOrganicCoffeeLatteRecipe from "@/assets/projects/sprouted-organic
 import sproutedOrganicCoffeeFrenchRoast from "@/assets/projects/sprouted-organic-coffee-french-roast.png";
 import sproutedOrganicCoffeeLightRoast from "@/assets/projects/sprouted-organic-coffee-light-roast.png";
 import sproutedOrganicCoffeeSocialMedia from "@/assets/projects/sprouted-organic-coffee-social-media.png";
+import cesarCaroHero from "@/assets/projects/cesar-caro-hero.png";
+import cesarCaroProducts from "@/assets/projects/cesar-caro-products.png";
+import cesarCaroShampooSet from "@/assets/projects/cesar-caro-shampoo-set.png";
+import cesarCaroProducts2 from "@/assets/projects/cesar-caro-products-2.png";
+import cesarCaroSalon from "@/assets/projects/cesar-caro-salon.png";
 
 const projectImages: Record<string, string[]> = {
   "born-x-raised": [bornXRaisedHero, bornXRaised1, bornXRaised2, bornXRaised3, bornXRaised4],
@@ -59,6 +64,7 @@ const projectImages: Record<string, string[]> = {
   "baby-this-is-keke-palmer": [kekePalmerHeroWide, kekePalmerPodcast, krsAstrology, ladaAstrology, kekePalmerInfluencers],
   "panera-bread-coffee": [paneraBreadCoffeeHeroWide, paneraBreadCoffeeLatteRecipes, paneraBreadCoffeeEspresso, paneraBreadCoffeeFrenchRoast, paneraBreadCoffeeNewBlends],
   "sprouted-organic-coffee": [sproutedOrganicCoffeeHero, sproutedOrganicCoffeeLatteRecipe, sproutedOrganicCoffeeFrenchRoast, sproutedOrganicCoffeeLightRoast, sproutedOrganicCoffeeSocialMedia],
+  "cesar-caro": [cesarCaroHero, cesarCaroProducts, cesarCaroShampooSet, cesarCaroProducts2, cesarCaroSalon],
 };
 
 // Projects whose gallery images should fill their containers exactly (no
@@ -69,6 +75,7 @@ const galleryAspectRatios: Record<string, [string, string, string, string]> = {
   "baby-this-is-keke-palmer": ["2050 / 672", "1298 / 1856", "1350 / 1852", "1430 / 1006"],
   "panera-bread-coffee": ["2962 / 1052", "2880 / 1788", "2876 / 1648", "2924 / 1316"],
   "sprouted-organic-coffee": ["2548 / 1210", "2166 / 1038", "2214 / 1042", "2586 / 1316"],
+  "cesar-caro": ["3454 / 1316", "2854 / 1322", "2862 / 1330", "3454 / 1364"],
 };
 
 export default function ProjectDetail() {
