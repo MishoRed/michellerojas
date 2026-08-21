@@ -14,6 +14,7 @@ import kekePalmerMagazineCover from "@/assets/projects/keke-palmer-magazine-cove
 import paneraBreadCoffeeHero from "@/assets/projects/panera-bread-coffee-hero.webp";
 import sproutedOrganicCoffeeHero from "@/assets/projects/sprouted-organic-coffee-hero.png";
 import cesarCaroHero from "@/assets/projects/cesar-caro-hero.png";
+import acaciaTransitionsLogo from "@/assets/projects/acacia-transitions-logo.png";
 
 const projectImages: Record<string, string> = {
   "born-x-raised": bornXRaisedHero,
@@ -26,10 +27,11 @@ const projectImages: Record<string, string> = {
   "panera-bread-coffee": paneraBreadCoffeeHero,
   "sprouted-organic-coffee": sproutedOrganicCoffeeHero,
   "cesar-caro": cesarCaroHero,
+  "acacia-transitions": acaciaTransitionsLogo,
 };
 
-const customAspectSlugs = ["meta", "soundcloud", "panera-bread-coffee"];
-const containFitSlugs = ["meta", "soundcloud", "panera-bread-coffee"];
+const customAspectSlugs = ["meta", "soundcloud", "panera-bread-coffee", "acacia-transitions"];
+const containFitSlugs = ["meta", "soundcloud", "panera-bread-coffee", "acacia-transitions"];
 // These heroes don't fit the shared 4/3 frame without cropping or
 // letterboxing, so they get a custom aspect ratio matching their own photo
 // instead, at which point cover and contain fit render identically.

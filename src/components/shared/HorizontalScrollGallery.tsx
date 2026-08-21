@@ -5,9 +5,6 @@ import { projects } from '@/data/projects';
 // Import gallery images
 import gallery1 from '@/assets/gallery/gallery-1.jpg';
 import gallery2 from '@/assets/gallery/gallery-2.jpg';
-import gallery9 from '@/assets/gallery/gallery-9.jpg';
-import gallery10 from '@/assets/gallery/gallery-10.jpg';
-import gallery11 from '@/assets/gallery/gallery-11.jpg';
 import eveHero from '@/assets/projects/eve-hero.png';
 import paneraBreadHero from '@/assets/projects/panera-bread-hero.png';
 import metaHero from '@/assets/projects/meta-hero.jpeg';
@@ -16,6 +13,7 @@ import kekePalmerMagazineCover from '@/assets/projects/keke-palmer-magazine-cove
 import paneraBreadCoffeeHero from '@/assets/projects/panera-bread-coffee-hero.webp';
 import sproutedOrganicCoffeeHero from '@/assets/projects/sprouted-organic-coffee-hero.png';
 import cesarCaroHero from '@/assets/projects/cesar-caro-hero.png';
+import acaciaTransitionsLogo from '@/assets/projects/acacia-transitions-logo.png';
 
 type ImageSize = 'large' | 'medium' | 'small';
 type ImageOrientation = 'portrait' | 'landscape';
@@ -50,9 +48,7 @@ const galleryImages: GalleryImage[] = [
   { src: paneraBreadCoffeeHero, alt: 'Panera Bread Coffee digital marketing', size: 'medium', orientation: 'landscape', verticalOffset: 'center', projectSlug: 'panera-bread-coffee' },
   { src: sproutedOrganicCoffeeHero, alt: 'Sprouted Organic Coffee digital marketing', size: 'large', orientation: 'landscape', verticalOffset: 'center', projectSlug: 'sprouted-organic-coffee', customDimensions: { width: 560, height: 233 } },
   { src: cesarCaroHero, alt: 'Cesar Caro website redesign', size: 'large', orientation: 'landscape', verticalOffset: 'center', projectSlug: 'cesar-caro', customDimensions: { width: 560, height: 254 }, verticalNudge: 127 },
-  { src: gallery9, alt: 'Northlight Studio color palette', size: 'small', orientation: 'portrait', verticalOffset: 'top', projectSlug: 'born-x-raised' },
-  { src: gallery10, alt: 'Meridian Architects business cards', size: 'large', orientation: 'landscape', verticalOffset: 'center', projectSlug: 'pcc-community-markets' },
-  { src: gallery11, alt: 'Stillwater Journal editorial layout', size: 'medium', orientation: 'portrait', verticalOffset: 'bottom', projectSlug: 'panera-bread' },
+  { src: acaciaTransitionsLogo, alt: 'Acacia Transitions senior relocation services', size: 'medium', orientation: 'landscape', verticalOffset: 'center', projectSlug: 'acacia-transitions', fit: 'contain' },
 ];
 
 const getImageDimensions = (size: ImageSize, orientation: ImageOrientation): { width: number; height: number } => {
@@ -137,7 +133,7 @@ export const HorizontalScrollGallery = () => {
         // More height = slower horizontal scroll
         height: `${Math.max(300, horizontalScrollAmount * 0.6 + window.innerHeight)}px`
       }}
-      aria-label="Image gallery, 13 items"
+      aria-label="Image gallery, 11 items"
       role="region"
     >
       {/* Skip link */}
