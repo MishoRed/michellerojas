@@ -53,6 +53,11 @@ import cesarCaroProducts from "@/assets/projects/cesar-caro-products.png";
 import cesarCaroShampooSet from "@/assets/projects/cesar-caro-shampoo-set.png";
 import cesarCaroProducts2 from "@/assets/projects/cesar-caro-products-2.png";
 import cesarCaroSalon from "@/assets/projects/cesar-caro-salon.png";
+import acaciaTransitionsHero from "@/assets/projects/acacia-transitions-hero.png";
+import acaciaTransitionsHomeSaleCredit from "@/assets/projects/acacia-transitions-home-sale-credit.png";
+import acaciaTransitionsHomeSaleCreditProgram from "@/assets/projects/acacia-transitions-home-sale-credit-program.png";
+import acaciaTransitionsConciergeRelocationServices from "@/assets/projects/acacia-transitions-concierge-relocation-services.png";
+import acaciaTransitionsRelocationServices from "@/assets/projects/acacia-transitions-relocation-services.png";
 
 const projectImages: Record<string, string[]> = {
   "born-x-raised": [bornXRaisedHero, bornXRaised1, bornXRaised2, bornXRaised3, bornXRaised4],
@@ -65,6 +70,7 @@ const projectImages: Record<string, string[]> = {
   "panera-bread-coffee": [paneraBreadCoffeeHeroWide, paneraBreadCoffeeLatteRecipes, paneraBreadCoffeeEspresso, paneraBreadCoffeeFrenchRoast, paneraBreadCoffeeNewBlends],
   "sprouted-organic-coffee": [sproutedOrganicCoffeeHero, sproutedOrganicCoffeeLatteRecipe, sproutedOrganicCoffeeFrenchRoast, sproutedOrganicCoffeeLightRoast, sproutedOrganicCoffeeSocialMedia],
   "cesar-caro": [cesarCaroHero, cesarCaroProducts, cesarCaroShampooSet, cesarCaroProducts2, cesarCaroSalon],
+  "acacia-transitions": [acaciaTransitionsHero, acaciaTransitionsHomeSaleCredit, acaciaTransitionsHomeSaleCreditProgram, acaciaTransitionsConciergeRelocationServices, acaciaTransitionsRelocationServices],
 };
 
 // Projects whose gallery images should fill their containers exactly (no
@@ -76,6 +82,7 @@ const galleryAspectRatios: Record<string, [string, string, string, string]> = {
   "panera-bread-coffee": ["2962 / 1052", "2880 / 1788", "2876 / 1648", "2924 / 1316"],
   "sprouted-organic-coffee": ["2548 / 1210", "2166 / 1038", "2214 / 1042", "2586 / 1316"],
   "cesar-caro": ["3454 / 1316", "2854 / 1322", "2862 / 1330", "3454 / 1364"],
+  "acacia-transitions": ["2520 / 688", "1258 / 1078", "1248 / 1080", "2574 / 632"],
 };
 
 export default function ProjectDetail() {

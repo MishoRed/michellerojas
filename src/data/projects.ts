@@ -148,4 +148,18 @@ export const projects: Project[] = [
     presentationUrl: "https://cesarcarosalon.com/",
     presentationLabel: "CESAR CARO",
   },
+  {
+    slug: "acacia-transitions",
+    title: "Acacia Transitions",
+    category: "Family Services and Senior Relocation",
+    year: "2024",
+    client: "Acacia Transitions",
+    industry: "Family Services and Senior Relocation",
+    services: ["Website Redesign"],
+    overview: "This project involved a full redesign of the Acacia Transitions website, where I handled visual and UX design in Figma, Canva, and Photoshop to bring a client's vision to life as a responsive WordPress site. SEO was built in from the start, with on-page and off-page strategies aimed at growing organic traffic over the long term.",
+    challenge: "Getting the redesign right meant sitting down with stakeholders early to understand what users actually needed, then carrying that understanding through every stage from initial concept to launch. The harder part was making the site easier to navigate and its content easier to find, all without losing sight of the technical SEO work happening underneath, from site architecture to keyword strategy.",
+    solution: "Low- and high-fidelity wireframes gave the redesign a clear starting point, and testing interactive Figma prototypes helped cut down how long users spent completing tasks on the site. Throughout, I kept the client looped in by breaking down SEO and design decisions into terms that were easy to act on, which kept the project moving with everyone on the same page.",
+    presentationUrl: "https://acaciatransitions.com/",
+    presentationLabel: "ACACIA TRANSITIONS",
+  },
 ];
