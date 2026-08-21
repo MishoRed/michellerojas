@@ -33,6 +33,10 @@ interface GalleryImage {
   // own aspect ratio doesn't fit the standard buckets without cropping or
   // letterboxing.
   customDimensions?: { width: number; height: number };
+  // Nudges a 'center'-aligned item down (positive) or up (negative) from the
+  // shared center line, in pixels, for fine-tuned staggering against a
+  // specific neighbor.
+  verticalNudge?: number;
 }
 
 const galleryImages: GalleryImage[] = [
@@ -45,7 +49,7 @@ const galleryImages: GalleryImage[] = [
   { src: kekePalmerMagazineCover, alt: 'Baby, This is Keke Palmer influencer marketing', size: 'large', orientation: 'portrait', verticalOffset: 'bottom', projectSlug: 'baby-this-is-keke-palmer' },
   { src: paneraBreadCoffeeHero, alt: 'Panera Bread Coffee digital marketing', size: 'medium', orientation: 'landscape', verticalOffset: 'center', projectSlug: 'panera-bread-coffee' },
   { src: sproutedOrganicCoffeeHero, alt: 'Sprouted Organic Coffee digital marketing', size: 'large', orientation: 'landscape', verticalOffset: 'center', projectSlug: 'sprouted-organic-coffee', customDimensions: { width: 560, height: 233 } },
-  { src: cesarCaroHero, alt: 'Cesar Caro website redesign', size: 'large', orientation: 'landscape', verticalOffset: 'center', projectSlug: 'cesar-caro', customDimensions: { width: 560, height: 254 } },
+  { src: cesarCaroHero, alt: 'Cesar Caro website redesign', size: 'large', orientation: 'landscape', verticalOffset: 'center', projectSlug: 'cesar-caro', customDimensions: { width: 560, height: 254 }, verticalNudge: 127 },
   { src: gallery9, alt: 'Northlight Studio color palette', size: 'small', orientation: 'portrait', verticalOffset: 'top', projectSlug: 'born-x-raised' },
   { src: gallery10, alt: 'Meridian Architects business cards', size: 'large', orientation: 'landscape', verticalOffset: 'center', projectSlug: 'pcc-community-markets' },
   { src: gallery11, alt: 'Stillwater Journal editorial layout', size: 'medium', orientation: 'portrait', verticalOffset: 'bottom', projectSlug: 'panera-bread' },
@@ -191,9 +195,10 @@ export const HorizontalScrollGallery = () => {
                 key={index}
                 to={`/work/${image.projectSlug}`}
                 className="flex-shrink-0 relative group cursor-pointer block"
-                style={{ 
+                style={{
                   marginRight: `${gap}px`,
                   alignSelf,
+                  transform: image.verticalNudge ? `translateY(${image.verticalNudge}px)` : undefined,
                 }}
                 onMouseEnter={() => setHoveredIndex(index)}
                 onMouseLeave={() => setHoveredIndex(null)}
