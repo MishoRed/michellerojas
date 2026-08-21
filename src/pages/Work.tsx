@@ -12,6 +12,7 @@ import soundcloudHero from "@/assets/projects/soundcloud-hero.png";
 import kekePalmerMagazineCover from "@/assets/projects/keke-palmer-magazine-cover-original.png";
 import paneraBreadCoffeeHero from "@/assets/projects/panera-bread-coffee-hero.webp";
 import sproutedOrganicCoffeeHero from "@/assets/projects/sprouted-organic-coffee-hero.png";
+import cesarCaroHero from "@/assets/projects/cesar-caro-hero.png";
 
 const projectImages: Record<string, string> = {
   "born-x-raised": bornXRaisedHero,
@@ -23,6 +24,7 @@ const projectImages: Record<string, string> = {
   "baby-this-is-keke-palmer": kekePalmerMagazineCover,
   "panera-bread-coffee": paneraBreadCoffeeHero,
   "sprouted-organic-coffee": sproutedOrganicCoffeeHero,
+  "cesar-caro": cesarCaroHero,
 };
 
 const customAspectSlugs = ["meta", "soundcloud", "panera-bread-coffee"];
@@ -33,6 +35,7 @@ const containFitSlugs = ["meta", "soundcloud", "panera-bread-coffee"];
 const exactAspectRatios: Record<string, string> = {
   "sprouted-organic-coffee": "2550 / 1060",
   "baby-this-is-keke-palmer": "1612 / 2150",
+  "cesar-caro": "3414 / 1546",
 };
 
 export default function Work() {

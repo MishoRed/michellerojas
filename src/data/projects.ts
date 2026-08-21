@@ -134,4 +134,18 @@ export const projects: Project[] = [
     presentationUrl: "https://java-trading.com/",
     presentationLabel: "SPROUTED ORGANIC COFFEE",
   },
+  {
+    slug: "cesar-caro",
+    title: "Cesar Caro",
+    category: "Beauty and Hair Care",
+    year: "2024",
+    client: "Cesar Caro",
+    industry: "Beauty and Hair Care",
+    services: ["Website Redesign"],
+    overview: "For this project, I owned the end-to-end redesign of Cesar Caro's website, leading visual and UX design in Figma, Canva, and Photoshop to translate client goals into an engaging, responsive Squarespace site. Alongside the design work, I implemented on-page and off-page SEO strategies to strengthen organic visibility and support long-term traffic growth.",
+    challenge: "The redesign required partnering closely with stakeholders to define project goals and understand user needs, then turning those insights into wireframes and interactive prototypes that improved navigation and content accessibility across devices. It also meant balancing strong visual design with technical SEO considerations like site architecture and keyword strategy, while keeping the client informed and aligned throughout.",
+    solution: "By designing low- and high-fidelity wireframes and refining usability through interactive Figma prototypes, I reduced average time-on-task by 20% while applying technical SEO expertise to strengthen search rankings. Translating complex SEO and design concepts into clear, actionable insights for Cesar Caro built trust and alignment from concept through launch.",
+    presentationUrl: "https://cesarcarosalon.com/",
+    presentationLabel: "CESAR CARO",
+  },
 ];
