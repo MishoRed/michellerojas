@@ -2,6 +2,7 @@ import { Layout } from "@/components/layout/Layout";
 import { ScrollReveal } from "@/components/shared/ScrollReveal";
 import { ProjectCard } from "@/components/shared/ProjectCard";
 import { projects } from "@/data/projects";
+import { cn } from "@/lib/utils";
 
 import bornXRaisedHero from "@/assets/gallery/gallery-1.jpg";
 import pccCommunityMarketsHero from "@/assets/gallery/gallery-2.jpg";
@@ -56,25 +57,30 @@ export default function Work() {
       {/* Projects Grid */}
       <section className="section-padding border-t border-divider">
         <div className="container-editorial px-6 md:px-12 lg:px-20">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-16 md:gap-x-12 md:gap-y-24 lg:gap-x-16">
-            {projects.map((project, index) => (
-              <ScrollReveal 
-                key={project.slug} 
-                delay={index * 100}
-                className={index % 3 === 1 ? "md:mt-24" : ""}
-              >
-                <ProjectCard
-                  slug={project.slug}
-                  title={project.title}
-                  category={project.category}
-                  year={project.year}
-                  image={projectImages[project.slug]}
-                  aspectRatio={index % 2 === 0 ? "landscape" : "portrait"}
-                  objectPosition={project.slug === "eve" || project.slug === "pcc-community-markets" ? "left" : "center"}
-                  objectFit={containFitSlugs.includes(project.slug) ? "contain" : "cover"}
-                  customAspectRatio={exactAspectRatios[project.slug] ?? (customAspectSlugs.includes(project.slug) ? "4 / 3" : undefined)}
-                />
-              </ScrollReveal>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-x-8 md:gap-x-12 lg:gap-x-16">
+            {[0, 1].map((column) => (
+              <div key={column} className={cn("flex flex-col gap-y-16 md:gap-y-24", column === 1 && "md:mt-24")}>
+                {projects
+                  .filter((_, index) => index % 2 === column)
+                  .map((project) => {
+                    const index = projects.indexOf(project);
+                    return (
+                      <ScrollReveal key={project.slug} delay={index * 100}>
+                        <ProjectCard
+                          slug={project.slug}
+                          title={project.title}
+                          category={project.category}
+                          year={project.year}
+                          image={projectImages[project.slug]}
+                          aspectRatio={index % 2 === 0 ? "landscape" : "portrait"}
+                          objectPosition={project.slug === "eve" || project.slug === "pcc-community-markets" ? "left" : "center"}
+                          objectFit={containFitSlugs.includes(project.slug) ? "contain" : "cover"}
+                          customAspectRatio={exactAspectRatios[project.slug] ?? (customAspectSlugs.includes(project.slug) ? "4 / 3" : undefined)}
+                        />
+                      </ScrollReveal>
+                    );
+                  })}
+              </div>
             ))}
           </div>
         </div>
