@@ -157,7 +157,7 @@ export function Header() {
           >
             <div className="flex gap-6">
               <a
-                href="https://instagram.com"
+                href="https://www.instagram.com/mishored/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-sm text-ink-muted transition-colors duration-300 hover:text-ink"
@@ -165,7 +165,7 @@ export function Header() {
                 Instagram
               </a>
               <a
-                href="https://linkedin.com"
+                href="https://www.linkedin.com/in/michelle-rojas/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-sm text-ink-muted transition-colors duration-300 hover:text-ink"

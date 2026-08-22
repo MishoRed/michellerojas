@@ -23,16 +23,16 @@ const projectImages: Record<string, string> = {
 
 const services = [
   {
+    title: "Website Design",
+    description: "Responsive, intuitive experiences that turn visitors into engaged, returning users.",
+  },
+  {
     title: "Brand Strategy",
-    description: "Positioning and narrative frameworks that create lasting differentiation.",
+    description: "Strategic positioning and storytelling that set a brand apart for the long run.",
   },
   {
-    title: "Visual Identity",
-    description: "Distinctive design systems built on strategic foundations.",
-  },
-  {
-    title: "Art Direction",
-    description: "Creative guidance that brings brand visions to life with precision.",
+    title: "Creative Campaign",
+    description: "Bold visuals, compelling narrative, and emotional resonance brought to life.",
   },
 ];
 
@@ -46,7 +46,7 @@ export default function Index() {
             {/* Text Content */}
             <div className="lg:col-span-7 order-2 lg:order-1">
               <ScrollReveal>
-                <p className="eyebrow mb-6">Design & Brand Strategy</p>
+                <p className="eyebrow mb-6">Digital Marketing, Design and Brand Strategy</p>
               </ScrollReveal>
               <ScrollReveal delay={100}>
                 <h1 className="text-ink mb-8">
@@ -55,7 +55,7 @@ export default function Index() {
               </ScrollReveal>
               <ScrollReveal delay={200}>
                 <p className="text-lg md:text-xl text-ink-light max-w-xl mb-10">
-                  Designer and brand strategist crafting thoughtful identities for ambitious brands.
+                  Digital marketer, designer, and brand strategist building thoughtful identities for ambitious brands with precision.
                 </p>
               </ScrollReveal>
 
@@ -144,14 +144,15 @@ export default function Index() {
               </ScrollReveal>
               <ScrollReveal delay={100}>
                 <blockquote className="font-serif text-3xl md:text-4xl text-ink leading-snug mb-8">
-                  "Good design is invisible. It solves problems without drawing attention to itself."
+                  "Great marketing gets you noticed. Great brand strategy gets you remembered."
                 </blockquote>
               </ScrollReveal>
               <ScrollReveal delay={200}>
                 <p className="text-ink-light mb-8">
-                  With over a decade of experience working with brands across industries, 
-                  I bring a strategic approach to every project. My work is rooted in the 
-                  belief that the best brands are built on clarity, consistency, and restraint.
+                  Digital Marketing is precise and measurable, using search, social, and email,
+                  turning attention to loyalty. Brand strategy is the compass, the quiet
+                  conviction, turning a name people recognize into a name people believe in.
+                  Together, they build a brand people choose on purpose.
                 </p>
               </ScrollReveal>
               <ScrollReveal delay={300}>
@@ -221,7 +222,7 @@ export default function Index() {
             </ScrollReveal>
             <ScrollReveal delay={100}>
               <p className="text-ink-light mb-10 max-w-xl mx-auto">
-                Currently accepting new projects for Q1 2025. I'd love to hear about 
+                Currently accepting new projects for Q4 2026. I'd love to hear about
                 what you're building.
               </p>
             </ScrollReveal>
