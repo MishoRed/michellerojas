@@ -231,10 +231,10 @@ your project.</h1>
                   <div>
                     <p className="eyebrow mb-3">Social</p>
                     <div className="space-y-2">
-                      <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" className="block text-ink hover:opacity-70 transition-opacity duration-300">
+                      <a href="https://www.instagram.com/mishored/" target="_blank" rel="noopener noreferrer" className="block text-ink hover:opacity-70 transition-opacity duration-300">
                         Instagram
                       </a>
-                      <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="block text-ink hover:opacity-70 transition-opacity duration-300">
+                      <a href="https://www.linkedin.com/in/michelle-rojas/" target="_blank" rel="noopener noreferrer" className="block text-ink hover:opacity-70 transition-opacity duration-300">
                         LinkedIn
                       </a>
                       <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" className="block text-ink hover:opacity-70 transition-opacity duration-300">

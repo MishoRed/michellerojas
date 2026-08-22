@@ -11,7 +11,7 @@ import metaHero from '@/assets/projects/meta-hero.jpeg';
 import soundcloudHero from '@/assets/projects/soundcloud-hero.png';
 import kekePalmerMagazineCover from '@/assets/projects/keke-palmer-magazine-cover-original.png';
 import paneraBreadCoffeeHero from '@/assets/projects/panera-bread-coffee-hero.webp';
-import sproutedOrganicCoffeeHero from '@/assets/projects/sprouted-organic-coffee-hero.png';
+import sproutedOrganicCoffeeGallery from '@/assets/projects/sprouted-organic-coffee-gallery.png';
 import cesarCaroHero from '@/assets/projects/cesar-caro-hero.png';
 import acaciaTransitionsLogo from '@/assets/projects/acacia-transitions-logo.png';
 
@@ -46,7 +46,7 @@ const galleryImages: GalleryImage[] = [
   { src: soundcloudHero, alt: 'Soundcloud audio storytelling', size: 'small', orientation: 'landscape', verticalOffset: 'center', projectSlug: 'soundcloud' },
   { src: kekePalmerMagazineCover, alt: 'Baby, This is Keke Palmer influencer marketing', size: 'large', orientation: 'portrait', verticalOffset: 'bottom', projectSlug: 'baby-this-is-keke-palmer' },
   { src: paneraBreadCoffeeHero, alt: 'Panera Bread Coffee digital marketing', size: 'medium', orientation: 'landscape', verticalOffset: 'center', projectSlug: 'panera-bread-coffee' },
-  { src: sproutedOrganicCoffeeHero, alt: 'Sprouted Organic Coffee digital marketing', size: 'large', orientation: 'landscape', verticalOffset: 'center', projectSlug: 'sprouted-organic-coffee', customDimensions: { width: 560, height: 233 } },
+  { src: sproutedOrganicCoffeeGallery, alt: 'Sprouted Organic Coffee digital marketing', size: 'large', orientation: 'landscape', verticalOffset: 'center', projectSlug: 'sprouted-organic-coffee', customDimensions: { width: 560, height: 548 } },
   { src: cesarCaroHero, alt: 'Cesar Caro website redesign', size: 'large', orientation: 'landscape', verticalOffset: 'center', projectSlug: 'cesar-caro', customDimensions: { width: 560, height: 254 }, verticalNudge: 127 },
   { src: acaciaTransitionsLogo, alt: 'Acacia Transitions senior relocation services', size: 'medium', orientation: 'landscape', verticalOffset: 'center', projectSlug: 'acacia-transitions', fit: 'contain' },
 ];

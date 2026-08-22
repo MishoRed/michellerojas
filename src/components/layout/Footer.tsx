@@ -9,8 +9,8 @@ const navLinks = [
 ];
 
 const socialLinks = [
-  { name: "Instagram", url: "https://instagram.com" },
-  { name: "LinkedIn", url: "https://linkedin.com" },
+  { name: "Instagram", url: "https://www.instagram.com/mishored/" },
+  { name: "LinkedIn", url: "https://www.linkedin.com/in/michelle-rojas/" },
 ];
 
 export function Footer() {
@@ -29,7 +29,7 @@ export function Footer() {
               Michelle Rojas
             </Link>
             <p className="mt-4 text-sm text-ink-muted max-w-xs">
-              Designer and brand strategist crafting distinctive identities with intention and restraint.
+              Digital marketer, designer, and brand strategist crafting distinctive identities with intention and discipline.
             </p>
           </div>
 
