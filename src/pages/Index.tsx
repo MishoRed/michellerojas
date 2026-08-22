@@ -32,7 +32,7 @@ const services = [
   },
   {
     title: "Creative Campaign",
-    description: "Bold visuals, compelling narrative, and emotional resonance brought to life across every channel.",
+    description: "Bold visuals, compelling narrative, and emotional resonance brought to life.",
   },
 ];
 
@@ -55,7 +55,7 @@ export default function Index() {
               </ScrollReveal>
               <ScrollReveal delay={200}>
                 <p className="text-lg md:text-xl text-ink-light max-w-xl mb-10">
-                  Digital marketer, designer, and brand strategist crafting thoughtful identities for ambitious brands.
+                  Digital marketer, designer, and brand strategist building thoughtful identities for ambitious brands with precision.
                 </p>
               </ScrollReveal>
 
@@ -149,13 +149,10 @@ export default function Index() {
               </ScrollReveal>
               <ScrollReveal delay={200}>
                 <p className="text-ink-light mb-8">
-                  Digital Marketing is the engine, precise, measurable, and always testing what
-                  actually moves people, using search, social, and email to guide someone from a
-                  passing glance to genuine loyalty. Brand strategy is the compass, the quiet
-                  decision-making about who you are and what you refuse to compromise on, turning
-                  a name people recognize into a name people believe in. Together, they don't just
-                  fill a pipeline, they build something that outlasts any single campaign: a brand
-                  people choose on purpose.
+                  Digital Marketing is precise and measurable, using search, social, and email,
+                  turning attention to loyalty. Brand strategy is the compass, the quiet
+                  conviction, turning a name people recognize into a name people believe in.
+                  Together, they build a brand people choose on purpose.
                 </p>
               </ScrollReveal>
               <ScrollReveal delay={300}>
