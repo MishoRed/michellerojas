@@ -4,8 +4,8 @@ import { Layout } from "@/components/layout/Layout";
 import { ScrollReveal } from "@/components/shared/ScrollReveal";
 import { Button } from "@/components/ui/button";
 
-import portraitMain from "@/assets/portrait-main.jpg";
-import workspace from "@/assets/workspace.jpg";
+import portraitMain from "@/assets/projects/Michelle Rojas Collective About.jpg";
+import workspace from "@/assets/projects/MRC Beyond Work.jpg";
 
 const values = [
   {
@@ -26,7 +26,7 @@ const values = [
 ];
 
 const recognition = [
-  { name: "Communication Arts", type: "Award of Excellence", year: "2024" },
+  { name: "UW Screen Summit", type: "Professionals' Choice Award - Eve AI Skincare", year: "2026" },
 ];
 
 export default function About() {
@@ -42,7 +42,7 @@ export default function About() {
               </ScrollReveal>
               <ScrollReveal delay={100}>
                 <h1 className="text-ink">
-                  Designing with purpose since 2014.
+                  Building brands with purpose.
                 </h1>
               </ScrollReveal>
             </div>
@@ -67,32 +67,26 @@ export default function About() {
           <div className="max-w-3xl">
             <ScrollReveal>
               <p className="text-xl md:text-2xl text-ink leading-relaxed mb-8 first-letter:text-8xl md:first-letter:text-9xl first-letter:font-serif first-letter:float-left first-letter:mr-4 first-letter:mt-0 first-letter:leading-[0.75]">
-                I'm Michelle, a designer and brand strategist based in New York City. 
-                For over a decade, I've partnered with organizations—from ambitious 
-                startups to established institutions—to craft identities that resonate 
-                and endure.
+                I'm Michelle, a digital marketer, designer, and brand strategist based in
+                Seattle. For over a decade, I've partnered with organizations, from
+                ambitious startups to established institutions, to build brands that
+                connect and campaigns that convert.
               </p>
             </ScrollReveal>
             <ScrollReveal delay={100}>
               <p className="text-ink-light mb-8">
-                My approach is rooted in restraint and intention. I believe the most 
-                powerful brands are built on clarity—a deep understanding of who you 
-                are and who you serve. This understanding becomes the foundation for 
-                every visual and verbal decision.
+                My approach is rooted in attention to detail and intention. I believe the
+                most powerful brands are built on clarity, a deep understanding of who
+                you are, who you serve, and how to reach them, and that understanding
+                shapes everything from a logo to a landing page to the strategy behind a
+                campaign.
               </p>
             </ScrollReveal>
             <ScrollReveal delay={200}>
               <p className="text-ink-light mb-8">
-                Before starting my practice, I worked with leading design studios and 
-                global brands, where I developed my belief that great design emerges 
-                from rigorous thinking and deep collaboration.
-              </p>
-            </ScrollReveal>
-            <ScrollReveal delay={300}>
-              <p className="text-ink-light">
-                When I'm not designing, you'll find me exploring the city's architecture, 
-                collecting vintage typography specimens, or attempting to master the art 
-                of sourdough.
+                Before starting my practice, I worked with leading businesses and global
+                brands, where I developed my belief that great marketing and branding
+                emerge from creativity, data, and deep collaboration.
               </p>
             </ScrollReveal>
           </div>
@@ -127,7 +121,7 @@ export default function About() {
             <div className="lg:col-span-4">
               <ScrollReveal>
                 <p className="eyebrow mb-4">Recognition</p>
-                <h2 className="text-ink">Awards & Press</h2>
+                <h2 className="text-ink">Awards</h2>
               </ScrollReveal>
             </div>
             <div className="lg:col-span-7 lg:col-start-6">
@@ -170,10 +164,12 @@ export default function About() {
               </ScrollReveal>
               <ScrollReveal delay={200}>
                 <p className="text-ink-light">
-                  Design is a lens through which I see the world. Outside the studio, 
-                  I'm drawn to architecture, typography, and the quiet details that 
-                  make spaces and objects memorable. I believe creativity is fueled 
-                  by curiosity—and by taking time to simply observe.
+                  Outside of my work, I dedicate my time to family, friends, pets, and
+                  the outdoors. I have a genuine interest in art and lifelong learning
+                  across a wide range of subjects. I believe creativity is fueled by
+                  curiosity, and that the most meaningful ideas emerge from seeing the
+                  world through both your own perspective and the perspectives of
+                  others.
                 </p>
               </ScrollReveal>
             </div>
