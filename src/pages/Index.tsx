@@ -200,13 +200,6 @@ export default function Index() {
               </ScrollReveal>
             ))}
           </div>
-
-          <ScrollReveal className="mt-16 md:mt-20">
-            <Link to="/services" className="arrow-link text-ink">
-              View All Services
-              <ArrowRight size={18} strokeWidth={1.5} />
-            </Link>
-          </ScrollReveal>
         </div>
       </section>
 
