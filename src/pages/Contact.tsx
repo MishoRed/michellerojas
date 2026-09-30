@@ -2,7 +2,6 @@ import { useState } from "react";
 import { z } from "zod";
 import { Layout } from "@/components/layout/Layout";
 import { ScrollReveal } from "@/components/shared/ScrollReveal";
-import { InvestmentEstimator } from "@/components/shared/InvestmentEstimator";
 import { Button } from "@/components/ui/button";
 import { useToast } from "@/hooks/use-toast";
 const projectTypes = ["Brand Identity", "Visual Design System", "Art Direction", "Brand Guidelines", "Other"];
@@ -92,24 +91,21 @@ export default function Contact() {
         <div className="container-editorial px-6 md:px-12 lg:px-20">
           <div className="max-w-3xl">
             <ScrollReveal>
-              <p className="eyebrow mb-6">Get an Estimate</p>
+              <p className="eyebrow mb-6">Get in contact with me</p>
             </ScrollReveal>
             <ScrollReveal delay={100}>
               <h1 className="text-ink mb-8">Let's build
-your project.</h1>
+our connection.</h1>
             </ScrollReveal>
             <ScrollReveal delay={200}>
               <p className="text-xl text-ink-light">
-                Use the estimator below to get a personalized investment range, 
-                then fill out the form to start the conversation.
+                Fill out the form below to start a conversation about our
+                future endeavors.
               </p>
             </ScrollReveal>
           </div>
         </div>
       </section>
-
-      {/* Investment Estimator */}
-      <InvestmentEstimator />
 
       {/* Contact Form */}
       <section id="contact-form" className="section-padding border-t border-divider">
