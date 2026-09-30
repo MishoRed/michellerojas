@@ -200,6 +200,18 @@ export default function Index() {
               </ScrollReveal>
             ))}
           </div>
+
+          <ScrollReveal className="mt-16 md:mt-20">
+            <a
+              href="https://michellerojascollective.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="arrow-link text-ink"
+            >
+              Visit Michelle Rojas Collective
+              <ArrowRight size={18} strokeWidth={1.5} />
+            </a>
+          </ScrollReveal>
         </div>
       </section>
 
@@ -222,7 +234,7 @@ export default function Index() {
             <ScrollReveal delay={200}>
               <Button asChild>
                 <Link to="/contact" className="inline-flex items-center gap-2">
-                  Get an Estimate
+                  Contact Me
                   <ArrowRight size={18} strokeWidth={1.5} />
                 </Link>
               </Button>

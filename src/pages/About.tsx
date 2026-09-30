@@ -194,7 +194,7 @@ export default function About() {
             <ScrollReveal delay={200}>
               <Button asChild>
                 <Link to="/contact" className="inline-flex items-center gap-2">
-                  Get an Estimate
+                  Contact Me
                   <ArrowRight size={18} strokeWidth={1.5} />
                 </Link>
               </Button>
