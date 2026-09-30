@@ -86,8 +86,29 @@ export default function Contact() {
     }
   };
   return <Layout>
+      {/* Hero */}
+      <section className="pt-32 md:pt-40 pb-16 md:pb-24">
+        <div className="container-editorial px-6 md:px-12 lg:px-20">
+          <div className="max-w-3xl">
+            <ScrollReveal>
+              <p className="eyebrow mb-6">Get in contact with me</p>
+            </ScrollReveal>
+            <ScrollReveal delay={100}>
+              <h1 className="text-ink mb-8">Let's build
+our connection.</h1>
+            </ScrollReveal>
+            <ScrollReveal delay={200}>
+              <p className="text-xl text-ink-light">
+                Fill out the form below to start a conversation about our
+                future endeavors.
+              </p>
+            </ScrollReveal>
+          </div>
+        </div>
+      </section>
+
       {/* Contact Form */}
-      <section id="contact-form" className="pt-32 md:pt-40 pb-16 md:pb-24 lg:pb-32 px-6 md:px-12 lg:px-20">
+      <section id="contact-form" className="section-padding border-t border-divider">
         <div className="container-editorial px-6 md:px-12 lg:px-20">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16">
             {/* Form */}
