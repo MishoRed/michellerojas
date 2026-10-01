@@ -155,7 +155,7 @@ our connection.</h1>
                     <label htmlFor="role" className="eyebrow block mb-3">
                       Role You're Reaching Out About <span className="text-ink-muted">*</span>
                     </label>
-                    <input type="text" id="role" name="role" required maxLength={150} value={formData.role} onChange={handleChange} className="input-editorial" placeholder="e.g. Brand Strategist" />
+                    <input type="text" id="role" name="role" required maxLength={150} value={formData.role} onChange={handleChange} className="input-editorial" placeholder="e.g. Brand Manager" />
                   </div>
 
                   {/* LinkedIn */}
