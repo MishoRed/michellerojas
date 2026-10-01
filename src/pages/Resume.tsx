@@ -201,13 +201,6 @@ export default function Resume() {
                           </li>
                         ))}
                       </ul>
-                      <a
-                        href={resumePdfUrl}
-                        download="Michelle-Rojas-Resume.pdf"
-                        className="inline-block mt-4 text-sm text-ink-muted underline underline-offset-4 hover:text-ink transition-colors"
-                      >
-                        Download to view more
-                      </a>
                     </div>
                   </ScrollReveal>
                 ))}
@@ -302,8 +295,8 @@ export default function Resume() {
             </ScrollReveal>
             <ScrollReveal delay={100}>
               <p className="text-ink-light mb-10 max-w-xl mx-auto">
-                Download the full Resume as a PDF, or reach out if you'd like to
-                discuss a project.
+                Download my resume as a PDF, or reach out if you'd like to
+                discuss an opportunity.
               </p>
             </ScrollReveal>
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
