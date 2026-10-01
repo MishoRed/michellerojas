@@ -4,18 +4,15 @@ import { Layout } from "@/components/layout/Layout";
 import { ScrollReveal } from "@/components/shared/ScrollReveal";
 import { Button } from "@/components/ui/button";
 import { useToast } from "@/hooks/use-toast";
-const projectTypes = ["Brand Identity", "Visual Design System", "Art Direction", "Brand Guidelines", "Other"];
-const budgetRanges = ["Under $25,000", "$25,000 – $50,000", "$50,000 – $100,000", "$100,000+", "Not sure yet"];
-const referralSources = ["Referral", "Social Media", "Search Engine", "Press / Publication", "Other"];
 
 const contactSchema = z.object({
   name: z.string().trim().min(1, "Name is required").max(100, "Name must be under 100 characters"),
   email: z.string().trim().email("Please enter a valid email").max(255),
-  company: z.string().trim().max(150, "Company must be under 150 characters").optional(),
-  projectType: z.string().max(100).optional(),
-  budget: z.string().max(100).optional(),
-  message: z.string().trim().min(1, "Project details are required").max(2000, "Message must be under 2000 characters"),
-  referral: z.string().max(100).optional(),
+  company: z.string().trim().min(1, "Company/Organization is required").max(150, "Company/Organization must be under 150 characters"),
+  role: z.string().trim().min(1, "Role is required").max(150, "Role must be under 150 characters"),
+  linkedin: z.string().trim().min(1, "LinkedIn profile URL is required").url("Please enter a valid URL").max(255),
+  phone: z.string().trim().min(1, "Phone number is required").max(30, "Phone number must be under 30 characters"),
+  message: z.string().trim().min(1, "Message is required").max(2000, "Message must be under 2000 characters"),
 });
 
 const encodeFormData = (data: Record<string, string>) =>
@@ -30,10 +27,10 @@ export default function Contact() {
     name: "",
     email: "",
     company: "",
-    projectType: "",
-    budget: "",
+    role: "",
+    linkedin: "",
+    phone: "",
     message: "",
-    referral: ""
   });
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
     setFormData({
@@ -70,15 +67,15 @@ export default function Contact() {
         name: "",
         email: "",
         company: "",
-        projectType: "",
-        budget: "",
+        role: "",
+        linkedin: "",
+        phone: "",
         message: "",
-        referral: ""
       });
     } catch (err) {
       toast({
         title: "Something went wrong",
-        description: "Your message couldn't be sent. Please try again or email hello@michellerojas.com.",
+        description: "Your message couldn't be sent. Please try again or email rojasmichellec@gmail.com.",
         variant: "destructive",
       });
     } finally {
@@ -148,56 +145,41 @@ our connection.</h1>
                   {/* Company */}
                   <div>
                     <label htmlFor="company" className="eyebrow block mb-3">
-                      Company / Organization
+                      Company/Organization <span className="text-ink-muted">*</span>
                     </label>
-                    <input type="text" id="company" name="company" maxLength={150} value={formData.company} onChange={handleChange} className="input-editorial" placeholder="Your company" />
+                    <input type="text" id="company" name="company" required maxLength={150} value={formData.company} onChange={handleChange} className="input-editorial" placeholder="Your company" />
                   </div>
 
-                  {/* Project Type */}
+                  {/* Role */}
                   <div>
-                    <label htmlFor="projectType" className="eyebrow block mb-3">
-                      Project Type
+                    <label htmlFor="role" className="eyebrow block mb-3">
+                      Role You're Reaching Out About <span className="text-ink-muted">*</span>
                     </label>
-                    <select id="projectType" name="projectType" value={formData.projectType} onChange={handleChange} className="input-editorial bg-transparent cursor-pointer">
-                      <option value="">Select a project type</option>
-                      {projectTypes.map(type => <option key={type} value={type}>
-                          {type}
-                        </option>)}
-                    </select>
+                    <input type="text" id="role" name="role" required maxLength={150} value={formData.role} onChange={handleChange} className="input-editorial" placeholder="e.g. Brand Manager" />
                   </div>
 
-                  {/* Budget */}
+                  {/* LinkedIn */}
                   <div>
-                    <label htmlFor="budget" className="eyebrow block mb-3">
-                      Budget Range
+                    <label htmlFor="linkedin" className="eyebrow block mb-3">
+                      LinkedIn Profile URL <span className="text-ink-muted">*</span>
                     </label>
-                    <select id="budget" name="budget" value={formData.budget} onChange={handleChange} className="input-editorial bg-transparent cursor-pointer">
-                      <option value="">Select a budget range</option>
-                      {budgetRanges.map(range => <option key={range} value={range}>
-                          {range}
-                        </option>)}
-                    </select>
+                    <input type="url" id="linkedin" name="linkedin" required maxLength={255} value={formData.linkedin} onChange={handleChange} className="input-editorial" placeholder="https://www.linkedin.com/in/yourname" />
                   </div>
 
                   {/* Message */}
                   <div>
                     <label htmlFor="message" className="eyebrow block mb-3">
-                      Project Details <span className="text-ink-muted">*</span>
+                      Message/Details <span className="text-ink-muted">*</span>
                     </label>
                     <textarea id="message" name="message" required maxLength={2000} rows={6} value={formData.message} onChange={handleChange} className="input-editorial resize-none" placeholder="Tell me about your project, goals, and timeline..." />
                   </div>
 
-                  {/* Referral */}
+                  {/* Phone */}
                   <div>
-                    <label htmlFor="referral" className="eyebrow block mb-3">
-                      How did you hear about me?
+                    <label htmlFor="phone" className="eyebrow block mb-3">
+                      Phone Number <span className="text-ink-muted">*</span>
                     </label>
-                    <select id="referral" name="referral" value={formData.referral} onChange={handleChange} className="input-editorial bg-transparent cursor-pointer">
-                      <option value="">Select an option</option>
-                      {referralSources.map(source => <option key={source} value={source}>
-                          {source}
-                        </option>)}
-                    </select>
+                    <input type="tel" id="phone" name="phone" required maxLength={30} value={formData.phone} onChange={handleChange} className="input-editorial" placeholder="(555) 123-4567" />
                   </div>
 
                   {/* Submit */}
@@ -214,27 +196,21 @@ our connection.</h1>
                 <div className="lg:sticky lg:top-32 space-y-10">
                   <div>
                     <p className="eyebrow mb-3">Email</p>
-                    <a href="mailto:hello@michellerojas.com" className="text-ink hover:opacity-70 transition-opacity duration-300">
-                      hello@michellerojas.com
+                    <a href="mailto:rojasmichellec@gmail.com" className="text-ink hover:opacity-70 transition-opacity duration-300">
+                      rojasmichellec@gmail.com
                     </a>
                   </div>
 
                   <div>
                     <p className="eyebrow mb-3">Location</p>
-                    <p className="text-ink">New York, NY</p>
+                    <p className="text-ink">Seattle, WA</p>
                   </div>
 
                   <div>
                     <p className="eyebrow mb-3">Social</p>
                     <div className="space-y-2">
-                      <a href="https://www.instagram.com/mishored/" target="_blank" rel="noopener noreferrer" className="block text-ink hover:opacity-70 transition-opacity duration-300">
-                        Instagram
-                      </a>
                       <a href="https://www.linkedin.com/in/michelle-rojas/" target="_blank" rel="noopener noreferrer" className="block text-ink hover:opacity-70 transition-opacity duration-300">
                         LinkedIn
-                      </a>
-                      <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" className="block text-ink hover:opacity-70 transition-opacity duration-300">
-                        Twitter
                       </a>
                     </div>
                   </div>
@@ -248,25 +224,6 @@ our connection.</h1>
                 </div>
               </ScrollReveal>
             </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Alternative Contact */}
-      <section className="section-padding bg-cream-dark">
-        <div className="container-editorial px-6 md:px-12 lg:px-20">
-          <div className="max-w-2xl">
-            <ScrollReveal>
-              <p className="eyebrow mb-4">Prefer email?</p>
-            </ScrollReveal>
-            <ScrollReveal delay={100}>
-              <p className="text-ink-light">
-                You can also reach me directly at{" "}
-                <a href="mailto:hello@michellerojas.com" className="text-ink underline underline-offset-4 hover:opacity-70 transition-opacity duration-300">
-                  hello@michellerojas.com
-                </a>
-              </p>
-            </ScrollReveal>
           </div>
         </div>
       </section>
