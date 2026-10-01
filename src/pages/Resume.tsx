@@ -3,29 +3,54 @@ import { ArrowRight, Download } from "lucide-react";
 import { Layout } from "@/components/layout/Layout";
 import { ScrollReveal } from "@/components/shared/ScrollReveal";
 import { Button } from "@/components/ui/button";
-import resumePdf from "@/assets/michelle-rojas-resume.pdf.asset.json";
+
+const resumePdfUrl = "/michelle-rojas-resume.pdf";
 
 const experience = [
+  {
+    role: "Website Design & SEO Consultant",
+    company: "Michelle Rojas Collective — Seattle, Washington",
+    period: "January 2021 – Current",
+    description:
+      "Own end-to-end design, optimization, and maintenance of client websites, delivering high-quality user experiences paired with strong search engine visibility. Selected consulting projects include full website builds, SEO audits, and redesigns for small business clients, balanced alongside full-time roles and graduate program. Lead visual and UX design, translating client goals into engaging, responsive websites building trust and alignment throughout each project. Implement on-page and off-page SEO strategies to drive organic visibility and long-term traffic growth.",
+    tools: ["Figma", "Canva", "Adobe Illustrator", "Google Analytics", "Squarespace", "Wix", "WordPress", "Netlify", "GitHub", "Claude AI"],
+    achievements: [
+      "Built and maintained a 5-year independent consulting practice while working full-time and completing a graduate degree, reflecting strong time management sustained client trust.",
+      "Develop wireframes and interactive prototypes in Figma to refine usability, reducing average time-on-task by 20%.",
+      "Delivered complimentary website and SEO audits for 5 clients, identifying key opportunities to improve search visibility and user experience.",
+      "Partner closely with stakeholders to define project goals, understand user needs, and shape site strategy from concept through launch.",
+      "Design low- and high-fidelity wireframes and mockups for a full website redesign, improving user navigation and content accessibility.",
+      "Apply technical SEO expertise, including site architecture, keyword strategy, and performance optimization, to strengthen search rankings and user experience.",
+    ],
+  },
   {
     role: "Digital Marketing Manager",
     company: "Distant Lands Coffee — Renton, Washington",
     period: "January 2025 – August 2026",
     description:
-      "Lead branded national coffee programs across D2C e-commerce, CRM, and social media, driving audience growth, engagement, acquisition, and brand awareness through data-informed campaigns. Serve as creative director for Panera Coffee and Sprouted Organic Coffee, shaping brand tone, voice, and visual identity across photoshoots and email campaigns. Direct execution across Shopify, Omnisend, Google Ads, Microsoft Ads, Walmart Seller Market/Walmart Connect, Amazon Seller Central, TikTok, and Meta. Manage and maintain the yearly Digital Marketing Department budget to enhance acquisition while minimizing costs. Drove growth across channels: $42K increase in Omnisend email revenue with 58% audience growth, $30K growth in Walmart e-commerce, $66K growth in Shopify e-commerce, and a 25% lift in Google Ads conversions. Develop and present high-level reports on digital channel performance, campaign results, and growth opportunities at General Management meetings.",
+      "Supported Panera Bread Coffee and Sprouted Organic Coffee programs across D2C e-commerce channels, CRM, and social media platforms, driving over $138K in combined revenue growth across email, Walmart, and Shopify channels. Developed tactics and campaigns that drove earned media, audience growth, owned engagement, acquisition, reach, and brand awareness. Applied company standard social voice, tone, style, and creative.",
+    tools: ["Shopify", "Omnisend", "Google Ads", "Microsoft Ads", "Walmart Seller Market & Walmart Connect Ad", "Amazon Seller Central", "TikTok", "Meta", "Photoshop", "Claude AI"],
+    achievements: [
+      "Increased yearly sales per channel; grew Omnisend email revenue by $42K with 58% audience growth, Walmart e-commerce by $30K, Shopify e-commerce by $66K, and Google Ads conversions by 25%.",
+      "Built and maintained a comprehensive email and social media campaign calendar, ensuring cross-functional alignment and timely execution for all national coffee brands.",
+      "Managed the yearly Digital Marketing Department budget to enhance acquisition while minimizing costs by 13%.",
+      "Directed creative concept and setup for global coffee brands' photoshoots and future creative planning.",
+      "Created and presented high-level reports on digital channel sales, email campaigns, and promotional development at General Management meetings.",
+    ],
   },
   {
     role: "Senior Marketing Specialist",
     company: "Sterlitech — Auburn, Washington",
     period: "December 2023 – April 2024",
     description:
-      "Owned daily operations of B2B marketing and brand presence, reporting directly to the Director of Marketing and presenting initiatives to the Founder and President. Partnered with international, cross-functional teams to align brand messaging and campaigns with organizational goals. Directed marketing product launches, trade shows, promotions, events, and branded promotional materials, ensuring consistent brand presentation across touchpoints. Produced executive reporting using NetSuite, Magento, Power BI, GA4, and Google Ads to evaluate campaign and brand performance. Improved email deliverability, open rates, and conversion rates by 20% using Bloom Growth and Klaviyo, refining brand messaging and creative along the way. Trained and mentored a Marketing Specialist, strengthening team creative capability and brand consistency.",
-  },
-  {
-    role: "SEO Specialist",
-    company: "Portent — Seattle, Washington",
-    period: "February 2022 – April 2023",
-    description:
-      "Strengthened brand visibility for agency clients through advanced SEO strategy, technical audits, and stakeholder consulting in a fast-paced agency environment. Partnered with Development and Content teams to align technical execution with brand voice and content strategy. Led SEO strategy using Ahrefs, SEMrush, Screaming Frog, STATS, and Google Analytics to strengthen brand visibility and organic reach. Delivered SEO improvements of 25%+ across stakeholder campaigns within given timeframes. Built roadmaps and action plans that increased organization, consistency, and efficiency across client engagements. Led the Employee Engagement Committee, organizing company culture and brand-building events.",
+      "Managed daily operations of B2B marketing, reporting directly to the Director of Marketing and presenting initiatives to the Founder and President. Collaborated with international, cross-functional teams across sales, e-Commerce, engineering, and operations to align campaigns with organizational goals.",
+    tools: ["NetSuite", "Magento", "Power BI", "GA4", "Google Ads", "Bloom Growth", "Klaviyo", "Microsoft Office"],
+    achievements: [
+      "Improved email deliverability, open rates, click-through rates, and conversion rates by 48% using Bloom Growth and Klaviyo.",
+      "Managed and presented 4 marketing product launches, trade shows, promotions, events, and branded promotional items.",
+      "Produced reports using NetSuite, Magento, Power BI, GA4, and Google Ads on campaign performance boosting ROI by 20% in the first quarter.",
+      "Trained Marketing Specialists to improve team effectiveness and drive mission forward.",
+    ],
   },
 ];
 
@@ -41,14 +66,16 @@ const capabilities = [
   "Brand Strategy & Positioning",
   "Creative Direction",
   "Digital Marketing",
-  "Leadership",
-  "Campaign Strategy",
-  "Email Marketing",
-  "Social Media",
-  "UX Design",
+  "Website Design",
+  "SEO",
   "E-Commerce",
-  "Technical SEO",
-  "Executive Reporting & Communication",
+  "Email Marketing",
+  "Campaign Strategy",
+  "UX Design",
+  "Social Media Growth",
+  "Leadership",
+  "Executive Reporting",
+  "Problem-Solving",
   "Product Marketing",
   "Brand Partnerships",
   "English / Spanish",
@@ -58,7 +85,7 @@ const recognition = [
   { name: "Omnisend Email Revenue", type: "+$42K with 58% audience growth", year: "Distant Lands" },
   { name: "Shopify E-Commerce", type: "+$66K growth", year: "Distant Lands" },
   { name: "Google Ads Conversions", type: "25% lift", year: "Distant Lands" },
-  { name: "Email Deliverability & Conversion", type: "20% improvement", year: "Sterlitech" },
+  { name: "Email Deliverability & Conversion", type: "48% improvement", year: "Sterlitech" },
   { name: "SEO Campaign Performance", type: "25%+ improvement", year: "Portent" },
 ];
 
@@ -75,7 +102,7 @@ export default function Resume() {
               </ScrollReveal>
               <ScrollReveal delay={100}>
                 <h1 className="text-ink max-w-4xl">
-                  Results-focused brand and marketing strategist with a passion for creative direction.
+                  Digital Marketer, Driven by Creative Branding.
                 </h1>
               </ScrollReveal>
             </div>
@@ -83,8 +110,6 @@ export default function Resume() {
               <ScrollReveal delay={200}>
                 <p className="text-ink-light">
                   Seattle, Washington
-                  <br />
-                  206-351-0831
                   <br />
                   <a href="mailto:rojasmichellec@gmail.com" className="hover:text-ink transition-colors">
                     rojasmichellec@gmail.com
@@ -101,7 +126,7 @@ export default function Resume() {
                 </p>
                 <Button asChild className="mt-6">
                   <a
-                    href={resumePdf.url}
+                    href={resumePdfUrl}
                     download="Michelle-Rojas-Resume.pdf"
                     className="inline-flex items-center gap-2"
                   >
@@ -127,9 +152,17 @@ export default function Resume() {
             </div>
             <div className="lg:col-span-7 lg:col-start-6">
               <ScrollReveal>
-                <p className="text-ink-light text-lg leading-relaxed">
-                  Results-focused, strategic professional with a passion for brand building and creative marketing. Proven leader able to oversee cross-functional teams and cultivate a supportive environment. Expert in developing brand strategy, positioning, and creative direction that bring a brand's story to life across every touchpoint, from website design to social media. Entrepreneurial mindset, natural collaborator, exceptionally organized and detail-oriented. Recognized for elevating local to global brand campaigns with a proven record of exceptional results.
-                </p>
+                <div className="space-y-4">
+                  <p className="text-ink-light text-lg leading-relaxed">
+                    Digital marketing, design, and brand strategist with a track record of building brand identity, leading creative direction, and driving measurable growth across e-commerce, SEO, and social channels.
+                  </p>
+                  <p className="text-ink-light text-lg leading-relaxed">
+                    Led cross-functional teams and client engagements from strategy through execution, translating brand vision into cohesive campaigns, websites, and creative assets.
+                  </p>
+                  <p className="text-ink-light text-lg leading-relaxed">
+                    Combined an entrepreneurial, detail-oriented approach with strong stakeholder communication to deliver consistent, high-impact results for national and global brands, B2B clients, and small businesses alike.
+                  </p>
+                </div>
               </ScrollReveal>
             </div>
           </div>
@@ -156,7 +189,18 @@ export default function Resume() {
                         <span className="text-sm text-ink-muted">{item.period}</span>
                       </div>
                       <p className="text-sm text-ink-muted mb-3">{item.company}</p>
-                      <p className="text-ink-light">{item.description}</p>
+                      <p className="text-ink-light mb-3">{item.description}</p>
+                      <p className="text-sm text-ink-muted mb-3">
+                        <span className="text-ink">Tools:</span>{" "}
+                        <em>{item.tools.join(" | ")}</em>
+                      </p>
+                      <ul className="list-disc list-outside pl-5 space-y-2">
+                        {item.achievements.map((achievement) => (
+                          <li key={achievement} className="text-ink-light">
+                            {achievement}
+                          </li>
+                        ))}
+                      </ul>
                     </div>
                   </ScrollReveal>
                 ))}
@@ -251,8 +295,8 @@ export default function Resume() {
             </ScrollReveal>
             <ScrollReveal delay={100}>
               <p className="text-ink-light mb-10 max-w-xl mx-auto">
-                Download the full CV as a PDF, or reach out if you'd like to
-                discuss a project.
+                Download my resume as a PDF, or reach out if you'd like to
+                discuss an opportunity.
               </p>
             </ScrollReveal>
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
@@ -267,12 +311,12 @@ export default function Resume() {
               <ScrollReveal delay={300}>
                 <Button asChild variant="outline">
                   <a
-                    href={resumePdf.url}
+                    href={resumePdfUrl}
                     download="Michelle-Rojas-Resume.pdf"
                     className="inline-flex items-center gap-2"
                   >
                     <Download size={18} strokeWidth={1.5} />
-                    Download CV
+                    Download Resume (PDF)
                   </a>
                 </Button>
               </ScrollReveal>
