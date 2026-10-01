@@ -8,7 +8,7 @@ import { useToast } from "@/hooks/use-toast";
 const contactSchema = z.object({
   name: z.string().trim().min(1, "Name is required").max(100, "Name must be under 100 characters"),
   email: z.string().trim().email("Please enter a valid email").max(255),
-  company: z.string().trim().max(150, "Company must be under 150 characters").optional(),
+  company: z.string().trim().min(1, "Company/Organization is required").max(150, "Company/Organization must be under 150 characters"),
   role: z.string().trim().min(1, "Role is required").max(150, "Role must be under 150 characters"),
   linkedin: z.string().trim().min(1, "LinkedIn profile URL is required").url("Please enter a valid URL").max(255),
   phone: z.string().trim().min(1, "Phone number is required").max(30, "Phone number must be under 30 characters"),
@@ -145,9 +145,9 @@ our connection.</h1>
                   {/* Company */}
                   <div>
                     <label htmlFor="company" className="eyebrow block mb-3">
-                      Company / Organization
+                      Company/Organization <span className="text-ink-muted">*</span>
                     </label>
-                    <input type="text" id="company" name="company" maxLength={150} value={formData.company} onChange={handleChange} className="input-editorial" placeholder="Your company" />
+                    <input type="text" id="company" name="company" required maxLength={150} value={formData.company} onChange={handleChange} className="input-editorial" placeholder="Your company" />
                   </div>
 
                   {/* Role */}
