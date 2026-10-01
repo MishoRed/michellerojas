@@ -171,7 +171,7 @@ our connection.</h1>
                     <label htmlFor="message" className="eyebrow block mb-3">
                       Message/Details <span className="text-ink-muted">*</span>
                     </label>
-                    <textarea id="message" name="message" required maxLength={2000} rows={6} value={formData.message} onChange={handleChange} className="input-editorial resize-none" placeholder="Tell me about your project, goals, and timeline..." />
+                    <textarea id="message" name="message" required maxLength={2000} rows={6} value={formData.message} onChange={handleChange} className="input-editorial resize-none" placeholder="Tell me about the work opportunity..." />
                   </div>
 
                   {/* Phone */}
