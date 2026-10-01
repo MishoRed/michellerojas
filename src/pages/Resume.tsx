@@ -12,35 +12,45 @@ const experience = [
     company: "Michelle Rojas Collective — Seattle, Washington",
     period: "January 2021 – Current",
     description:
-      "Own end-to-end design, optimization, and maintenance of client websites, delivering high-quality user experiences paired with strong search engine visibility. Selected consulting projects include full website builds, SEO audits, and redesigns for small business clients, balanced alongside full-time roles and a graduate program. Lead visual and UX design, translating client goals into engaging, responsive websites that build trust and alignment throughout each project. Implement on-page and off-page SEO strategies to drive organic visibility and long-term traffic growth. Develop wireframes and interactive prototypes in Figma to refine usability, reducing average time-on-task by 20%. Delivered complimentary website and SEO audits for 5 clients, identifying key opportunities to improve search visibility and user experience.",
+      "Own end-to-end design, optimization, and maintenance of client websites, delivering high-quality user experiences paired with strong search engine visibility. Selected consulting projects include full website builds, SEO audits, and redesigns for small business clients, balanced alongside full-time roles and graduate program. Lead visual and UX design, translating client goals into engaging, responsive websites building trust and alignment throughout each project. Implement on-page and off-page SEO strategies to drive organic visibility and long-term traffic growth.",
+    tools: ["Figma", "Canva", "Adobe Illustrator", "Google Analytics", "Squarespace", "Wix", "WordPress", "Netlify", "GitHub", "Claude AI"],
+    achievements: [
+      "Built and maintained a 5-year independent consulting practice while working full-time and completing a graduate degree, reflecting strong time management sustained client trust.",
+      "Develop wireframes and interactive prototypes in Figma to refine usability, reducing average time-on-task by 20%.",
+      "Delivered complimentary website and SEO audits for 5 clients, identifying key opportunities to improve search visibility and user experience.",
+      "Partner closely with stakeholders to define project goals, understand user needs, and shape site strategy from concept through launch.",
+      "Design low- and high-fidelity wireframes and mockups for a full website redesign, improving user navigation and content accessibility.",
+      "Apply technical SEO expertise, including site architecture, keyword strategy, and performance optimization, to strengthen search rankings and user experience.",
+    ],
   },
   {
     role: "Digital Marketing Manager",
     company: "Distant Lands Coffee — Renton, Washington",
     period: "January 2025 – August 2026",
     description:
-      "Supported Panera Bread Coffee and Sprouted Organic Coffee programs across D2C e-commerce channels, CRM, and social media platforms, driving over $138K in combined revenue growth across email, Walmart, and Shopify channels. Developed tactics and campaigns that drove earned media, audience growth, owned engagement, acquisition, reach, and brand awareness. Applied company standard social voice, tone, style, and creative. Increased yearly sales per channel, growing Omnisend email revenue by $42K with 58% audience growth, Walmart e-commerce by $30K, Shopify e-commerce by $66K, and Google Ads conversions by 25%. Built and maintained a comprehensive email and social media campaign calendar, ensuring cross-functional alignment and timely execution for all national coffee brands. Managed the yearly Digital Marketing Department budget to enhance acquisition while minimizing costs by 13%.",
+      "Supported Panera Bread Coffee and Sprouted Organic Coffee programs across D2C e-commerce channels, CRM, and social media platforms, driving over $138K in combined revenue growth across email, Walmart, and Shopify channels. Developed tactics and campaigns that drove earned media, audience growth, owned engagement, acquisition, reach, and brand awareness. Applied company standard social voice, tone, style, and creative.",
+    tools: ["Shopify", "Omnisend", "Google Ads", "Microsoft Ads", "Walmart Seller Market & Walmart Connect Ad", "Amazon Seller Central", "TikTok", "Meta", "Photoshop", "Claude AI"],
+    achievements: [
+      "Increased yearly sales per channel; grew Omnisend email revenue by $42K with 58% audience growth, Walmart e-commerce by $30K, Shopify e-commerce by $66K, and Google Ads conversions by 25%.",
+      "Built and maintained a comprehensive email and social media campaign calendar, ensuring cross-functional alignment and timely execution for all national coffee brands.",
+      "Managed the yearly Digital Marketing Department budget to enhance acquisition while minimizing costs by 13%.",
+      "Directed creative concept and setup for global coffee brands' photoshoots and future creative planning.",
+      "Created and presented high-level reports on digital channel sales, email campaigns, and promotional development at General Management meetings.",
+    ],
   },
   {
     role: "Senior Marketing Specialist",
     company: "Sterlitech — Auburn, Washington",
     period: "December 2023 – April 2024",
     description:
-      "Managed daily operations of B2B marketing, reporting directly to the Director of Marketing and presenting initiatives to the Founder and President. Collaborated with international, cross-functional teams across sales, e-commerce, engineering, and operations to align campaigns with organizational goals. Improved email deliverability, open rates, click-through rates, and conversion rates by 48% using Bloom Growth and Klaviyo. Managed and presented 4 marketing product launches, trade shows, promotions, events, and branded promotional items. Produced reports using NetSuite, Magento, Power BI, GA4, and Google Ads on campaign performance, boosting ROI by 20% in the first quarter. Trained Marketing Specialists to improve team effectiveness and drive the mission forward.",
-  },
-  {
-    role: "SEO Specialist",
-    company: "Portent — Seattle, Washington",
-    period: "February 2022 – April 2023",
-    description:
-      "Optimized brand visibility by producing high-level SEO deliverables for stakeholders across 14 client campaigns. Led advanced SEO strategy, consulting, and technical audits, including keyword research, SERP analysis, backlink analysis, and internal linking, in a fast-paced agency environment. Achieved SEO quality results within given timeframes, resulting in 25%+ improvement in stakeholder campaigns. Drove an average 68% increase in organic traffic and ranking performance across 14 client campaigns. Completed 9 comprehensive technical SEO audits, identifying and resolving site architecture and indexing issues for agency clients. Championed numerous projects from strategy to execution, partnering with cross-functional teams to deliver measurable visibility gains for agency clients.",
-  },
-  {
-    role: "LATAM Sales Specialist",
-    company: "PACCAR Parts — Renton, Washington",
-    period: "April 2018 – April 2020",
-    description:
-      "Managed revenue growth by incentivizing top sales performance, outlining high-volume sales data, and tracking industry trends in support of the Latin American and international sales teams. Generated accurate daily and monthly million-dollar forecasts and produced inclusive reports to support informed business decisions. Optimized sales team presentations and organized executive annual business events. Attended quarterly training classes to strengthen sales, parts, and overall company knowledge. Served as a key collaborator on large dealer orders exceeding $100K, fostering cohesive workflow between marketing and sales staff. Streamlined creation and distribution of memos to senior leadership by successfully navigating DocuSign.",
+      "Managed daily operations of B2B marketing, reporting directly to the Director of Marketing and presenting initiatives to the Founder and President. Collaborated with international, cross-functional teams across sales, e-Commerce, engineering, and operations to align campaigns with organizational goals.",
+    tools: ["NetSuite", "Magento", "Power BI", "GA4", "Google Ads", "Bloom Growth", "Klaviyo", "Microsoft Office"],
+    achievements: [
+      "Improved email deliverability, open rates, click-through rates, and conversion rates by 48% using Bloom Growth and Klaviyo.",
+      "Managed and presented 4 marketing product launches, trade shows, promotions, events, and branded promotional items.",
+      "Produced reports using NetSuite, Magento, Power BI, GA4, and Google Ads on campaign performance boosting ROI by 20% in the first quarter.",
+      "Trained Marketing Specialists to improve team effectiveness and drive mission forward.",
+    ],
   },
 ];
 
@@ -142,9 +152,17 @@ export default function Resume() {
             </div>
             <div className="lg:col-span-7 lg:col-start-6">
               <ScrollReveal>
-                <p className="text-ink-light text-lg leading-relaxed">
-                  Digital marketing, design, and brand strategist with a track record of building brand identity, leading creative direction, and driving measurable growth across e-commerce, SEO, and social channels. Led cross-functional teams and client engagements from strategy through execution, translating brand vision into cohesive campaigns, websites, and creative assets. Combined an entrepreneurial, detail-oriented approach with strong stakeholder communication to deliver consistent, high-impact results for national and global brands, B2B clients, and small businesses alike.
-                </p>
+                <div className="space-y-4">
+                  <p className="text-ink-light text-lg leading-relaxed">
+                    Digital marketing, design, and brand strategist with a track record of building brand identity, leading creative direction, and driving measurable growth across e-commerce, SEO, and social channels.
+                  </p>
+                  <p className="text-ink-light text-lg leading-relaxed">
+                    Led cross-functional teams and client engagements from strategy through execution, translating brand vision into cohesive campaigns, websites, and creative assets.
+                  </p>
+                  <p className="text-ink-light text-lg leading-relaxed">
+                    Combined an entrepreneurial, detail-oriented approach with strong stakeholder communication to deliver consistent, high-impact results for national and global brands, B2B clients, and small businesses alike.
+                  </p>
+                </div>
               </ScrollReveal>
             </div>
           </div>
@@ -171,11 +189,22 @@ export default function Resume() {
                         <span className="text-sm text-ink-muted">{item.period}</span>
                       </div>
                       <p className="text-sm text-ink-muted mb-3">{item.company}</p>
-                      <p className="text-ink-light">{item.description}</p>
+                      <p className="text-ink-light mb-3">{item.description}</p>
+                      <p className="text-sm text-ink-muted mb-3">
+                        <span className="text-ink">Tools:</span>{" "}
+                        <em>{item.tools.join(" | ")}</em>
+                      </p>
+                      <ul className="list-disc list-outside pl-5 space-y-2">
+                        {item.achievements.map((achievement) => (
+                          <li key={achievement} className="text-ink-light">
+                            {achievement}
+                          </li>
+                        ))}
+                      </ul>
                       <a
                         href={resumePdfUrl}
                         download="Michelle-Rojas-Resume.pdf"
-                        className="inline-block mt-3 text-sm text-ink-muted underline underline-offset-4 hover:text-ink transition-colors"
+                        className="inline-block mt-4 text-sm text-ink-muted underline underline-offset-4 hover:text-ink transition-colors"
                       >
                         Download to view more
                       </a>
