@@ -1,44 +1,22 @@
+import { Link } from "react-router-dom";
+import { ArrowRight } from "lucide-react";
 import { Layout } from "@/components/layout/Layout";
 import { ScrollReveal } from "@/components/shared/ScrollReveal";
+import { SectionHeader } from "@/components/shared/SectionHeader";
 import { ProjectCard } from "@/components/shared/ProjectCard";
 import { projects } from "@/data/projects";
-import { cn } from "@/lib/utils";
 
+import portraitMain from "@/assets/portrait-main.jpg";
 import bornXRaisedHero from "@/assets/gallery/gallery-1.jpg";
 import pccCommunityMarketsHero from "@/assets/gallery/gallery-2.jpg";
 import eveHero from "@/assets/projects/eve-hero.png";
 import paneraBreadHero from "@/assets/projects/panera-bread-hero.png";
-import metaHero from "@/assets/projects/meta-hero.jpeg";
-import soundcloudHero from "@/assets/projects/soundcloud-hero.png";
-import kekePalmerMagazineCover from "@/assets/projects/keke-palmer-magazine-cover-original.png";
-import paneraBreadCoffeeHero from "@/assets/projects/panera-bread-coffee-hero.webp";
-import sproutedOrganicCoffeeGallery from "@/assets/projects/sprouted-organic-coffee-gallery.png";
-import cesarCaroHero from "@/assets/projects/cesar-caro-hero.png";
-import acaciaTransitionsLogo from "@/assets/projects/acacia-transitions-logo.png";
 
 const projectImages: Record<string, string> = {
   "born-x-raised": bornXRaisedHero,
   "pcc-community-markets": pccCommunityMarketsHero,
   "eve": eveHero,
   "panera-bread": paneraBreadHero,
-  "meta": metaHero,
-  "soundcloud": soundcloudHero,
-  "baby-this-is-keke-palmer": kekePalmerMagazineCover,
-  "panera-bread-coffee": paneraBreadCoffeeHero,
-  "sprouted-organic-coffee": sproutedOrganicCoffeeGallery,
-  "cesar-caro": cesarCaroHero,
-  "acacia-transitions": acaciaTransitionsLogo,
-};
-
-const customAspectSlugs = ["meta", "soundcloud", "panera-bread-coffee", "acacia-transitions"];
-const containFitSlugs = ["meta", "soundcloud", "panera-bread-coffee", "acacia-transitions"];
-// These heroes don't fit the shared 4/3 frame without cropping or
-// letterboxing, so they get a custom aspect ratio matching their own photo
-// instead, at which point cover and contain fit render identically.
-const exactAspectRatios: Record<string, string> = {
-  "sprouted-organic-coffee": "560 / 548",
-  "baby-this-is-keke-palmer": "1612 / 2150",
-  "cesar-caro": "3414 / 1546",
 };
 
 export default function Work() {
@@ -56,33 +34,30 @@ export default function Work() {
         </div>
       </section>
 
-      {/* Projects Grid */}
+      {/* Selected Work Section */}
       <section className="section-padding border-t border-divider">
         <div className="container-editorial px-6 md:px-12 lg:px-20">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-x-8 md:gap-x-12 lg:gap-x-16">
-            {[0, 1].map((column) => (
-              <div key={column} className={cn("flex flex-col gap-y-16 md:gap-y-24", column === 1 && "md:mt-24")}>
-                {projects
-                  .filter((_, index) => index % 2 === column)
-                  .map((project) => {
-                    const index = projects.indexOf(project);
-                    return (
-                      <ScrollReveal key={project.slug} delay={index * 100}>
-                        <ProjectCard
-                          slug={project.slug}
-                          title={project.title}
-                          category={project.category}
-                          year={project.year}
-                          image={projectImages[project.slug]}
-                          aspectRatio={index % 2 === 0 ? "landscape" : "portrait"}
-                          objectPosition={project.slug === "eve" || project.slug === "pcc-community-markets" ? "left" : "center"}
-                          objectFit={containFitSlugs.includes(project.slug) ? "contain" : "cover"}
-                          customAspectRatio={exactAspectRatios[project.slug] ?? (customAspectSlugs.includes(project.slug) ? "4 / 3" : undefined)}
-                        />
-                      </ScrollReveal>
-                    );
-                  })}
-              </div>
+          <ScrollReveal>
+            <SectionHeader
+              eyebrow="Selected Work"
+              title="Projects"
+              className="mb-16 md:mb-20"
+            />
+          </ScrollReveal>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 lg:gap-16">
+            {projects.slice(0, 4).map((project, index) => (
+              <ScrollReveal key={project.slug} delay={index * 100}>
+                <ProjectCard
+                  slug={project.slug}
+                  title={project.title}
+                  category={project.category}
+                  year={project.year}
+                  image={projectImages[project.slug]}
+                  aspectRatio={index % 3 === 0 ? "portrait" : "landscape"}
+                  objectPosition={project.slug === "eve" ? "left" : "center"}
+                />
+              </ScrollReveal>
             ))}
           </div>
         </div>
@@ -93,19 +68,66 @@ export default function Work() {
         <div className="container-editorial px-6 md:px-12 lg:px-20">
           <div className="max-w-2xl">
             <ScrollReveal>
-              <p className="eyebrow mb-4">Have something in mind?</p>
+              <p className="eyebrow mb-4">Have an opportunity in mind?</p>
             </ScrollReveal>
             <ScrollReveal delay={100}>
               <h2 className="text-ink mb-6">
-                Let's discuss your project.
+                Let's talk about the role.
               </h2>
             </ScrollReveal>
             <ScrollReveal delay={200}>
               <p className="text-ink-light">
-                I'm always open to exploring new collaborations. 
-                Reach out to discuss how we might work together.
+                I'm actively open to new opportunities in digital marketing, brand
+                strategy, and creative direction. Reach out and let's discuss how I
+                could contribute to your company.
               </p>
             </ScrollReveal>
+          </div>
+        </div>
+      </section>
+
+      {/* About Preview Section */}
+      <section className="section-padding border-t border-divider">
+        <div className="container-editorial px-6 md:px-12 lg:px-20">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
+            {/* Text */}
+            <div className="lg:col-span-6">
+              <ScrollReveal>
+                <p className="eyebrow mb-6">About</p>
+              </ScrollReveal>
+              <ScrollReveal delay={100}>
+                <blockquote className="font-serif text-3xl md:text-4xl text-ink leading-snug mb-8">
+                  "Great marketing gets you noticed. Great brand strategy gets you remembered."
+                </blockquote>
+              </ScrollReveal>
+              <ScrollReveal delay={200}>
+                <p className="text-ink-light mb-8">
+                  Digital Marketing is precise and measurable, using search, social, and email,
+                  turning attention to loyalty. Brand strategy is the compass, the quiet
+                  conviction, turning a name people recognize into a name people believe in.
+                  Together, they build a brand people choose on purpose.
+                </p>
+              </ScrollReveal>
+              <ScrollReveal delay={300}>
+                <Link to="/about" className="arrow-link text-ink">
+                  Learn more about my approach
+                  <ArrowRight size={18} strokeWidth={1.5} />
+                </Link>
+              </ScrollReveal>
+            </div>
+
+            {/* Image */}
+            <div className="lg:col-span-5 lg:col-start-8">
+              <ScrollReveal delay={200}>
+                <div className="aspect-[4/5] bg-cream-darker overflow-hidden">
+                  <img
+                    src={portraitMain}
+                    alt="Michelle Rojas portrait"
+                    className="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700"
+                  />
+                </div>
+              </ScrollReveal>
+            </div>
           </div>
         </div>
       </section>
