@@ -174,18 +174,21 @@ export default function Index() {
         <div className="container-editorial">
           <div className="max-w-3xl mx-auto text-center">
             <ScrollReveal>
-              <h2 className="text-ink mb-6">
-                Let's build something{" "}
-                <em className="font-serif italic">meaningful.</em>
-              </h2>
+              <p className="eyebrow mb-4">Have an opportunity in mind?</p>
             </ScrollReveal>
             <ScrollReveal delay={100}>
-              <p className="text-ink-light mb-10 max-w-xl mx-auto">
-                Currently open to new opportunities for Q4 2026. I'd love to hear
-                from you.
-              </p>
+              <h2 className="text-ink mb-6">
+                Let's talk about the role.
+              </h2>
             </ScrollReveal>
             <ScrollReveal delay={200}>
+              <p className="text-ink-light mb-10 max-w-xl mx-auto">
+                I'm actively open to new opportunities in digital marketing, brand
+                strategy, and creative direction. Reach out and let's discuss how I
+                could contribute to your company.
+              </p>
+            </ScrollReveal>
+            <ScrollReveal delay={300}>
               <Button asChild>
                 <Link to="/contact" className="inline-flex items-center gap-2">
                   Contact Me
