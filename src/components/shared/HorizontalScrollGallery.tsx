@@ -72,28 +72,34 @@ export const HorizontalScrollGallery = () => {
   const [scrollProgress, setScrollProgress] = useState(0);
   const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
   const [trackWidth, setTrackWidth] = useState(0);
+  const [viewportSize, setViewportSize] = useState({ width: 0, height: 0 });
   const [prefersReducedMotion, setPrefersReducedMotion] = useState(false);
 
   useEffect(() => {
     const mediaQuery = window.matchMedia('(prefers-reduced-motion: reduce)');
     setPrefersReducedMotion(mediaQuery.matches);
-    
+
     const handler = (e: MediaQueryListEvent) => setPrefersReducedMotion(e.matches);
     mediaQuery.addEventListener('change', handler);
     return () => mediaQuery.removeEventListener('change', handler);
   }, []);
 
-  // Calculate track width on mount and resize
+  // Calculate track width and viewport size on mount and resize. Both are
+  // tracked as state (rather than read directly during render) so a
+  // height-only viewport change still triggers a re-render and keeps the
+  // section's JS-computed height in sync with the sticky child's CSS
+  // dvh-based height.
   useEffect(() => {
-    const calculateTrackWidth = () => {
+    const measure = () => {
       if (trackRef.current) {
         setTrackWidth(trackRef.current.scrollWidth);
       }
+      setViewportSize({ width: window.innerWidth, height: window.innerHeight });
     };
 
-    calculateTrackWidth();
-    window.addEventListener('resize', calculateTrackWidth);
-    return () => window.removeEventListener('resize', calculateTrackWidth);
+    measure();
+    window.addEventListener('resize', measure);
+    return () => window.removeEventListener('resize', measure);
   }, []);
 
   // Handle scroll to translate vertical scroll into horizontal position
@@ -104,11 +110,11 @@ export const HorizontalScrollGallery = () => {
       const container = containerRef.current;
       const rect = container.getBoundingClientRect();
       const windowHeight = window.innerHeight;
-      
+
       // Calculate how far into the section we've scrolled
       const scrollableDistance = container.offsetHeight - windowHeight;
       const scrolled = -rect.top;
-      
+
       // Clamp progress between 0 and 1
       const progress = Math.max(0, Math.min(1, scrolled / scrollableDistance));
       setScrollProgress(progress);
@@ -116,22 +122,22 @@ export const HorizontalScrollGallery = () => {
 
     window.addEventListener('scroll', handleScroll, { passive: true });
     handleScroll(); // Initial calculation
-    
+
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
   // Calculate how much we need to scroll the track
-  const horizontalScrollAmount = trackWidth - window.innerWidth;
+  const horizontalScrollAmount = trackWidth - viewportSize.width;
   const translateX = -scrollProgress * Math.max(0, horizontalScrollAmount);
 
   return (
     <section
       ref={containerRef}
       className="relative w-screen -ml-[calc((100vw-100%)/2)]"
-      style={{ 
+      style={{
         // Height determines how long the scroll-hijack lasts
         // More height = slower horizontal scroll
-        height: `${Math.max(300, horizontalScrollAmount * 0.6 + window.innerHeight)}px`
+        height: `${Math.max(300, horizontalScrollAmount * 0.6 + viewportSize.height)}px`
       }}
       aria-label="Image gallery, 11 items"
       role="region"
