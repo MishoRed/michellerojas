@@ -4,7 +4,6 @@ import { Layout } from "@/components/layout/Layout";
 import { ScrollReveal } from "@/components/shared/ScrollReveal";
 import { ProjectCard } from "@/components/shared/ProjectCard";
 import { SectionHeader } from "@/components/shared/SectionHeader";
-import { HorizontalScrollGallery } from "@/components/shared/HorizontalScrollGallery";
 import { Button } from "@/components/ui/button";
 import { projects } from "@/data/projects";
 import { cn } from "@/lib/utils";
@@ -119,9 +118,6 @@ export default function Index() {
           </ScrollReveal>
         </div>
       </section>
-
-      {/* Horizontal Scroll Gallery */}
-      <HorizontalScrollGallery />
 
       {/* Portfolio Section */}
       <section className="section-padding bg-cream-dark">

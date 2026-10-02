@@ -3,6 +3,7 @@ import { ArrowRight } from "lucide-react";
 import { Layout } from "@/components/layout/Layout";
 import { ScrollReveal } from "@/components/shared/ScrollReveal";
 import { SectionHeader } from "@/components/shared/SectionHeader";
+import { HorizontalScrollGallery } from "@/components/shared/HorizontalScrollGallery";
 import { ProjectCard } from "@/components/shared/ProjectCard";
 import { projects } from "@/data/projects";
 
@@ -33,6 +34,9 @@ export default function Work() {
           </ScrollReveal>
         </div>
       </section>
+
+      {/* Horizontal Scroll Gallery */}
+      <HorizontalScrollGallery />
 
       {/* Selected Work Section */}
       <section className="section-padding border-t border-divider">
