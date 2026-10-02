@@ -24,29 +24,6 @@ export default function Work() {
       {/* Horizontal Scroll Gallery */}
       <HorizontalScrollGallery />
 
-      {/* CTA */}
-      <section className="section-padding bg-cream-dark">
-        <div className="container-editorial px-6 md:px-12 lg:px-20">
-          <div className="max-w-2xl">
-            <ScrollReveal>
-              <p className="eyebrow mb-4">Have an opportunity in mind?</p>
-            </ScrollReveal>
-            <ScrollReveal delay={100}>
-              <h2 className="text-ink mb-6">
-                Let's talk about the role.
-              </h2>
-            </ScrollReveal>
-            <ScrollReveal delay={200}>
-              <p className="text-ink-light">
-                I'm actively open to new opportunities in digital marketing, brand
-                strategy, and creative direction. Reach out and let's discuss how I
-                could contribute to your company.
-              </p>
-            </ScrollReveal>
-          </div>
-        </div>
-      </section>
-
       {/* About Preview Section */}
       <section className="section-padding border-t border-divider">
         <div className="container-editorial px-6 md:px-12 lg:px-20">
