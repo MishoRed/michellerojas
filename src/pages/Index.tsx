@@ -184,8 +184,7 @@ export default function Index() {
             <ScrollReveal delay={200}>
               <p className="text-ink-light mb-10 max-w-xl mx-auto">
                 I'm actively open to new opportunities in digital marketing, brand
-                strategy, and creative direction. Reach out and let's discuss how I
-                could contribute to your company.
+                strategy, and creative direction.
               </p>
             </ScrollReveal>
             <ScrollReveal delay={300}>
