@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { ArrowRight, ArrowDown } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 import { Layout } from "@/components/layout/Layout";
 import { ScrollReveal } from "@/components/shared/ScrollReveal";
 import { ProjectCard } from "@/components/shared/ProjectCard";
@@ -35,21 +35,10 @@ const projectImages: Record<string, string> = {
   "acacia-transitions": acaciaTransitionsLogo,
 };
 
-const customAspectSlugs = ["meta", "soundcloud", "panera-bread-coffee", "acacia-transitions"];
-const containFitSlugs = ["meta", "soundcloud", "panera-bread-coffee", "acacia-transitions"];
-// These heroes don't fit the shared 4/3 frame without cropping or
-// letterboxing, so they get a custom aspect ratio matching their own photo
-// instead, at which point cover and contain fit render identically.
-const exactAspectRatios: Record<string, string> = {
-  "sprouted-organic-coffee": "560 / 548",
-  "baby-this-is-keke-palmer": "1612 / 2150",
-  "cesar-caro": "3414 / 1546",
-};
-
 const services = [
   {
-    title: "Website Design",
-    description: "Responsive, intuitive experiences that turn visitors into engaged, returning users.",
+    title: "Digital Marketing",
+    description: "Data-driven strategies that turn visibility into engagement, and engagement into loyal customers.",
   },
   {
     title: "Brand Strategy",
@@ -108,14 +97,6 @@ export default function Index() {
               </ScrollReveal>
             </div>
           </div>
-
-          {/* Scroll Indicator */}
-          <ScrollReveal delay={500} className="hidden lg:block mt-24">
-            <div className="flex items-center gap-3 text-ink-muted">
-              <div className="w-px h-12 bg-divider origin-top animate-line-grow" />
-              <ArrowDown size={16} strokeWidth={1.5} className="animate-bounce" />
-            </div>
-          </ScrollReveal>
         </div>
       </section>
 
@@ -145,10 +126,8 @@ export default function Index() {
                           category={project.category}
                           year={project.year}
                           image={projectImages[project.slug]}
-                          aspectRatio={index % 2 === 0 ? "landscape" : "portrait"}
-                          objectPosition={project.slug === "eve" || project.slug === "pcc-community-markets" ? "left" : "center"}
-                          objectFit={containFitSlugs.includes(project.slug) ? "contain" : "cover"}
-                          customAspectRatio={exactAspectRatios[project.slug] ?? (customAspectSlugs.includes(project.slug) ? "4 / 3" : undefined)}
+                          objectFit="contain"
+                          customAspectRatio="4 / 3"
                         />
                       </ScrollReveal>
                     );
@@ -164,7 +143,7 @@ export default function Index() {
         <div className="container-editorial">
           <ScrollReveal>
             <SectionHeader
-              eyebrow="Services"
+              eyebrow="Experience"
               title="What I Do"
               className="mb-16 md:mb-20"
             />
@@ -182,15 +161,10 @@ export default function Index() {
           </div>
 
           <ScrollReveal className="mt-16 md:mt-20">
-            <a
-              href="https://michellerojascollective.com/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="arrow-link text-ink"
-            >
-              Visit Michelle Rojas Collective
+            <Link to="/resume" className="arrow-link text-ink">
+              View Full Resume
               <ArrowRight size={18} strokeWidth={1.5} />
-            </a>
+            </Link>
           </ScrollReveal>
         </div>
       </section>
@@ -201,14 +175,14 @@ export default function Index() {
           <div className="max-w-3xl mx-auto text-center">
             <ScrollReveal>
               <h2 className="text-ink mb-6">
-                Let's create something{" "}
+                Let's build something{" "}
                 <em className="font-serif italic">meaningful.</em>
               </h2>
             </ScrollReveal>
             <ScrollReveal delay={100}>
               <p className="text-ink-light mb-10 max-w-xl mx-auto">
-                Currently accepting new projects for Q4 2026. I'd love to hear about
-                what you're building.
+                Currently open to new opportunities for Q4 2026. I'd love to hear
+                from you.
               </p>
             </ScrollReveal>
             <ScrollReveal delay={200}>
