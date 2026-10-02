@@ -65,7 +65,7 @@ export default function Index() {
   return (
     <Layout>
       {/* Hero Section */}
-      <section className="min-h-dvh flex items-center pt-24 md:pt-32">
+      <section className="pt-24 md:pt-32 pb-16 md:pb-24">
         <div className="container-editorial px-6 md:px-12 lg:px-20 py-16 md:py-24">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center">
             {/* Text Content */}

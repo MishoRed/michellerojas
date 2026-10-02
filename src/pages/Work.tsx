@@ -2,23 +2,9 @@ import { Link } from "react-router-dom";
 import { ArrowRight } from "lucide-react";
 import { Layout } from "@/components/layout/Layout";
 import { ScrollReveal } from "@/components/shared/ScrollReveal";
-import { SectionHeader } from "@/components/shared/SectionHeader";
 import { HorizontalScrollGallery } from "@/components/shared/HorizontalScrollGallery";
-import { ProjectCard } from "@/components/shared/ProjectCard";
-import { projects } from "@/data/projects";
 
 import portraitMain from "@/assets/portrait-main.jpg";
-import bornXRaisedHero from "@/assets/gallery/gallery-1.jpg";
-import pccCommunityMarketsHero from "@/assets/gallery/gallery-2.jpg";
-import eveHero from "@/assets/projects/eve-hero.png";
-import paneraBreadHero from "@/assets/projects/panera-bread-hero.png";
-
-const projectImages: Record<string, string> = {
-  "born-x-raised": bornXRaisedHero,
-  "pcc-community-markets": pccCommunityMarketsHero,
-  "eve": eveHero,
-  "panera-bread": paneraBreadHero,
-};
 
 export default function Work() {
   return (
@@ -37,35 +23,6 @@ export default function Work() {
 
       {/* Horizontal Scroll Gallery */}
       <HorizontalScrollGallery />
-
-      {/* Selected Work Section */}
-      <section className="section-padding border-t border-divider">
-        <div className="container-editorial px-6 md:px-12 lg:px-20">
-          <ScrollReveal>
-            <SectionHeader
-              eyebrow="Selected Work"
-              title="Projects"
-              className="mb-16 md:mb-20"
-            />
-          </ScrollReveal>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 lg:gap-16">
-            {projects.slice(0, 4).map((project, index) => (
-              <ScrollReveal key={project.slug} delay={index * 100}>
-                <ProjectCard
-                  slug={project.slug}
-                  title={project.title}
-                  category={project.category}
-                  year={project.year}
-                  image={projectImages[project.slug]}
-                  aspectRatio={index % 3 === 0 ? "portrait" : "landscape"}
-                  objectPosition={project.slug === "eve" ? "left" : "center"}
-                />
-              </ScrollReveal>
-            ))}
-          </div>
-        </div>
-      </section>
 
       {/* CTA */}
       <section className="section-padding bg-cream-dark">
