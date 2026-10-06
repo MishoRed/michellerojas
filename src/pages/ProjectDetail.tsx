@@ -99,7 +99,7 @@ export default function ProjectDetail() {
   const project = projects[projectIndex];
 
   if (!project) {
-    return <Navigate to="/work" replace />;
+    return <Navigate to="/" replace />;
   }
 
   const nextProject = projects[(projectIndex + 1) % projects.length];
@@ -367,8 +367,8 @@ export default function ProjectDetail() {
       {/* Back Link */}
       <section className="bg-cream-dark">
         <div className="container-editorial px-6 md:px-12 lg:px-20 py-8">
-          <Link 
-            to="/work" 
+          <Link
+            to="/"
             className="inline-flex items-center gap-2 text-sm text-ink-muted hover:text-ink transition-colors duration-300"
           >
             <ArrowLeft size={16} strokeWidth={1.5} />
