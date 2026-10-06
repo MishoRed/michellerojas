@@ -35,7 +35,7 @@ export function ProjectCard({
       {/* Image Container */}
       <div
         className={cn(
-          "relative overflow-hidden bg-cream-darker mb-6",
+          "relative overflow-hidden mb-6",
           aspectRatio === "landscape" ? "aspect-[16/10]" : "aspect-[4/5]"
         )}
         style={customAspectRatio ? { aspectRatio: customAspectRatio } : undefined}

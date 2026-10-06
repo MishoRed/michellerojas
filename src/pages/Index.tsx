@@ -6,7 +6,6 @@ import { ProjectCard } from "@/components/shared/ProjectCard";
 import { SectionHeader } from "@/components/shared/SectionHeader";
 import { Button } from "@/components/ui/button";
 import { projects } from "@/data/projects";
-import { cn } from "@/lib/utils";
 
 import portraitMain from "@/assets/portrait-main.jpg";
 import bornXRaisedHero from "@/assets/gallery/gallery-1.jpg";
@@ -111,28 +110,19 @@ export default function Index() {
             />
           </ScrollReveal>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-x-8 md:gap-x-12 lg:gap-x-16">
-            {[0, 1].map((column) => (
-              <div key={column} className={cn("flex flex-col gap-y-16 md:gap-y-24", column === 1 && "md:mt-24")}>
-                {projects
-                  .filter((_, index) => index % 2 === column)
-                  .map((project) => {
-                    const index = projects.indexOf(project);
-                    return (
-                      <ScrollReveal key={project.slug} delay={index * 100}>
-                        <ProjectCard
-                          slug={project.slug}
-                          title={project.title}
-                          category={project.category}
-                          year={project.year}
-                          image={projectImages[project.slug]}
-                          objectFit="contain"
-                          customAspectRatio="4 / 3"
-                        />
-                      </ScrollReveal>
-                    );
-                  })}
-              </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-x-8 md:gap-x-12 lg:gap-x-16 gap-y-16 md:gap-y-20">
+            {projects.map((project, index) => (
+              <ScrollReveal key={project.slug} delay={index * 100}>
+                <ProjectCard
+                  slug={project.slug}
+                  title={project.title}
+                  category={project.category}
+                  year={project.year}
+                  image={projectImages[project.slug]}
+                  objectFit="contain"
+                  customAspectRatio="4 / 3"
+                />
+              </ScrollReveal>
             ))}
           </div>
         </div>

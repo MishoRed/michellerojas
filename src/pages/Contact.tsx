@@ -10,7 +10,9 @@ const contactSchema = z.object({
   email: z.string().trim().email("Please enter a valid email").max(255),
   company: z.string().trim().min(1, "Company/Organization is required").max(150, "Company/Organization must be under 150 characters"),
   role: z.string().trim().min(1, "Role is required").max(150, "Role must be under 150 characters"),
-  linkedin: z.string().trim().min(1, "LinkedIn profile URL is required").url("Please enter a valid URL").max(255),
+  linkedin: z.string().trim().max(255).refine((val) => val === "" || z.string().url().safeParse(val).success, {
+    message: "Please enter a valid URL",
+  }),
   phone: z.string().trim().min(1, "Phone number is required").max(30, "Phone number must be under 30 characters"),
   message: z.string().trim().min(1, "Message is required").max(2000, "Message must be under 2000 characters"),
 });
@@ -161,9 +163,9 @@ our connection.</h1>
                   {/* LinkedIn */}
                   <div>
                     <label htmlFor="linkedin" className="eyebrow block mb-3">
-                      LinkedIn Profile URL <span className="text-ink-muted">*</span>
+                      LinkedIn Profile URL
                     </label>
-                    <input type="url" id="linkedin" name="linkedin" required maxLength={255} value={formData.linkedin} onChange={handleChange} className="input-editorial" placeholder="https://www.linkedin.com/in/yourname" />
+                    <input type="url" id="linkedin" name="linkedin" maxLength={255} value={formData.linkedin} onChange={handleChange} className="input-editorial" placeholder="https://www.linkedin.com/in/yourname" />
                   </div>
 
                   {/* Message */}

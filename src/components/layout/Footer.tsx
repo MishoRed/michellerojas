@@ -7,7 +7,6 @@ const navLinks = [
 ];
 
 const socialLinks = [
-  { name: "Instagram", url: "https://www.instagram.com/mishored/" },
   { name: "LinkedIn", url: "https://www.linkedin.com/in/michelle-rojas/" },
 ];
 
@@ -27,7 +26,7 @@ export function Footer() {
               Michelle Rojas
             </Link>
             <p className="mt-4 text-sm text-ink-muted max-w-xs">
-              Digital marketer, designer, and brand strategist crafting distinctive identities with intention and discipline.
+              Digital marketer, designer, and brand strategist crafting distinctive identities with intention and creativity.
             </p>
           </div>
 
