@@ -74,13 +74,13 @@ export default function Index() {
               </ScrollReveal>
 
               <ScrollReveal delay={300}>
-                <Link
-                  to="/work"
+                <a
+                  href="#selected-projects"
                   className="arrow-link text-ink"
                 >
                   View Selected Work
                   <ArrowRight size={18} strokeWidth={1.5} />
-                </Link>
+                </a>
               </ScrollReveal>
             </div>
 
@@ -101,7 +101,7 @@ export default function Index() {
       </section>
 
       {/* Portfolio Section */}
-      <section className="section-padding bg-cream-dark">
+      <section id="selected-projects" className="section-padding bg-cream-dark">
         <div className="container-editorial px-6 md:px-12 lg:px-20">
           <ScrollReveal>
             <SectionHeader
