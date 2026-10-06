@@ -69,23 +69,29 @@ export default function About() {
               <p className="text-xl md:text-2xl text-ink leading-relaxed mb-8 first-letter:text-8xl md:first-letter:text-9xl first-letter:font-serif first-letter:float-left first-letter:mr-4 first-letter:mt-0 first-letter:leading-[0.75]">
                 I'm Michelle, a digital marketer, designer, and brand strategist based in
                 Seattle. I was raised in South King County and began my career as an SEO
-                Specialist. For over a decade, I've partnered with organizations, from
-                ambitious startups to established institutions, to build brands that
-                connect and campaigns that convert. My background spans leading campaigns
-                and creative direction for national coffee brands, managing B2B marketing
-                operations, and optimizing SEO strategy for agency clients across the
-                region.
+                Specialist in 2013. For over a decade, I've partnered with organizations,
+                from ambitious startups to established institutions, to build brands that
+                connect and campaigns that convert.
               </p>
             </ScrollReveal>
             <ScrollReveal delay={100}>
               <p className="text-ink-light mb-8">
-                My approach is rooted in attention to detail and intention. I believe the
-                most powerful brands are built on clarity: a deep understanding of who
-                you are, who you serve, and how to reach them. That understanding shapes
+                My background spans leading campaigns and creative direction for national
+                coffee brands, managing B2B marketing operations, and optimizing SEO
+                strategy for agency clients across the region. In 2021, I founded{" "}
+                <a
+                  href="https://michellerojascollective.com/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="underline underline-offset-4 hover:text-ink transition-colors duration-300"
+                >
+                  Michelle Rojas Collective
+                </a>
+                , a website design and SEO consulting practice built on ethics,
+                transparency, and principle-led client relationships. My approach is
+                rooted in attention to detail and intention. That understanding shapes
                 everything from a logo to a landing page to the strategy behind a
-                campaign. In 2021, I founded Michelle Rojas Collective, a website design
-                and SEO consulting practice built on ethics, transparency, and
-                principle-led client relationships.
+                campaign.
               </p>
             </ScrollReveal>
             <ScrollReveal delay={200}>
@@ -95,7 +101,7 @@ export default function About() {
                 Digital Media from the University of Washington, which deepened my
                 expertise in strategic communication and digital brand storytelling. I'm
                 now looking to bring that combination of hands-on experience and
-                strategic thinking to a branding agency.
+                strategic thinking to the right company.
               </p>
             </ScrollReveal>
           </div>
