@@ -4,8 +4,8 @@ import { Layout } from "@/components/layout/Layout";
 import { ScrollReveal } from "@/components/shared/ScrollReveal";
 import { Button } from "@/components/ui/button";
 
-import portraitMain from "@/assets/projects/Michelle Rojas Collective About.jpg";
-import workspace from "@/assets/projects/MRC Beyond Work.jpg";
+import portraitMain from "@/assets/projects/michelle-rojas-graduation.webp";
+import workspace from "@/assets/projects/mrc-beaded-vw-beetle.webp";
 
 const values = [
   {
@@ -68,25 +68,34 @@ export default function About() {
             <ScrollReveal>
               <p className="text-xl md:text-2xl text-ink leading-relaxed mb-8 first-letter:text-8xl md:first-letter:text-9xl first-letter:font-serif first-letter:float-left first-letter:mr-4 first-letter:mt-0 first-letter:leading-[0.75]">
                 I'm Michelle, a digital marketer, designer, and brand strategist based in
-                Seattle. For over a decade, I've partnered with organizations, from
+                Seattle. I was raised in South King County and began my career as an SEO
+                Specialist. For over a decade, I've partnered with organizations, from
                 ambitious startups to established institutions, to build brands that
-                connect and campaigns that convert.
+                connect and campaigns that convert. My background spans leading campaigns
+                and creative direction for national coffee brands, managing B2B marketing
+                operations, and optimizing SEO strategy for agency clients across the
+                region.
               </p>
             </ScrollReveal>
             <ScrollReveal delay={100}>
               <p className="text-ink-light mb-8">
                 My approach is rooted in attention to detail and intention. I believe the
-                most powerful brands are built on clarity, a deep understanding of who
-                you are, who you serve, and how to reach them, and that understanding
-                shapes everything from a logo to a landing page to the strategy behind a
-                campaign.
+                most powerful brands are built on clarity: a deep understanding of who
+                you are, who you serve, and how to reach them. That understanding shapes
+                everything from a logo to a landing page to the strategy behind a
+                campaign. In 2021, I founded Michelle Rojas Collective, a website design
+                and SEO consulting practice built on ethics, transparency, and
+                principle-led client relationships.
               </p>
             </ScrollReveal>
             <ScrollReveal delay={200}>
               <p className="text-ink-light mb-8">
-                Before starting my practice, I worked with leading businesses and global
-                brands, where I developed my belief that great marketing and branding
-                emerge from creativity, data, and deep collaboration.
+                I enjoy learning about marketing and have a lasting passion for brand and
+                design. I recently earned my Master's in Communication Leadership and
+                Digital Media from the University of Washington, which deepened my
+                expertise in strategic communication and digital brand storytelling. I'm
+                now looking to bring that combination of hands-on experience and
+                strategic thinking to a branding agency.
               </p>
             </ScrollReveal>
           </div>
@@ -163,13 +172,17 @@ export default function About() {
                 <p className="eyebrow mb-4">Beyond Work</p>
               </ScrollReveal>
               <ScrollReveal delay={200}>
-                <p className="text-ink-light">
+                <p className="text-ink-light mb-6">
                   Outside of my work, I dedicate my time to family, friends, pets, and
                   the outdoors. I have a genuine interest in art and lifelong learning
-                  across a wide range of subjects. I believe creativity is fueled by
-                  curiosity, and that the most meaningful ideas emerge from seeing the
-                  world through both your own perspective and the perspectives of
-                  others.
+                  across a wide range of subjects.
+                </p>
+              </ScrollReveal>
+              <ScrollReveal delay={300}>
+                <p className="text-ink-light">
+                  I believe creativity is fueled by curiosity, and that the most
+                  meaningful ideas emerge from seeing the world through both your own
+                  perspective and the perspectives of others.
                 </p>
               </ScrollReveal>
             </div>
@@ -183,12 +196,13 @@ export default function About() {
           <div className="max-w-3xl mx-auto text-center">
             <ScrollReveal>
               <h2 className="text-ink mb-6">
-                Let's work together.
+                Hiring? Let's Talk.
               </h2>
             </ScrollReveal>
             <ScrollReveal delay={100}>
               <p className="text-ink-light mb-10 max-w-xl mx-auto">
-                I'm always interested in hearing about new projects and challenges.
+                I bring a decade of digital marketing experience. I'd be glad to hear
+                what your company is building next.
               </p>
             </ScrollReveal>
             <ScrollReveal delay={200}>
