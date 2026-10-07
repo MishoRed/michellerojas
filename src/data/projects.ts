@@ -98,10 +98,10 @@ export const projects: Project[] = [
   },
   {
     slug: "soundcloud",
-    title: "Soundcloud",
+    title: "SoundCloud",
     category: "Audio Storytelling",
     year: "2025",
-    client: "Soundcloud",
+    client: "SoundCloud",
     industry: "Digital Audio",
     services: ["Audio Storytelling Episode"],
     overview: "\"The Thabbs\" is a narrative-driven podcast episode that blends structured storytelling with the raw, electric energy of an unforgettable interview. Intentional narration guides listeners through the story while actualities from the interview capture the subject's eccentric personality, humor, and unstoppable energy in their own words.",
