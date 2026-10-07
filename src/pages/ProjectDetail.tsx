@@ -31,7 +31,7 @@ import metaHeroWide from "@/assets/projects/meta-hero-wide.png";
 import meta1 from "@/assets/projects/meta-1.png";
 import meta2 from "@/assets/projects/meta-2.png";
 import meta3 from "@/assets/projects/meta-3.png";
-import meta4 from "@/assets/projects/meta-4.png";
+import metaGoals from "@/assets/projects/meta-goals.webp";
 import soundcloudHeroWide from "@/assets/projects/soundcloud-hero-wide.png";
 import kekePalmerHeroWide from "@/assets/projects/keke-palmer-hero-wide.jpg";
 import kekePalmerPodcast from "@/assets/projects/keke-palmer-podcast.png";
@@ -64,7 +64,7 @@ const projectImages: Record<string, string[]> = {
   "pcc-community-markets": [pccCommunityMarketsHero, pccCommunityMarkets1, pccCommunityMarkets2, pccCommunityMarkets3, pccCommunityMarkets4],
   "eve": [eveHero, eveLowFidelityFlow, eveLowFidelityFlowPicture, eveHiFidelityFlowPicture, eveHiFidelityFlow],
   "panera-bread": [paneraBreadHero, paneraBread1, paneraBread2, paneraBread3, paneraBread4],
-  "meta": [metaHeroWide, meta1, meta2, meta3, meta4],
+  "meta": [metaHeroWide, meta1, meta2, meta3, metaGoals],
   "soundcloud": [soundcloudHeroWide],
   "baby-this-is-keke-palmer": [kekePalmerHeroWide, kekePalmerPodcast, krsAstrology, ladaAstrology, kekePalmerInfluencers],
   "panera-bread-coffee": [paneraBreadCoffeeHeroWide, paneraBreadCoffeeLatteRecipes, paneraBreadCoffeeEspresso, paneraBreadCoffeeFrenchRoast, paneraBreadCoffeeNewBlends],
@@ -77,7 +77,7 @@ const projectImages: Record<string, string[]> = {
 // crop, no letterbox) instead of using the default fixed aspect ratios.
 // Each tuple is [image 1, image 2, image 3, image 4] as "width / height".
 const galleryAspectRatios: Record<string, [string, string, string, string]> = {
-  meta: ["3332 / 1554", "2522 / 1570", "2522 / 1570", "3152 / 1294"],
+  meta: ["3332 / 1554", "2892 / 1278", "2522 / 1570", "1515 / 780"],
   "baby-this-is-keke-palmer": ["2050 / 672", "1298 / 1856", "1350 / 1852", "1430 / 1006"],
   "panera-bread-coffee": ["2962 / 1052", "2880 / 1788", "2876 / 1648", "2924 / 1316"],
   "sprouted-organic-coffee": ["2548 / 1210", "2166 / 1038", "2214 / 1042", "2586 / 1316"],
@@ -302,7 +302,7 @@ export default function ProjectDetail() {
                   <img
                     src={detailImages[1]}
                     alt={`${project.title} detail`}
-                    className={`w-full h-full transition-transform duration-700 ease-out group-hover:scale-[1.02] ${galleryAspects ? "object-cover" : slug === "panera-bread" ? "object-contain bg-cream-darker" : "object-cover"}`}
+                    className={`w-full h-full transition-transform duration-700 ease-out group-hover:scale-[1.02] ${slug === "meta" ? "object-contain" : galleryAspects ? "object-cover" : slug === "panera-bread" ? "object-contain bg-cream-darker" : "object-cover"}`}
                   />
                 </button>
               </ScrollReveal>
