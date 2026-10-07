@@ -77,7 +77,7 @@ const projectImages: Record<string, string[]> = {
 // crop, no letterbox) instead of using the default fixed aspect ratios.
 // Each tuple is [image 1, image 2, image 3, image 4] as "width / height".
 const galleryAspectRatios: Record<string, [string, string, string, string]> = {
-  meta: ["3454 / 1316", "2854 / 1322", "2862 / 1330", "3454 / 1364"],
+  meta: ["3454 / 1316", "2892 / 1278", "2522 / 1570", "3454 / 1364"],
   "baby-this-is-keke-palmer": ["2050 / 672", "1298 / 1856", "1350 / 1852", "1430 / 1006"],
   "panera-bread-coffee": ["2962 / 1052", "2880 / 1788", "2876 / 1648", "2924 / 1316"],
   "sprouted-organic-coffee": ["2548 / 1210", "2166 / 1038", "2214 / 1042", "2586 / 1316"],
@@ -291,11 +291,13 @@ export default function ProjectDetail() {
             </ScrollReveal>
 
             {/* Two Column */}
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12">
+            <div
+              className={slug === "meta" ? "grid grid-cols-1 md:grid-cols-[2.263fr_1.606fr] gap-8 md:gap-12" : "grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12"}
+            >
               <ScrollReveal>
                 <button
                   onClick={() => openLightbox(1)}
-                  className={`block w-full text-left aspect-[4/5] overflow-hidden cursor-pointer group ${galleryAspects ? "bg-cream-darker" : ""}`}
+                  className={`block w-full text-left overflow-hidden cursor-pointer group ${slug === "meta" ? "" : "aspect-[4/5]"} ${galleryAspects ? "bg-cream-darker" : ""}`}
                   style={galleryAspects ? { aspectRatio: galleryAspects[1] } : undefined}
                   aria-label={`Open ${project.title} gallery image 2 in lightbox`}
                 >
@@ -309,14 +311,14 @@ export default function ProjectDetail() {
               <ScrollReveal delay={100}>
                 <button
                   onClick={() => openLightbox(2)}
-                  className={`block w-full text-left aspect-[4/5] overflow-hidden cursor-pointer group ${galleryAspects ? "bg-cream-darker" : ""}`}
+                  className={`block w-full text-left overflow-hidden cursor-pointer group ${slug === "meta" ? "" : "aspect-[4/5]"} ${galleryAspects ? "bg-cream-darker" : ""}`}
                   style={galleryAspects ? { aspectRatio: galleryAspects[2] } : undefined}
                   aria-label={`Open ${project.title} gallery image 3 in lightbox`}
                 >
                   <img
                     src={detailImages[2]}
                     alt={`${project.title} detail`}
-                    className={`w-full h-full transition-transform duration-700 ease-out group-hover:scale-[1.02] ${slug === "panera-bread" || galleryAspects ? "object-contain bg-cream-darker" : "object-cover"}`}
+                    className={`w-full h-full transition-transform duration-700 ease-out group-hover:scale-[1.02] ${slug === "meta" ? "object-contain" : slug === "panera-bread" || galleryAspects ? "object-contain bg-cream-darker" : "object-cover"}`}
                   />
                 </button>
               </ScrollReveal>
