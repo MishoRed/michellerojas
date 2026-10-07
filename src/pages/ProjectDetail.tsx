@@ -177,7 +177,7 @@ export default function ProjectDetail() {
               <ScrollReveal delay={200}>
                 <div className="lg:sticky lg:top-32 space-y-8">
                   <div>
-                    <p className="eyebrow mb-2">Client</p>
+                    <p className="eyebrow mb-2">{project.clientLabel || "Client"}</p>
                     <p className="text-ink">{project.client}</p>
                   </div>
                   <div>
@@ -185,13 +185,25 @@ export default function ProjectDetail() {
                     <p className="text-ink">{project.industry}</p>
                   </div>
                   <div>
-                    <p className="eyebrow mb-2">Services</p>
+                    <p className="eyebrow mb-2">{project.servicesLabel || "Services"}</p>
                     <ul className="space-y-1">
                       {project.services.map((service) => (
                         <li key={service} className="text-ink">{service}</li>
                       ))}
                     </ul>
                   </div>
+                  {project.role && (
+                    <div>
+                      <p className="eyebrow mb-2">Role</p>
+                      <p className="text-ink">{project.role}</p>
+                    </div>
+                  )}
+                  {project.context && (
+                    <div>
+                      <p className="eyebrow mb-2">Context</p>
+                      <p className="text-ink">{project.context}</p>
+                    </div>
+                  )}
                   <div>
                     <p className="eyebrow mb-2">Year</p>
                     <p className="text-ink">{project.year}</p>
