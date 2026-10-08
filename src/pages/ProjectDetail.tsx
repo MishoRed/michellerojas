@@ -60,7 +60,7 @@ import acaciaTransitionsConciergeRelocationServices from "@/assets/projects/acac
 import acaciaTransitionsRelocationServices from "@/assets/projects/acacia-transitions-relocation-services.png";
 
 const projectImages: Record<string, string[]> = {
-  "born-x-raised": [bornXRaisedHero, bornXRaised1, bornXRaised2, bornXRaised3, bornXRaised4],
+  "born-x-raised": [bornXRaisedHero, bornXRaised4, bornXRaised2, bornXRaised3, bornXRaised1],
   "pcc-community-markets": [pccCommunityMarketsHero, pccCommunityMarkets1, pccCommunityMarkets2, pccCommunityMarkets3, pccCommunityMarkets4],
   "eve": [eveHero, eveLowFidelityFlow, eveLowFidelityFlowPicture, eveHiFidelityFlowPicture, eveHiFidelityFlow],
   "panera-bread": [paneraBreadHero, paneraBread1, paneraBread2, paneraBread3, paneraBread4],
