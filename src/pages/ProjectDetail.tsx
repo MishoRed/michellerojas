@@ -215,6 +215,12 @@ export default function ProjectDetail() {
                       <p className="text-ink">{project.role}</p>
                     </div>
                   )}
+                  {project.company && (
+                    <div>
+                      <p className="eyebrow mb-2">Company</p>
+                      <p className="text-ink">{project.company}</p>
+                    </div>
+                  )}
                   {project.context && (
                     <div>
                       <p className="eyebrow mb-2">Context</p>
