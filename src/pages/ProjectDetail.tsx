@@ -291,9 +291,7 @@ export default function ProjectDetail() {
             </ScrollReveal>
 
             {/* Two Column */}
-            <div
-              className={slug === "meta" ? "grid grid-cols-1 md:grid-cols-[2.263fr_1.606fr] gap-8 md:gap-12" : "grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12"}
-            >
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12">
               <ScrollReveal>
                 <button
                   onClick={() => openLightbox(1)}
