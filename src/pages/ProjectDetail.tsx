@@ -77,7 +77,7 @@ const projectImages: Record<string, string[]> = {
 // crop, no letterbox) instead of using the default fixed aspect ratios.
 // Each tuple is [image 1, image 2, image 3, image 4] as "width / height".
 const galleryAspectRatios: Record<string, [string, string, string, string]> = {
-  meta: ["3454 / 1316", "2892 / 1278", "2522 / 1570", "3454 / 1364"],
+  meta: ["3332 / 1554", "2892 / 1278", "2522 / 1570", "1515 / 780"],
   "baby-this-is-keke-palmer": ["2050 / 672", "1298 / 1856", "1350 / 1852", "1430 / 1006"],
   "panera-bread-coffee": ["2962 / 1052", "2880 / 1788", "2876 / 1648", "2924 / 1316"],
   "sprouted-organic-coffee": ["2548 / 1210", "2166 / 1038", "2214 / 1042", "2586 / 1316"],
@@ -291,7 +291,7 @@ export default function ProjectDetail() {
             </ScrollReveal>
 
             {/* Two Column */}
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12">
+            <div className={slug === "meta" ? "grid grid-cols-1 md:grid-cols-[2.263fr_1.606fr] gap-8 md:gap-12" : "grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12"}>
               <ScrollReveal>
                 <button
                   onClick={() => openLightbox(1)}
