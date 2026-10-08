@@ -78,11 +78,23 @@ const projectImages: Record<string, string[]> = {
 // Each tuple is [image 1, image 2, image 3, image 4] as "width / height".
 const galleryAspectRatios: Record<string, [string, string, string, string]> = {
   meta: ["3332 / 1554", "2892 / 1278", "2522 / 1570", "1515 / 780"],
+  eve: ["3070 / 1468", "3094 / 1506", "2172 / 1052", "3190 / 1668"],
   "baby-this-is-keke-palmer": ["2050 / 672", "1298 / 1856", "1350 / 1852", "1430 / 1006"],
   "panera-bread-coffee": ["2962 / 1052", "2880 / 1788", "2876 / 1648", "2924 / 1316"],
   "sprouted-organic-coffee": ["2548 / 1210", "2166 / 1038", "2214 / 1042", "2586 / 1316"],
   "cesar-caro": ["3454 / 1316", "2854 / 1322", "2862 / 1330", "3454 / 1364"],
   "acacia-transitions": ["2520 / 688", "1258 / 1078", "1248 / 1080", "2574 / 632"],
+};
+
+// Projects using the "full fit" gallery treatment: every image shown
+// completely (object-contain) with no crop and no letterbox padding, and
+// the middle two-column row sized proportionally so both images match
+// height instead of a fixed 50/50 split.
+const FULL_FIT_SLUGS = new Set(["meta", "eve"]);
+
+const parseAspectRatio = (ratio: string) => {
+  const [width, height] = ratio.split("/").map(Number);
+  return width / height;
 };
 
 export default function ProjectDetail() {
@@ -108,6 +120,11 @@ export default function ProjectDetail() {
   // Projects with a dedicated hero image supply more than 3 images; the
   // gallery below uses the remaining ones instead of doubling up the hero.
   const detailImages = images.length > 3 ? images.slice(1) : images;
+  const isFullFit = slug ? FULL_FIT_SLUGS.has(slug) : false;
+  const twoColumnTemplate =
+    isFullFit && galleryAspects
+      ? `${parseAspectRatio(galleryAspects[1])}fr ${parseAspectRatio(galleryAspects[2])}fr`
+      : "1fr 1fr";
 
   return (
     <Layout>
@@ -291,32 +308,35 @@ export default function ProjectDetail() {
             </ScrollReveal>
 
             {/* Two Column */}
-            <div className={slug === "meta" ? "grid grid-cols-1 md:grid-cols-[2.263fr_1.606fr] gap-8 md:gap-12" : "grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12"}>
+            <div
+              className="grid grid-cols-1 gap-8 md:gap-12 md:[grid-template-columns:var(--two-col-template)]"
+              style={{ "--two-col-template": twoColumnTemplate } as React.CSSProperties}
+            >
               <ScrollReveal>
                 <button
                   onClick={() => openLightbox(1)}
-                  className={`block w-full text-left overflow-hidden cursor-pointer group ${slug === "meta" ? "" : "aspect-[4/5]"} ${galleryAspects ? "bg-cream-darker" : ""}`}
+                  className={`block w-full text-left overflow-hidden cursor-pointer group ${isFullFit ? "" : "aspect-[4/5]"} ${galleryAspects ? "bg-cream-darker" : ""}`}
                   style={galleryAspects ? { aspectRatio: galleryAspects[1] } : undefined}
                   aria-label={`Open ${project.title} gallery image 2 in lightbox`}
                 >
                   <img
                     src={detailImages[1]}
                     alt={`${project.title} detail`}
-                    className={`w-full h-full transition-transform duration-700 ease-out group-hover:scale-[1.02] ${slug === "meta" ? "object-contain" : galleryAspects ? "object-cover" : slug === "panera-bread" ? "object-contain bg-cream-darker" : "object-cover"}`}
+                    className={`w-full h-full transition-transform duration-700 ease-out group-hover:scale-[1.02] ${isFullFit ? "object-contain" : galleryAspects ? "object-cover" : slug === "panera-bread" ? "object-contain bg-cream-darker" : "object-cover"}`}
                   />
                 </button>
               </ScrollReveal>
               <ScrollReveal delay={100}>
                 <button
                   onClick={() => openLightbox(2)}
-                  className={`block w-full text-left overflow-hidden cursor-pointer group ${slug === "meta" ? "" : "aspect-[4/5]"} ${galleryAspects ? "bg-cream-darker" : ""}`}
+                  className={`block w-full text-left overflow-hidden cursor-pointer group ${isFullFit ? "" : "aspect-[4/5]"} ${galleryAspects ? "bg-cream-darker" : ""}`}
                   style={galleryAspects ? { aspectRatio: galleryAspects[2] } : undefined}
                   aria-label={`Open ${project.title} gallery image 3 in lightbox`}
                 >
                   <img
                     src={detailImages[2]}
                     alt={`${project.title} detail`}
-                    className={`w-full h-full transition-transform duration-700 ease-out group-hover:scale-[1.02] ${slug === "meta" ? "object-contain" : slug === "panera-bread" || galleryAspects ? "object-contain bg-cream-darker" : "object-cover"}`}
+                    className={`w-full h-full transition-transform duration-700 ease-out group-hover:scale-[1.02] ${isFullFit ? "object-contain" : slug === "panera-bread" || galleryAspects ? "object-contain bg-cream-darker" : "object-cover"}`}
                   />
                 </button>
               </ScrollReveal>
