@@ -79,6 +79,7 @@ const projectImages: Record<string, string[]> = {
 const galleryAspectRatios: Record<string, [string, string, string, string]> = {
   meta: ["3332 / 1554", "2892 / 1278", "2522 / 1570", "1515 / 780"],
   eve: ["3070 / 1468", "3094 / 1506", "2172 / 1052", "3190 / 1668"],
+  "pcc-community-markets": ["2000 / 1334", "637 / 796", "1600 / 1200", "2942 / 1532"],
   "baby-this-is-keke-palmer": ["2050 / 672", "1298 / 1856", "1350 / 1852", "1430 / 1006"],
   "panera-bread-coffee": ["2962 / 1052", "2880 / 1788", "2876 / 1648", "2924 / 1316"],
   "sprouted-organic-coffee": ["2548 / 1210", "2166 / 1038", "2214 / 1042", "2586 / 1316"],
@@ -90,7 +91,7 @@ const galleryAspectRatios: Record<string, [string, string, string, string]> = {
 // completely (object-contain) with no crop and no letterbox padding, and
 // the middle two-column row sized proportionally so both images match
 // height instead of a fixed 50/50 split.
-const FULL_FIT_SLUGS = new Set(["meta", "eve"]);
+const FULL_FIT_SLUGS = new Set(["meta", "eve", "pcc-community-markets"]);
 
 const parseAspectRatio = (ratio: string) => {
   const [width, height] = ratio.split("/").map(Number);
