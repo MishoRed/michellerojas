@@ -85,6 +85,7 @@ const galleryAspectRatios: Record<string, [string, string, string, string]> = {
   "sprouted-organic-coffee": ["2548 / 1210", "2166 / 1038", "2214 / 1042", "2586 / 1316"],
   "cesar-caro": ["3454 / 1316", "2854 / 1322", "2862 / 1330", "3454 / 1364"],
   "acacia-transitions": ["2520 / 688", "1258 / 1078", "1248 / 1080", "2574 / 632"],
+  "panera-bread": ["3454 / 1316", "2854 / 1322", "2862 / 1330", "3454 / 1364"],
 };
 
 // Projects using the "full fit" gallery treatment: every image shown
@@ -316,7 +317,7 @@ export default function ProjectDetail() {
                 <img
                   src={detailImages[0]}
                   alt={`${project.title} detail`}
-                  className={`w-full h-full transition-transform duration-700 ease-out group-hover:scale-[1.02] ${galleryAspects ? "object-contain" : "object-cover"} ${slug === "born-x-raised" ? "object-[50%_80%]" : ""}`}
+                  className={`w-full h-full transition-transform duration-700 ease-out group-hover:scale-[1.02] ${slug === "panera-bread" ? "object-cover" : galleryAspects ? "object-contain" : "object-cover"} ${slug === "born-x-raised" ? "object-[50%_80%]" : ""}`}
                 />
               </button>
             </ScrollReveal>
@@ -336,7 +337,7 @@ export default function ProjectDetail() {
                   <img
                     src={detailImages[1]}
                     alt={`${project.title} detail`}
-                    className={`w-full h-full transition-transform duration-700 ease-out group-hover:scale-[1.02] ${isFullFit ? "object-contain" : galleryAspects ? "object-cover" : slug === "panera-bread" ? "object-contain bg-cream-darker" : "object-cover"}`}
+                    className={`w-full h-full transition-transform duration-700 ease-out group-hover:scale-[1.02] ${isFullFit ? "object-contain" : "object-cover"}`}
                   />
                 </button>
               </ScrollReveal>
@@ -350,7 +351,7 @@ export default function ProjectDetail() {
                   <img
                     src={detailImages[2]}
                     alt={`${project.title} detail`}
-                    className={`w-full h-full transition-transform duration-700 ease-out group-hover:scale-[1.02] ${isFullFit ? "object-contain" : slug === "panera-bread" || galleryAspects ? "object-contain bg-cream-darker" : "object-cover"}`}
+                    className={`w-full h-full transition-transform duration-700 ease-out group-hover:scale-[1.02] ${isFullFit ? "object-contain" : slug === "panera-bread" ? "object-cover" : galleryAspects ? "object-contain bg-cream-darker" : "object-cover"}`}
                   />
                 </button>
               </ScrollReveal>
@@ -367,7 +368,7 @@ export default function ProjectDetail() {
                 <img
                   src={detailImages[3] ?? detailImages[0]}
                   alt={`${project.title} detail`}
-                  className={`w-full h-full transition-transform duration-700 ease-out group-hover:scale-[1.02] ${galleryAspects ? "object-contain" : "object-cover"} ${slug === "born-x-raised" ? "object-[50%_80%]" : ""}`}
+                  className={`w-full h-full transition-transform duration-700 ease-out group-hover:scale-[1.02] ${slug === "panera-bread" ? "object-cover" : galleryAspects ? "object-contain" : "object-cover"} ${slug === "born-x-raised" ? "object-[50%_80%]" : ""}`}
                 />
               </button>
             </ScrollReveal>
