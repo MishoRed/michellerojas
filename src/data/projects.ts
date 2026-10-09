@@ -8,6 +8,7 @@ export interface Project {
   industry: string;
   services: string[];
   servicesLabel?: string;
+  course?: string;
   role?: string;
   company?: string;
   context?: string;
@@ -127,8 +128,12 @@ export const projects: Project[] = [
     category: "Audio Storytelling",
     year: "2025",
     client: "SoundCloud",
+    clientLabel: "Brand",
     industry: "Digital Audio",
     services: ["Audio Storytelling Episode"],
+    servicesLabel: "Deliverable",
+    course: "Audio Storytelling",
+    context: "Graduate Project, University of Washington",
     overview: "\"The Thabbs\" is a narrative-driven podcast episode that blends structured storytelling with the raw, electric energy of an unforgettable interview. Intentional narration guides listeners through the story while actualities from the interview capture the subject's eccentric personality, humor, and unstoppable energy in their own words.",
     challenge: "The production needed to balance journalistic integrity with expressive storytelling, grounding the narrative in careful research and fact-checking while still leaving room for spontaneity and personality. It also required layering environmental sound, music, and subtle effects to enhance emotion and pacing without overpowering the interviewee's voice or making the piece feel overproduced.",
     solution: "By weaving ambi throughout the episode and using sound design selectively, the piece brings scenes to life while letting the interview feel alive rather than scripted. The result is a dynamic, credible, and entertaining podcast that celebrates creativity, energy, and character in equal measure.",
