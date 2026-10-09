@@ -210,6 +210,12 @@ export default function ProjectDetail() {
                       ))}
                     </ul>
                   </div>
+                  {project.course && (
+                    <div>
+                      <p className="eyebrow mb-2">Course</p>
+                      <p className="text-ink">{project.course}</p>
+                    </div>
+                  )}
                   {project.role && (
                     <div>
                       <p className="eyebrow mb-2">Role</p>
