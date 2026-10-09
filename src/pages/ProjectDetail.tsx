@@ -386,52 +386,34 @@ export default function ProjectDetail() {
         alt={project.title}
       />
 
-      {/* Previous Project */}
+      {/* Project Navigation */}
       <section className="border-t border-divider">
-        <Link
-          to={`/work/${previousProject.slug}`}
-          className="group block"
-        >
-          <div className="container-editorial px-6 md:px-12 lg:px-20 py-16 md:py-24">
-            <div className="flex items-center justify-between">
+        <div className="container-editorial px-6 md:px-12 lg:px-20 py-16 md:py-24">
+          <div className="grid grid-cols-2 gap-8">
+            <Link to={`/work/${previousProject.slug}`} className="group block">
+              <p className="eyebrow mb-4">Previous Project</p>
+              <h2 className="font-serif text-3xl md:text-4xl text-ink group-hover:opacity-70 transition-opacity duration-300 mb-6">
+                {previousProject.title}
+              </h2>
               <ArrowLeft
                 size={32}
                 strokeWidth={1}
                 className="text-ink transition-transform duration-300 group-hover:-translate-x-2"
               />
-              <div className="text-right">
-                <p className="eyebrow mb-4">Previous Project</p>
-                <h2 className="font-serif text-3xl md:text-4xl text-ink group-hover:opacity-70 transition-opacity duration-300">
-                  {previousProject.title}
-                </h2>
-              </div>
-            </div>
-          </div>
-        </Link>
-      </section>
-
-      {/* Next Project */}
-      <section className="border-t border-divider">
-        <Link
-          to={`/work/${nextProject.slug}`}
-          className="group block"
-        >
-          <div className="container-editorial px-6 md:px-12 lg:px-20 py-16 md:py-24">
-            <div className="flex items-center justify-between">
-              <div>
-                <p className="eyebrow mb-4">Next Project</p>
-                <h2 className="font-serif text-3xl md:text-4xl text-ink group-hover:opacity-70 transition-opacity duration-300">
-                  {nextProject.title}
-                </h2>
-              </div>
+            </Link>
+            <Link to={`/work/${nextProject.slug}`} className="group block text-right">
+              <p className="eyebrow mb-4">Next Project</p>
+              <h2 className="font-serif text-3xl md:text-4xl text-ink group-hover:opacity-70 transition-opacity duration-300 mb-6">
+                {nextProject.title}
+              </h2>
               <ArrowRight
                 size={32}
                 strokeWidth={1}
                 className="text-ink transition-transform duration-300 group-hover:translate-x-2"
               />
-            </div>
+            </Link>
           </div>
-        </Link>
+        </div>
       </section>
 
       {/* Back Link */}
