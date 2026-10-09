@@ -116,6 +116,7 @@ export default function ProjectDetail() {
   }
 
   const nextProject = projects[(projectIndex + 1) % projects.length];
+  const previousProject = projects[(projectIndex - 1 + projects.length) % projects.length];
   const images = projectImages[slug!] || [northlightHero];
   const galleryAspects = galleryAspectRatios[slug!];
   // Projects with a dedicated hero image supply more than 3 images; the
@@ -385,9 +386,33 @@ export default function ProjectDetail() {
         alt={project.title}
       />
 
+      {/* Previous Project */}
+      <section className="border-t border-divider">
+        <Link
+          to={`/work/${previousProject.slug}`}
+          className="group block"
+        >
+          <div className="container-editorial px-6 md:px-12 lg:px-20 py-16 md:py-24">
+            <div className="flex items-center justify-between">
+              <ArrowLeft
+                size={32}
+                strokeWidth={1}
+                className="text-ink transition-transform duration-300 group-hover:-translate-x-2"
+              />
+              <div className="text-right">
+                <p className="eyebrow mb-4">Previous Project</p>
+                <h2 className="font-serif text-3xl md:text-4xl text-ink group-hover:opacity-70 transition-opacity duration-300">
+                  {previousProject.title}
+                </h2>
+              </div>
+            </div>
+          </div>
+        </Link>
+      </section>
+
       {/* Next Project */}
       <section className="border-t border-divider">
-        <Link 
+        <Link
           to={`/work/${nextProject.slug}`}
           className="group block"
         >
@@ -399,10 +424,10 @@ export default function ProjectDetail() {
                   {nextProject.title}
                 </h2>
               </div>
-              <ArrowRight 
-                size={32} 
-                strokeWidth={1} 
-                className="text-ink transition-transform duration-300 group-hover:translate-x-2" 
+              <ArrowRight
+                size={32}
+                strokeWidth={1}
+                className="text-ink transition-transform duration-300 group-hover:translate-x-2"
               />
             </div>
           </div>
