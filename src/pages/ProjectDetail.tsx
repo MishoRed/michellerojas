@@ -409,7 +409,7 @@ export default function ProjectDetail() {
               <ArrowRight
                 size={32}
                 strokeWidth={1}
-                className="text-ink transition-transform duration-300 group-hover:translate-x-2"
+                className="ml-auto text-ink transition-transform duration-300 group-hover:translate-x-2"
               />
             </Link>
           </div>
