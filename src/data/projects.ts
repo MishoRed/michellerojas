@@ -163,7 +163,7 @@ export const projects: Project[] = [
     client: "Baby, This is Keke Palmer",
     clientLabel: "Brand",
     industry: "Podcast",
-    services: ["Influencer Marketing", "Matching Influencers with Brands"],
+    services: ["Matching Influencers with Brands"],
     servicesLabel: "Deliverable",
     course: "Multicultural Marketing",
     context: "Graduate Project, University of Washington",
