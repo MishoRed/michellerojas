@@ -7,7 +7,7 @@ import { SectionHeader } from "@/components/shared/SectionHeader";
 import { Button } from "@/components/ui/button";
 import { projects } from "@/data/projects";
 
-import portraitMain from "@/assets/portrait-main.jpg";
+import portraitMain from "@/assets/portrait-main.webp";
 import bornXRaisedHero from "@/assets/gallery/gallery-1.jpg";
 import pccCommunityMarketsHero from "@/assets/gallery/gallery-2.jpg";
 import eveHero from "@/assets/projects/eve-hero.png";
