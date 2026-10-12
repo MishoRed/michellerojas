@@ -7,7 +7,7 @@ import { SectionHeader } from "@/components/shared/SectionHeader";
 import { Button } from "@/components/ui/button";
 import { projects } from "@/data/projects";
 
-import portraitMain from "@/assets/portrait-main.jpg";
+import portraitMain from "@/assets/portrait-main.webp";
 import bornXRaisedHero from "@/assets/gallery/gallery-1.jpg";
 import pccCommunityMarketsHero from "@/assets/gallery/gallery-2.jpg";
 import eveHero from "@/assets/projects/eve-hero.png";
@@ -86,11 +86,11 @@ export default function Index() {
             {/* Image */}
             <div className="lg:col-span-5 order-1 lg:order-2">
               <ScrollReveal delay={200}>
-                <div className="aspect-[4/5] bg-cream-darker overflow-hidden">
+                <div className="bg-cream-darker overflow-hidden">
                   <img
                     src={portraitMain}
                     alt="Michelle Rojas - Designer"
-                    className="w-full h-full object-cover"
+                    className="w-full h-auto object-contain"
                   />
                 </div>
               </ScrollReveal>

@@ -4,7 +4,7 @@ import { Layout } from "@/components/layout/Layout";
 import { ScrollReveal } from "@/components/shared/ScrollReveal";
 import { Button } from "@/components/ui/button";
 
-import portraitMain from "@/assets/projects/michelle-rojas-graduation.webp";
+import portraitMain from "@/assets/portrait-about.jpg";
 import workspace from "@/assets/projects/mrc-beaded-vw-beetle.webp";
 
 const values = [
@@ -48,11 +48,11 @@ export default function About() {
             </div>
             <div className="lg:col-span-5">
               <ScrollReveal delay={200}>
-                <div className="aspect-[4/5] overflow-hidden">
+                <div className="overflow-hidden">
                   <img
                     src={portraitMain}
                     alt="Michelle Rojas"
-                    className="w-full h-full object-cover"
+                    className="w-full h-auto object-contain"
                   />
                 </div>
               </ScrollReveal>
