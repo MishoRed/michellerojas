@@ -91,7 +91,7 @@ export default function About() {
                 transparency, and principle-led client relationships. My approach has
                 always been rooted in attention to detail, intention, and communication,
                 which shapes everything from a landing page to the strategy behind a
-                campaign, and to the client's perspective.
+                campaign to the client's perspective.
               </p>
             </ScrollReveal>
             <ScrollReveal delay={200}>
