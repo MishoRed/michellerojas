@@ -6,6 +6,7 @@ import { ProjectCard } from "@/components/shared/ProjectCard";
 import { SectionHeader } from "@/components/shared/SectionHeader";
 import { Button } from "@/components/ui/button";
 import { projects } from "@/data/projects";
+import { usePageMeta } from "@/hooks/use-page-meta";
 
 import portraitMain from "@/assets/portrait-main.webp";
 import bornXRaisedHero from "@/assets/gallery/gallery-1.jpg";
@@ -50,6 +51,11 @@ const services = [
 ];
 
 export default function Index() {
+  usePageMeta({
+    title: "Michelle Rojas | Digital Marketer, Designer & Brand Strategist",
+    description: "Digital marketer, designer, and brand strategist pairing a designer's eye with a marketer's discipline to build brands with intention and creativity.",
+  });
+
   return (
     <Layout>
       {/* Hero Section */}

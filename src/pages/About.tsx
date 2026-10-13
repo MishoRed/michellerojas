@@ -3,6 +3,7 @@ import { ArrowRight } from "lucide-react";
 import { Layout } from "@/components/layout/Layout";
 import { ScrollReveal } from "@/components/shared/ScrollReveal";
 import { Button } from "@/components/ui/button";
+import { usePageMeta } from "@/hooks/use-page-meta";
 
 import portraitMain from "@/assets/projects/michelle-rojas-graduation.webp";
 import workspace from "@/assets/projects/mrc-beaded-vw-beetle.webp";
@@ -30,6 +31,11 @@ const recognition = [
 ];
 
 export default function About() {
+  usePageMeta({
+    title: "About | Michelle Rojas",
+    description: "Meet Michelle Rojas, a Seattle-based digital marketer, designer, and brand strategist with over a decade of experience building brands that connect.",
+  });
+
   return (
     <Layout>
       {/* Hero Section */}

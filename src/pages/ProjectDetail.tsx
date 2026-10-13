@@ -5,6 +5,13 @@ import { Layout } from "@/components/layout/Layout";
 import { ScrollReveal } from "@/components/shared/ScrollReveal";
 import { Lightbox } from "@/components/shared/Lightbox";
 import { projects } from "@/data/projects";
+import { usePageMeta } from "@/hooks/use-page-meta";
+
+function truncateDescription(text: string, maxLength: number): string {
+  if (text.length <= maxLength) return text;
+  const truncated = text.slice(0, maxLength);
+  return `${truncated.slice(0, truncated.lastIndexOf(" "))}…`;
+}
 
 import northlightHero from "@/assets/projects/northlight-hero.jpg";
 import bornXRaisedHero from "@/assets/gallery/gallery-1.jpg";
@@ -111,6 +118,13 @@ export default function ProjectDetail() {
 
   const projectIndex = projects.findIndex((p) => p.slug === slug);
   const project = projects[projectIndex];
+
+  usePageMeta({
+    title: project ? `${project.title} | Michelle Rojas` : "Michelle Rojas",
+    description: project
+      ? truncateDescription(project.overview, 155)
+      : "Digital marketer, designer, and brand strategist pairing a designer's eye with a marketer's discipline to build brands with intention and creativity.",
+  });
 
   if (!project) {
     return <Navigate to="/" replace />;
