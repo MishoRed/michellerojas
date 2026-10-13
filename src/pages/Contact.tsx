@@ -4,6 +4,7 @@ import { Layout } from "@/components/layout/Layout";
 import { ScrollReveal } from "@/components/shared/ScrollReveal";
 import { Button } from "@/components/ui/button";
 import { useToast } from "@/hooks/use-toast";
+import { usePageMeta } from "@/hooks/use-page-meta";
 
 const contactSchema = z.object({
   name: z.string().trim().min(1, "Name is required").max(100, "Name must be under 100 characters"),
@@ -23,6 +24,11 @@ const encodeFormData = (data: Record<string, string>) =>
     .join("&");
 
 export default function Contact() {
+  usePageMeta({
+    title: "Contact | Michelle Rojas",
+    description: "Get in touch with Michelle Rojas, a Seattle-based digital marketer, designer, and brand strategist, to talk about your next brand or marketing project.",
+  });
+
   const { toast } = useToast();
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [formData, setFormData] = useState({

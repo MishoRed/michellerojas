@@ -3,6 +3,7 @@ import { ArrowRight, Download } from "lucide-react";
 import { Layout } from "@/components/layout/Layout";
 import { ScrollReveal } from "@/components/shared/ScrollReveal";
 import { Button } from "@/components/ui/button";
+import { usePageMeta } from "@/hooks/use-page-meta";
 
 const resumePdfUrl = "/michelle-rojas-resume.pdf";
 
@@ -90,6 +91,11 @@ const recognition = [
 ];
 
 export default function Resume() {
+  usePageMeta({
+    title: "Resume | Michelle Rojas",
+    description: "View Michelle Rojas's resume: over a decade of experience in digital marketing, SEO, brand strategy, and design across agencies and in-house teams.",
+  });
+
   return (
     <Layout>
       {/* Hero */}
