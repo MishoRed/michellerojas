@@ -89,8 +89,9 @@ export default function About() {
                 </a>
                 , a website design and SEO consulting practice built on ethics,
                 transparency, and principle-led client relationships. My approach has
-                always been rooted in attention to detail, which shapes everything from a
-                landing page to the strategy behind a campaign.
+                always been rooted in attention to detail, intention, and communication,
+                which shapes everything from a landing page to the strategy behind a
+                campaign, and to the client's perspective.
               </p>
             </ScrollReveal>
             <ScrollReveal delay={200}>
