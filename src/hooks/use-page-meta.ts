@@ -36,9 +36,6 @@ export function usePageMeta({ title, description, image = DEFAULT_OG_IMAGE }: Pa
     setMetaTag("property", "og:title", title);
     setMetaTag("property", "og:description", description);
     setMetaTag("property", "og:image", image);
-    setMetaTag("name", "twitter:title", title);
-    setMetaTag("name", "twitter:description", description);
-    setMetaTag("name", "twitter:image", image);
     setCanonical(`${SITE_URL}${window.location.pathname}`);
   }, [title, description, image]);
 }
