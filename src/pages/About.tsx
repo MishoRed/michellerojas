@@ -11,7 +11,7 @@ const values = [
   {
     number: "01",
     title: "Clarity over complexity",
-    description: "The best solutions are often the simplest. I distill ideas to their essence, removing noise to reveal what matters.",
+    description: "The best solutions are often the simplest. Every project starts with one question: what does this brand need people to understand?",
   },
   {
     number: "02",
@@ -207,7 +207,7 @@ export default function About() {
             </ScrollReveal>
             <ScrollReveal delay={100}>
               <p className="text-ink-light mb-10 max-w-xl mx-auto">
-                I bring a decade of digital marketing experience. I'd be glad to hear
+                I bring over a decade of digital marketing experience. I'd be glad to hear
                 what your company is building next.
               </p>
             </ScrollReveal>
