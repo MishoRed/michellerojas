@@ -67,18 +67,18 @@ export default function About() {
           <div className="max-w-3xl">
             <ScrollReveal>
               <p className="text-xl md:text-2xl text-ink leading-relaxed mb-8 first-letter:text-8xl md:first-letter:text-9xl first-letter:font-serif first-letter:float-left first-letter:mr-4 first-letter:mt-0 first-letter:leading-[0.75]">
-                I'm Michelle, a digital marketer, designer, and brand strategist based in
+                I'm Michelle, a digital marketer, designer and brand strategist based in
                 Seattle. I was raised in South King County and began my career as an SEO
-                Specialist in 2013. For over a decade, I've partnered with organizations,
-                from ambitious startups to established institutions, to build brands that
+                Specialist in 2013. For over a decade, I've partnered with organizations
+                from startup agencies to established companies, building brands that
                 connect and campaigns that convert.
               </p>
             </ScrollReveal>
             <ScrollReveal delay={100}>
               <p className="text-ink-light mb-8">
                 My background spans leading campaigns and creative direction for national
-                coffee brands, managing B2B marketing operations, and optimizing SEO
-                strategy for agency clients across the region. In 2021, I founded{" "}
+                coffee brands, managing B2B marketing operations, and designing and
+                optimizing SEO strategy for agency clients across the region. In 2021, I founded{" "}
                 <a
                   href="https://michellerojascollective.com/"
                   target="_blank"
@@ -88,10 +88,9 @@ export default function About() {
                   Michelle Rojas Collective
                 </a>
                 , a website design and SEO consulting practice built on ethics,
-                transparency, and principle-led client relationships. My approach is
-                rooted in attention to detail and intention. That understanding shapes
-                everything from a logo to a landing page to the strategy behind a
-                campaign.
+                transparency, and principle-led client relationships. My approach has
+                always been rooted in attention to detail, which shapes everything from a
+                landing page to the strategy behind a campaign.
               </p>
             </ScrollReveal>
             <ScrollReveal delay={200}>
