@@ -26,7 +26,7 @@ export function Footer() {
               Michelle Rojas
             </Link>
             <p className="mt-4 text-sm text-ink-muted max-w-xs">
-              Digital marketer, designer, and brand strategist who brings a designer's eye and a marketer's discipline to every brand, with intention and creativity.
+              Digital marketer, designer, and brand strategist: a designer's eye, a marketer's discipline, and brands built with intention and creativity.
             </p>
           </div>
 
