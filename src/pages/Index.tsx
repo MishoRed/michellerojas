@@ -59,55 +59,48 @@ export default function Index() {
   return (
     <Layout>
       {/* Hero Section */}
-      <section className="relative overflow-hidden pt-24 md:pt-32 pb-16 md:pb-24 lg:min-h-[640px] lg:flex lg:items-center">
-        {/* Background image with left fade - desktop only */}
-        <div className="hidden lg:block absolute top-32 bottom-0 right-0 w-[48%]">
-          <img
-            src={portraitMain}
-            alt="Michelle Rojas - Designer"
-            className="w-full h-full object-cover object-[center_15%]"
-          />
-          <div className="absolute inset-y-0 left-0 w-1/3 bg-gradient-to-r from-[hsl(var(--cream))] to-transparent" />
-        </div>
+      <section className="pt-24 md:pt-32 pb-16 md:pb-24">
+        <div className="container-editorial px-6 md:px-12 lg:px-20 py-16 md:py-24">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center">
+            {/* Text Content */}
+            <div className="lg:col-span-7 order-2 lg:order-1">
+              <ScrollReveal>
+                <p className="eyebrow mb-6">Digital Marketing, Design and Brand Strategy</p>
+              </ScrollReveal>
+              <ScrollReveal delay={100}>
+                <h1 className="text-ink mb-8">
+                  Michelle Rojas
+                </h1>
+              </ScrollReveal>
+              <ScrollReveal delay={200}>
+                <p className="text-lg md:text-xl text-ink-light max-w-xl mb-10">
+                  Digital marketer, designer, and brand strategist: a decade of experience, a master's in digital media & leadership, and a focus on building brands that drive real growth.
+                </p>
+              </ScrollReveal>
 
-        <div className="container-editorial px-6 md:px-12 lg:px-20 relative z-10 w-full">
-          <div className="max-w-xl">
-            <ScrollReveal>
-              <p className="eyebrow mb-6">Digital Marketing, Design and Brand Strategy</p>
-            </ScrollReveal>
-            <ScrollReveal delay={100}>
-              <h1 className="text-ink mb-8">
-                Michelle Rojas
-              </h1>
-            </ScrollReveal>
-            <ScrollReveal delay={200}>
-              <p className="text-lg md:text-xl text-ink-light max-w-xl mb-10">
-                Digital marketer, designer, and brand strategist: a decade of experience, a master's in digital media & leadership, and a focus on building brands that drive real growth.
-              </p>
-            </ScrollReveal>
+              <ScrollReveal delay={300}>
+                <a
+                  href="#selected-projects"
+                  className="arrow-link text-ink"
+                >
+                  View Selected Work
+                  <ArrowRight size={18} strokeWidth={1.5} />
+                </a>
+              </ScrollReveal>
+            </div>
 
-            <ScrollReveal delay={300}>
-              <a
-                href="#selected-projects"
-                className="arrow-link text-ink"
-              >
-                View Selected Work
-                <ArrowRight size={18} strokeWidth={1.5} />
-              </a>
-            </ScrollReveal>
-          </div>
-
-          {/* Image - mobile/tablet only, stacked below text */}
-          <div className="lg:hidden mt-12">
-            <ScrollReveal delay={200}>
-              <div className="bg-cream-darker overflow-hidden">
-                <img
-                  src={portraitMain}
-                  alt="Michelle Rojas - Designer"
-                  className="w-full h-auto object-contain"
-                />
-              </div>
-            </ScrollReveal>
+            {/* Image */}
+            <div className="lg:col-span-5 order-1 lg:order-2">
+              <ScrollReveal delay={200}>
+                <div className="bg-cream-darker overflow-hidden">
+                  <img
+                    src={portraitMain}
+                    alt="Michelle Rojas - Designer"
+                    className="w-full h-auto object-contain"
+                  />
+                </div>
+              </ScrollReveal>
+            </div>
           </div>
         </div>
       </section>
