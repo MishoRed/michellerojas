@@ -53,7 +53,7 @@ const services = [
 export default function Index() {
   usePageMeta({
     title: "Michelle Rojas | Digital Marketer, Designer & Brand Strategist",
-    description: "Digital marketer, designer, and brand strategist pairing a designer's eye with a marketer's discipline to build brands with intention and creativity.",
+    description: "Digital marketer, designer, and brand strategist: a decade of experience, a master's in digital media & leadership, and a focus on building brands that drive real growth.",
   });
 
   return (
