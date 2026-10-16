@@ -74,7 +74,7 @@ export default function Index() {
               </ScrollReveal>
               <ScrollReveal delay={200}>
                 <p className="text-lg md:text-xl text-ink-light max-w-xl mb-10">
-                  Digital marketer, designer, and brand strategist: a designer's eye, a marketer's discipline, and brands built with intention and creativity.
+                  Digital marketer, designer, and brand strategist: a decade of experience, a master's in digital media & leadership, and a focus on building brands that drive real growth.
                 </p>
               </ScrollReveal>
 
