@@ -222,7 +222,7 @@ export default function ProjectDetail() {
                     <p className="eyebrow mb-2">{project.servicesLabel || "Services"}</p>
                     <ul className="space-y-1">
                       {project.services.map((service) => (
-                        <li key={service} className="text-ink">{service}</li>
+                        <li key={service} className="text-ink text-base md:text-lg leading-relaxed">{service}</li>
                       ))}
                     </ul>
                   </div>
