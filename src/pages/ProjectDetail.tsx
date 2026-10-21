@@ -93,6 +93,7 @@ const galleryAspectRatios: Record<string, [string, string, string, string]> = {
   "cesar-caro": ["3454 / 1316", "2854 / 1322", "2862 / 1330", "3454 / 1364"],
   "acacia-transitions": ["2520 / 688", "1258 / 1078", "1248 / 1080", "2574 / 632"],
   "panera-bread": ["3454 / 1316", "2854 / 1322", "2862 / 1330", "3454 / 1364"],
+  "born-x-raised": ["2000 / 946", "620 / 704", "592 / 700", "2000 / 1063"],
 };
 
 // Projects using the "full fit" gallery treatment: every image shown
@@ -324,14 +325,14 @@ export default function ProjectDetail() {
             <ScrollReveal>
               <button
                 onClick={() => openLightbox(0)}
-                className={`block w-full text-left overflow-hidden cursor-pointer group ${slug === "born-x-raised" ? "aspect-square" : "aspect-[16/10]"} ${galleryAspects || slug === "born-x-raised" ? "bg-cream-darker" : ""}`}
+                className={`block w-full text-left overflow-hidden cursor-pointer group aspect-[16/10] ${galleryAspects ? "bg-cream-darker" : ""}`}
                 style={galleryAspects ? { aspectRatio: galleryAspects[0] } : undefined}
                 aria-label={`Open ${project.title} gallery image 1 in lightbox`}
               >
                 <img
                   src={detailImages[0]}
                   alt={`${project.title} detail`}
-                  className={`w-full h-full transition-transform duration-700 ease-out group-hover:scale-[1.02] ${slug === "panera-bread" ? "object-cover" : slug === "born-x-raised" ? "object-contain" : galleryAspects ? "object-contain" : "object-cover"}`}
+                  className={`w-full h-full transition-transform duration-700 ease-out group-hover:scale-[1.02] ${slug === "panera-bread" ? "object-cover" : galleryAspects ? "object-contain" : "object-cover"}`}
                 />
               </button>
             </ScrollReveal>
@@ -375,14 +376,14 @@ export default function ProjectDetail() {
             <ScrollReveal>
               <button
                 onClick={() => openLightbox(detailImages[3] ? 3 : 0)}
-                className={`block w-full text-left overflow-hidden cursor-pointer group ${slug === "born-x-raised" ? "aspect-square" : "aspect-[21/9]"} ${galleryAspects || slug === "born-x-raised" ? "bg-cream-darker" : ""}`}
+                className={`block w-full text-left overflow-hidden cursor-pointer group aspect-[21/9] ${galleryAspects ? "bg-cream-darker" : ""}`}
                 style={galleryAspects ? { aspectRatio: galleryAspects[3] } : undefined}
                 aria-label={`Open ${project.title} gallery image 4 in lightbox`}
               >
                 <img
                   src={detailImages[3] ?? detailImages[0]}
                   alt={`${project.title} detail`}
-                  className={`w-full h-full transition-transform duration-700 ease-out group-hover:scale-[1.02] ${slug === "panera-bread" ? "object-cover" : slug === "born-x-raised" ? "object-contain" : galleryAspects ? "object-contain" : "object-cover"}`}
+                  className={`w-full h-full transition-transform duration-700 ease-out group-hover:scale-[1.02] ${slug === "panera-bread" ? "object-cover" : galleryAspects ? "object-contain" : "object-cover"}`}
                 />
               </button>
             </ScrollReveal>
