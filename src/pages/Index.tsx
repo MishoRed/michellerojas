@@ -12,7 +12,7 @@ import portraitMain from "@/assets/portrait-main.webp";
 import bornXRaisedHero from "@/assets/gallery/gallery-1.jpg";
 import pccCommunityMarketsHero from "@/assets/gallery/gallery-2.jpg";
 import eveHero from "@/assets/projects/eve-hero.png";
-import paneraBreadHero from "@/assets/projects/panera-bread-hero.png";
+import paneraBreadHero from "@/assets/projects/panera-bread-hero.webp";
 import metaHero from "@/assets/projects/meta-hero.jpeg";
 import soundcloudHero from "@/assets/projects/soundcloud-hero.png";
 import kekePalmerMagazineCover from "@/assets/projects/keke-palmer-magazine-cover-original.png";
