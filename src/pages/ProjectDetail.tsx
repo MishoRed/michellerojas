@@ -29,11 +29,11 @@ import eveLowFidelityFlow from "@/assets/projects/eve-low-fidelity-flow.png";
 import eveLowFidelityFlowPicture from "@/assets/projects/eve-low-fidelity-flow-picture.png";
 import eveHiFidelityFlowPicture from "@/assets/projects/eve-hi-fidelity-flow-picture.png";
 import eveHiFidelityFlow from "@/assets/projects/eve-hi-fidelity-flow.png";
-import paneraBreadHero from "@/assets/projects/panera-bread-hero.png";
-import paneraBread1 from "@/assets/projects/panera-bread-1.png";
+import paneraBreadHero from "@/assets/projects/panera-bread-hero.webp";
+import paneraBread1 from "@/assets/projects/panera-bread-1.webp";
 import paneraBread2 from "@/assets/projects/panera-bread-2.png";
 import paneraBread3 from "@/assets/projects/panera-bread-3.png";
-import paneraBread4 from "@/assets/projects/panera-bread-4.png";
+import paneraBread4 from "@/assets/projects/panera-bread-4.webp";
 import metaHeroWide from "@/assets/projects/meta-hero-wide.png";
 import meta1 from "@/assets/projects/meta-1.png";
 import meta2 from "@/assets/projects/meta-2.png";
@@ -92,7 +92,7 @@ const galleryAspectRatios: Record<string, [string, string, string, string]> = {
   "sprouted-organic-coffee": ["2548 / 1210", "2166 / 1038", "2214 / 1042", "2586 / 1316"],
   "cesar-caro": ["3454 / 1316", "2854 / 1322", "2862 / 1330", "3454 / 1364"],
   "acacia-transitions": ["2520 / 688", "1258 / 1078", "1248 / 1080", "2574 / 632"],
-  "panera-bread": ["3454 / 1316", "2854 / 1322", "2862 / 1330", "3454 / 1364"],
+  "panera-bread": ["2000 / 1137", "1156 / 1864", "1180 / 1848", "2000 / 1124"],
   "born-x-raised": ["2000 / 946", "620 / 704", "592 / 700", "2000 / 1063"],
 };
 
@@ -332,7 +332,7 @@ export default function ProjectDetail() {
                 <img
                   src={detailImages[0]}
                   alt={`${project.title} detail`}
-                  className={`w-full h-full transition-transform duration-700 ease-out group-hover:scale-[1.02] ${slug === "panera-bread" ? "object-cover" : galleryAspects ? "object-contain" : "object-cover"}`}
+                  className={`w-full h-full transition-transform duration-700 ease-out group-hover:scale-[1.02] ${galleryAspects ? "object-contain" : "object-cover"}`}
                 />
               </button>
             </ScrollReveal>
@@ -366,7 +366,7 @@ export default function ProjectDetail() {
                   <img
                     src={detailImages[2]}
                     alt={`${project.title} detail`}
-                    className={`w-full h-full transition-transform duration-700 ease-out group-hover:scale-[1.02] ${isFullFit ? "object-contain" : slug === "panera-bread" ? "object-cover" : galleryAspects ? "object-contain bg-cream-darker" : "object-cover"}`}
+                    className={`w-full h-full transition-transform duration-700 ease-out group-hover:scale-[1.02] ${isFullFit ? "object-contain" : galleryAspects ? "object-contain bg-cream-darker" : "object-cover"}`}
                   />
                 </button>
               </ScrollReveal>
@@ -383,7 +383,7 @@ export default function ProjectDetail() {
                 <img
                   src={detailImages[3] ?? detailImages[0]}
                   alt={`${project.title} detail`}
-                  className={`w-full h-full transition-transform duration-700 ease-out group-hover:scale-[1.02] ${slug === "panera-bread" ? "object-cover" : galleryAspects ? "object-contain" : "object-cover"}`}
+                  className={`w-full h-full transition-transform duration-700 ease-out group-hover:scale-[1.02] ${galleryAspects ? "object-contain" : "object-cover"}`}
                 />
               </button>
             </ScrollReveal>
