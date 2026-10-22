@@ -339,7 +339,7 @@ export default function ProjectDetail() {
 
             {/* Two Column */}
             <div
-              className={`grid grid-cols-1 gap-8 md:gap-12 md:[grid-template-columns:var(--two-col-template)] ${slug === "born-x-raised" ? "md:max-w-2xl md:mx-auto" : ""}`}
+              className="grid grid-cols-1 gap-8 md:gap-12 md:[grid-template-columns:var(--two-col-template)]"
               style={{ "--two-col-template": twoColumnTemplate } as React.CSSProperties}
             >
               <ScrollReveal>
