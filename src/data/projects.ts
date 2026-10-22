@@ -192,7 +192,7 @@ export const projects: Project[] = [
     slug: "acacia-transitions",
     title: "Acacia Transitions",
     category: "Family Services and Senior Relocation",
-    year: "2024",
+    year: "2021",
     client: "Acacia Transitions",
     industry: "Family Services and Senior Relocation",
     services: ["SEO and Website Redesign"],
