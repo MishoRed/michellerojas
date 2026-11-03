@@ -14,7 +14,7 @@ const experience = [
     period: "January 2021 – Current",
     description:
       "Own end-to-end design, optimization, and maintenance of client websites, delivering high-quality user experiences paired with strong search engine visibility. Selected consulting projects include full website builds, SEO audits, and redesigns for small business clients, balanced alongside full-time roles and graduate program. Lead visual and UX design, translating client goals into engaging, responsive websites building trust and alignment throughout each project. Implement on-page and off-page SEO strategies to drive organic visibility and long-term traffic growth.",
-    tools: ["Figma", "Canva", "Adobe Illustrator", "Google Analytics", "Squarespace", "Wix", "WordPress", "Netlify", "GitHub", "Claude AI"],
+    tools: ["Figma", "Canva", "Adobe Illustrator", "Google Analytics", "Squarespace", "Wix", "WordPress", "Netlify", "GitHub", "Claude Code"],
     achievements: [
       "Built and maintained a 5-year independent consulting practice while working full-time and completing a graduate degree, reflecting strong time management sustained client trust.",
       "Develop wireframes and interactive prototypes in Figma to refine usability, reducing average time-on-task by 20%.",
@@ -53,6 +53,38 @@ const experience = [
       "Trained Marketing Specialists to improve team effectiveness and drive mission forward.",
     ],
   },
+  {
+    role: "SEO Specialist",
+    company: "Portent — Seattle, Washington",
+    period: "February 2022 – April 2023",
+    description:
+      "Optimized brand visibility by producing high-level SEO deliverables for stakeholders across 14 client campaigns. Led advanced SEO strategy, consulting, and technical audits, including keyword research, SERP analysis, backlink analysis, and internal linking, in a fast-paced agency environment.",
+    tools: ["Ahrefs", "SEMrush", "Screaming Frog", "STATS", "Google Analytics"],
+    achievements: [
+      "Achieved SEO quality results within given timeframes, resulting in 25%+ improvement in stakeholder campaigns.",
+      "Drove an average 68% increase in organic traffic and ranking performance across 14 client campaigns.",
+      "Completed 9 comprehensive technical SEO audits, identifying and resolving site architecture and indexing issues for agency clients.",
+      "Championed numerous projects from strategy to execution, partnering with cross-functional teams delivering measurable visibility gains for agency clients.",
+      "Increased organization, consistency, and efficiency by generating roadmaps and action plans of each client.",
+      "Led the Employee Engagement Committee, organizing company culture and company yearly events.",
+    ],
+  },
+  {
+    role: "LATAM Sales Specialist",
+    company: "PACCAR Parts — Renton, Washington",
+    period: "April 2018 – April 2020",
+    description:
+      "Managed revenue growth by incentivizing top sales performance, outlining high-volume sales data, and tracking industry trends in support of the Latin American and international sales teams. Generated accurate daily and monthly million-dollar forecasts and produced inclusive reports to support informed business decisions. Optimized sales team presentations and organized executive annual business events. Attended quarterly training classes to strengthen sales, parts, and overall company knowledge.",
+    tools: ["Sales", "ASI", "Microsoft Office", "Docusign"],
+    achievements: [
+      "Generated accurate daily and monthly million-dollar sales forecasts, enabling leadership to make informed, data-driven business decisions.",
+      "Served as key collaborator on large dealer orders exceeding $100K, fostering cohesive workflow between marketing and sales staff.",
+      "Processed new business deals across truck sales teams and vendors nationwide, maintaining and strengthening supplier relationships.",
+      "Streamlined creation and distribution of memos to senior leadership by successfully navigating DocuSign.",
+      "Optimized sales team presentations and organized executive annual business events at the Hyatt Regency Lake Washington, elevating team performance and company visibility.",
+      "Completed quarterly training to build expertise in sales strategy, parts knowledge, and company-wide operations.",
+    ],
+  },
 ];
 
 const education = [
@@ -69,7 +101,7 @@ const capabilities = [
   "Digital Marketing",
   "Website Design",
   "SEO",
-  "E-Commerce",
+  "e-Commerce",
   "Email Marketing",
   "Campaign Strategy",
   "UX Design",
@@ -78,8 +110,8 @@ const capabilities = [
   "Executive Reporting",
   "Problem-Solving",
   "Product Marketing",
-  "Brand Partnerships",
-  "English / Spanish",
+  "Brand Partnership",
+  "English & Spanish",
 ];
 
 const recognition = [
@@ -116,6 +148,10 @@ export default function Resume() {
               <ScrollReveal delay={200}>
                 <p className="text-ink-light">
                   Seattle, Washington
+                  <br />
+                  <a href="tel:206-351-0831" className="hover:text-ink transition-colors">
+                    206-351-0831
+                  </a>
                   <br />
                   <a href="mailto:rojasmichellec@gmail.com" className="hover:text-ink transition-colors">
                     rojasmichellec@gmail.com
